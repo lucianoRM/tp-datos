@@ -1,3 +1,12 @@
+#include <fstream>
+#include <iostream>
+#include <map>
+#include <vector>
+#include <string>
+using namespace std;
+
+#define MINIMA_LONG_TERMINO 1; 
+
 /*PARSEO(directorio,archivo de documentos)
 
 Crear hash para terminos globales
@@ -43,3 +52,46 @@ Destruir archivo de documentos viejo
 Destruir hash de frecuencias globales
 
 */
+
+void parsear_linea(string linea,map<string,unsigned int> *hash){
+	int ultima_posicion = 0;
+	int pos;
+	int size = linea.size();
+	string termino;
+	int size_termino;
+	int frecuencia_termino;
+	int pos_actual = 0;
+	int minima_long = MINIMA_LONG_TERMINO;
+	for(pos = 0; pos<size; pos++){
+		if(pos == size - 1) pos_actual = pos + 1;
+		else pos_actual = pos;
+		if(linea[pos] == ' ' || linea[pos] == '.' || pos_actual != pos){
+			termino = linea.substr(ultima_posicion,(pos_actual - ultima_posicion));
+			size_termino = termino.size();
+			if(size_termino > minima_long){
+				frecuencia_termino = (*hash)[termino];
+				if(frecuencia_termino)
+					(*hash)[termino]++;
+				else (*hash)[termino] = 1;
+			}	
+			ultima_posicion = pos+1;
+		}
+	}
+	
+}
+
+int main(void){
+	char nombre_archivo[] = "ejemplo.txt";
+	ifstream archivo;
+	archivo.open(nombre_archivo);
+	string linea;
+	map<string,unsigned int>::iterator it;
+	map<string,unsigned int> hash_archivo;
+	char* line;
+	while(getline(archivo,linea))
+		parsear_linea(linea,&hash_archivo);
+	for(it = hash_archivo.begin(); it!= hash_archivo.end(); it++)
+			cout <<it->first << "," <<it->second << endl;	
+	archivo.close();
+	return 0;
+}
