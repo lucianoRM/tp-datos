@@ -7,6 +7,7 @@ using std::map;
 using std::string;
 using std::ifstream;
 using std::cout;
+using std::endl;
 
 
 #define MINIMA_LONG_TERMINO 2
@@ -29,20 +30,23 @@ void cargar_terminos(string linea,map<string,unsigned int> *hash){
 	char letra_actual;
 	for(pos_actual = 0;pos_actual < size_linea;pos_actual++){
 		letra_actual = linea[pos_actual]; //para optimizar la lectura, lee el caracter una vez, nada mas.
-		if(letra_actual == ' ' || letra_actual == '.'){
+		if(letra_actual == ' ' || letra_actual == '.' || letra_actual == ',' || letra_actual == '\r'){
 			if(termino.size() > MINIMA_LONG_TERMINO)
 				agregar_termino_a_hash(termino,hash);
 			termino = "";			
 		}else
 			termino +=letra_actual;	
 	}
-	if(termino.size() > MINIMA_LONG_TERMINO)	agregar_termino_a_hash(termino,hash); //para la ultima palabra, porque sino no se agrega
+	if(termino.size() > MINIMA_LONG_TERMINO)
+		agregar_termino_a_hash(termino,hash); //para la ultima palabra, porque sino no se agrega
+	
 }
 
 
 
+
 int main(void){
-	char nombre_archivo[] = "ejemplo.txt";
+	char nombre_archivo[] = "Libros/passing_of_the_third_floor_back.txt";
 	ifstream archivo;
 	archivo.open(nombre_archivo);
 	string linea;
@@ -51,7 +55,7 @@ int main(void){
 	while(getline(archivo,linea))
 		cargar_terminos(linea,&hash_archivo);
 	for(it = hash_archivo.begin(); it!= hash_archivo.end(); it++)
-			cout <<it->first << "," <<it->second << "\n";	
+			cout << it->first << "," << it->second << endl;	
 	archivo.close();
 	return 0;
 }	
