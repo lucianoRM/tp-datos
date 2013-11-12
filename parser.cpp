@@ -44,10 +44,9 @@ void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias,ma
 	for(pos_actual = 0;pos_actual < linea_size;pos_actual++){
 		letra_actual = linea[pos_actual];//para optimizar la lectura, lee el caracter una vez, nada mas.
 		if(is_letter(letra_actual) == 0){ 
-			if(termino.size() > 1){
+			if(termino.size() > 1)
 				agregar_termino_a_hash(termino,hash_frecuencias,hash_stopwords);
-				termino = "";
-			}		
+			termino = "";		
 		}else{
 			letra_actual = tolower(letra_actual);
 			termino += letra_actual;	
