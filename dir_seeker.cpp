@@ -21,7 +21,7 @@ using std::ofstream;
 		
 
 /*Funcion que recorre un directorio e imprime los nombres de los archivos que se encuentran dentro de el*/
-void parsear_archivos(const char* nombre_dir){
+int* parsear_archivos(const char* nombre_dir){
 	
 	DIR* dir_pointer = opendir(nombre_dir);
 	struct dirent* reg_buffer = readdir(dir_pointer);
@@ -30,35 +30,49 @@ void parsear_archivos(const char* nombre_dir){
 	nombre_directorio += "/";
 	string linea;
 	ifstream archivo;
-	map<string,unsigned int> hash_frecuencias;	
+	map<string,unsigned int> hash_frecuencias_globales;
+	map<string,unsigned int> hash_frecuencias_locales;	
 	map<string,short> hash_stopwords = Stopwords::getInstance()->getMap();
-	
+	int cant_archivos = 0;
+	int cant_terminos = 0;
+	map<string,unsigned int>::iterator it_local;
 	while(reg_buffer != NULL){
 		nombre_archivo = (reg_buffer->d_name);
-		nombre_archivo = nombre_directorio + nombre_archivo;
-		cout << "Parsing: " << nombre_archivo << endl;
-		archivo.open(nombre_archivo.c_str());
+		cout << "Parsing: " << nombre_directorio + nombre_archivo << endl;
+		archivo.open((nombre_directorio + nombre_archivo).c_str());
 		while(getline(archivo,linea)){
 			linea += '\n'; //Lo agrego para que no se coma los terminos del final.
-			cargar_terminos(linea,&hash_frecuencias,&hash_stopwords);
+			cargar_terminos(linea,&hash_frecuencias_globales,&hash_frecuencias_locales,&hash_stopwords,&cant_terminos);
 		}
 		archivo.close();
 		reg_buffer = readdir(dir_pointer);
+		cant_archivos++;
+		nombre_archivo = "terminos_locales/" + nombre_archivo;
+		ofstream terminos_locales(nombre_archivo.c_str());
+		for(it_local = hash_frecuencias_locales.begin(); it_local != hash_frecuencias_locales.end(); ++it_local)
+			terminos_locales << it_local->first << ": " << it_local->second << endl;
+		terminos_locales.close();
 	}
 	closedir(dir_pointer);
-	ofstream terminos  ("archivo_terminos.txt");
+	ofstream terminos_globales("archivo_terminos_globales.txt");
 	map<string,unsigned int>::iterator it;
-	for(it = hash_frecuencias.begin(); it != hash_frecuencias.end(); ++it)
-		terminos << it->first << ": " << it->second << endl;
-	
-	terminos.close();
+	for(it = hash_frecuencias_globales.begin(); it != hash_frecuencias_globales.end(); ++it)
+		terminos_globales << it->first << ": " << it->second << endl;
+	terminos_globales.close();
+	int* cantidades = (int*) malloc ( sizeof(int) * 2);
+	cantidades[0] = cant_archivos;
+	cantidades[1] = cant_terminos;
+	return cantidades;
 }
 
 int main(){
 	int t_inicio = time(NULL);
-	parsear_archivos("Libros");
+	int* cantidades = parsear_archivos("Libros");
+	cout << "Cantidad de archivos: "<< cantidades[0] << endl;
+	cout << "Cantidad de terminos: "<< cantidades[1] << endl;
 	int t_fin = time(NULL);
 	cout << "Tardo: " << t_fin - t_inicio << " segundos";
+	free(cantidades);
 	return 0;
 }
 

@@ -20,12 +20,12 @@ using std::endl;
 
 /*Filtra el termino pasados por parametro y luego los agrega a los diccionarios*/
 
-void agregar_termino_a_hash(string termino, map<string,unsigned int> *hash_frecuencias,map<string,short>* hash_stopwords);
+void agregar_termino_a_hash(string termino, map<string,unsigned int> *hash_frecuencias_globales, map<string,unsigned int> *hash_frecuencias_locales,map<string,short>* hash_stopwords);
 	
 
 
 /*Recibe una linea(string), la parsea y carga los terminos a los hashes.*/
 
-void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias,map<string,short>* hash_stopwords);
+void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias_globales, map<string,unsigned int> *hash_frecuencias_locales, map<string,short>* hash_stopwords,int* cant_terminos);
 
 #endif //PARSER_H
