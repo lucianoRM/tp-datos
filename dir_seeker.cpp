@@ -30,26 +30,33 @@ int* parsear_archivos(const char* nombre_dir){
 	nombre_directorio += "/";
 	string linea;
 	ifstream archivo;
+	map<string,map<string,unsigned int> > documentos;
 	map<string,unsigned int> hash_frecuencias_globales;
 	map<string,unsigned int> hash_frecuencias_locales;	
 	map<string,short> hash_stopwords = Stopwords::getInstance()->getMap();
 	int cant_archivos = 0;
 	int cant_terminos = 0;
 	map<string,unsigned int>::iterator it_local;
+	map<string,map<string,unsigned int> >::iterator it_documentos;
 	while(reg_buffer != NULL){
 		nombre_archivo = (reg_buffer->d_name);
 		cout << "Parsing: " << nombre_directorio + nombre_archivo << endl;
 		archivo.open((nombre_directorio + nombre_archivo).c_str());
 		while(getline(archivo,linea)){
 			linea += '\n'; //Lo agrego para que no se coma los terminos del final.
-			cargar_terminos(linea,&hash_frecuencias_globales,&hash_frecuencias_locales,&hash_stopwords,&cant_terminos);
+			cargar_terminos(linea,&hash_frecuencias_globales,&documentos[nombre_archivo],&hash_stopwords,&cant_terminos);
 		}
 		archivo.close();
 		reg_buffer = readdir(dir_pointer);
 		cant_archivos++;
-		nombre_archivo = "terminos_locales/" + nombre_archivo;
+	}
+	
+	
+	for(it_documentos = documentos.begin();it_documentos != documentos.end(); ++it_documentos){
+		nombre_archivo = "terminos_locales/" + it_documentos->first;
+		cout << "Writing: " << it_documentos->first << endl;
 		ofstream terminos_locales(nombre_archivo.c_str());
-		for(it_local = hash_frecuencias_locales.begin(); it_local != hash_frecuencias_locales.end(); ++it_local)
+		for(it_local = it_documentos->second.begin(); it_local !=it_documentos->second.end(); ++it_local)
 			terminos_locales << it_local->first << ": " << it_local->second << endl;
 		terminos_locales.close();
 	}

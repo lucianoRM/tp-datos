@@ -22,27 +22,25 @@ short is_letter(char character){
 }
 
 
-
+ 
 void agregar_termino_a_hash(string termino, map<string,unsigned int> *hash_frecuencias_globales,map<string,unsigned int> *hash_frecuencias_locales,map<string,short>* hash_stopwords,int* cant_terminos){
 	
 
 	if((*hash_stopwords)[termino] == 1) return; //No entra porque es un stopword
-	unsigned int frecuencia_termino_globales = (*hash_frecuencias_globales)[termino];
-	unsigned int frecuencia_termino_locales = (*hash_frecuencias_locales)[termino];
-	if(frecuencia_termino_locales){
-		(*hash_frecuencias_globales)[termino]++;
+	
+	if(!((*hash_frecuencias_locales)[termino])){
+		(*hash_frecuencias_locales)[termino] = 1;
+		if((*hash_frecuencias_globales)[termino])
+			(*hash_frecuencias_globales)[termino]++;
+		else{
+			cant_terminos++;
+			(*hash_frecuencias_globales)[termino] = 1;
+		}
+	}else
 		(*hash_frecuencias_locales)[termino]++;
-	}
-	else if(frecuencia_termino_globales){
-		(*hash_frecuencias_globales)[termino]++;
-		(*hash_frecuencias_locales)[termino] = 1;
-	}
-	else{
-		(*cant_terminos)++;
-		(*hash_frecuencias_globales)[termino] = 1;
-		(*hash_frecuencias_locales)[termino] = 1;
-	}
+	
 }
+	
 
 
 /*Recibe una linea(string), la parsea y carga los terminos a los hashes.*/
@@ -64,6 +62,7 @@ void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias_gl
 	}
 	
 }
+
 
 
 

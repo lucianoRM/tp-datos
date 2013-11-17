@@ -20,7 +20,7 @@ Stopwords::Stopwords() {
 	archivo.open(nombre_archivo);
 	string stopword;
 	while(getline(archivo,stopword,',')) {
-		diccionario[stopword] = 0;
+		diccionario[stopword] = 1;
 	}
 }
  
