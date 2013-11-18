@@ -23,18 +23,21 @@ short is_letter(char character){
 
 
  
-void agregar_termino_a_hash(string termino, map<string,unsigned int> *hash_frecuencias_globales,map<string,unsigned int> *hash_frecuencias_locales,map<string,short>* hash_stopwords,int* cant_terminos){
+void agregar_termino_a_hash(string termino, map<string,unsigned int> *hash_frecuencias_globales,map<string,unsigned int> *hash_frecuencias_locales,map<string,short>* hash_stopwords,int* cant_terminos,map<string,string>* hash_apariciones_unicas,string nombre_archivo){
 	
 
 	if((*hash_stopwords)[termino] == 1) return; //No entra porque es un stopword
 	
 	if(!((*hash_frecuencias_locales)[termino])){
 		(*hash_frecuencias_locales)[termino] = 1;
-		if((*hash_frecuencias_globales)[termino])
+		if((*hash_frecuencias_globales)[termino]){
+			(*hash_apariciones_unicas).erase(termino);
 			(*hash_frecuencias_globales)[termino]++;
+		}
 		else{
-			cant_terminos++;
+			(*cant_terminos)++;
 			(*hash_frecuencias_globales)[termino] = 1;
+			(*hash_apariciones_unicas)[termino] = nombre_archivo;
 		}
 	}else
 		(*hash_frecuencias_locales)[termino]++;
@@ -44,7 +47,7 @@ void agregar_termino_a_hash(string termino, map<string,unsigned int> *hash_frecu
 
 
 /*Recibe una linea(string), la parsea y carga los terminos a los hashes.*/
-void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias_globales, map<string,unsigned int> *hash_frecuencias_locales, map<string,short>* hash_stopwords,int* cant_terminos){
+void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias_globales, map<string,unsigned int> *hash_frecuencias_locales, map<string,short>* hash_stopwords,int* cant_terminos,map<string,string>* hash_apariciones_unicas,string nombre_archivo){
 	unsigned int pos_actual;
 	unsigned int linea_size = linea.size();
 	string termino = "";
@@ -53,7 +56,7 @@ void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias_gl
 		letra_actual = linea[pos_actual];//para optimizar la lectura, lee el caracter una vez, nada mas.
 		if(is_letter(letra_actual) == 0){ 
 			if(termino.size() > 1)
-				agregar_termino_a_hash(termino,hash_frecuencias_globales,hash_frecuencias_locales,hash_stopwords,cant_terminos);
+				agregar_termino_a_hash(termino,hash_frecuencias_globales,hash_frecuencias_locales,hash_stopwords,cant_terminos,hash_apariciones_unicas,nombre_archivo);
 			termino = "";		
 		}else{
 			letra_actual = tolower(letra_actual);

@@ -26,6 +26,6 @@ void agregar_termino_a_hash(string termino, map<string,unsigned int> *hash_frecu
 
 /*Recibe una linea(string), la parsea y carga los terminos a los hashes.*/
 
-void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias_globales, map<string,unsigned int> *hash_frecuencias_locales, map<string,short>* hash_stopwords,int* cant_terminos);
+void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias_globales, map<string,unsigned int> *hash_frecuencias_locales, map<string,short>* hash_stopwords,int* cant_terminos,map<string,string>* hash_apariciones_unicas,string nombre_archivo);
 
 #endif //PARSER_H
