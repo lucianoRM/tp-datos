@@ -33,11 +33,8 @@ void agregar_termino_a_hash(string termino, map<string,unsigned int> *hash_frecu
 	
 	unsigned int ultimo_char = stem((char*)termino.c_str(),0,size-1); 
 	
-
+	termino = termino.substr(0,ultimo_char+1);
 	
-	if(ultimo_char < size){
-		termino = termino.substr(0,ultimo_char+1);
-	}
 
 	if(!((*hash_frecuencias_locales)[termino])){
 		(*hash_frecuencias_locales)[termino] = 1;

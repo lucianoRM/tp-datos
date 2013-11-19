@@ -11,7 +11,7 @@ all: stopwords.o porter.o parser.o dir_seeker.o
 
 dir_seeker.o: dir_seeker.cpp
 
-	$(G++) $(FLAGS) porter/porter.o stopwords/stopwords.o parser.o dir_seeker.cpp -o dir_seeker.o -lstdc++
+	$(G++) $(FLAGS) porter/porter.o stopwords/stopwords.o parser.o dir_seeker.cpp -o dir_seeker.o 
 
 
 parser.o: parser.cpp
@@ -31,4 +31,6 @@ porter.o: porter/porter.c
 #Cleanup
 clean:
 	rm *.o 
+	rm stopwords/*.o
+	rm porter/*.o
 	

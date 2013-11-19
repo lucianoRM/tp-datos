@@ -53,13 +53,14 @@ void guardar_terminos(map<string,unsigned int>* hash_frecuencias_globales,map<st
 
 
 /*Borra de los terminos los que solo aprecen 1 vez entre todos los documentos*/
-void filtrar_apariciones_unicas(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales,map<string,string>* hash_apariciones_unicas){
+void filtrar_apariciones_unicas(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales,map<string,string>* hash_apariciones_unicas,int* cant_terminos){
 	
 	map<string,string>::iterator it_hash_apariciones_unicas;
 	
 	for(it_hash_apariciones_unicas = hash_apariciones_unicas->begin();it_hash_apariciones_unicas != hash_apariciones_unicas->end();++it_hash_apariciones_unicas){
 		(*hash_frecuencias_locales)[it_hash_apariciones_unicas->second].erase(it_hash_apariciones_unicas->first);
 		(*hash_frecuencias_globales).erase(it_hash_apariciones_unicas->first);
+		(*cant_terminos)--;
 	}
 }
 
@@ -94,7 +95,7 @@ int* parsear_archivos(const char* nombre_dir){
 		cant_archivos++;
 	}
 	
-	filtrar_apariciones_unicas(&hash_frecuencias_globales,&hash_frecuencias_locales,&hash_apariciones_unicas);
+	filtrar_apariciones_unicas(&hash_frecuencias_globales,&hash_frecuencias_locales,&hash_apariciones_unicas,&cant_terminos);
 	guardar_terminos(&hash_frecuencias_globales,&hash_frecuencias_locales);
 	
 	closedir(dir_pointer);
