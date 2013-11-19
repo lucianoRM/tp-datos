@@ -4,12 +4,14 @@
 #include <string>
 #include "stopwords/stopwords.h"
 #include "parser.h"
+#include "porter/porter.h"
 
 using std::map;
 using std::string;
 using std::ifstream;
 using std::cout;
 using std::endl;
+
 
 
 /*Verifica si el caracter es una letra o no. Si no lo es devuelve 0*/
@@ -25,9 +27,18 @@ short is_letter(char character){
  
 void agregar_termino_a_hash(string termino, map<string,unsigned int> *hash_frecuencias_globales,map<string,unsigned int> *hash_frecuencias_locales,map<string,short>* hash_stopwords,int* cant_terminos,map<string,string>* hash_apariciones_unicas,string nombre_archivo){
 	
+	unsigned int size = termino.size();
 
 	if((*hash_stopwords)[termino] == 1) return; //No entra porque es un stopword
 	
+	unsigned int ultimo_char = stem((char*)termino.c_str(),0,size-1); 
+	
+
+	
+	if(ultimo_char < size){
+		termino = termino.substr(0,ultimo_char+1);
+	}
+
 	if(!((*hash_frecuencias_locales)[termino])){
 		(*hash_frecuencias_locales)[termino] = 1;
 		if((*hash_frecuencias_globales)[termino]){
@@ -55,7 +66,7 @@ void cargar_terminos(string linea, map<string,unsigned int> *hash_frecuencias_gl
 	for(pos_actual = 0;pos_actual < linea_size;pos_actual++){
 		letra_actual = linea[pos_actual];//para optimizar la lectura, lee el caracter una vez, nada mas.
 		if(is_letter(letra_actual) == 0){ 
-			if(termino.size() > 1)
+			if(termino.size() > 3)
 				agregar_termino_a_hash(termino,hash_frecuencias_globales,hash_frecuencias_locales,hash_stopwords,cant_terminos,hash_apariciones_unicas,nombre_archivo);
 			termino = "";		
 		}else{

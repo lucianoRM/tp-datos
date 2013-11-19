@@ -6,6 +6,7 @@
 #include <map>
 #include <string>
 #include "stopwords/stopwords.h"
+#include "porter/porter.h"
 
 
 using std::map;
