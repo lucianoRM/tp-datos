@@ -12,6 +12,9 @@ class Stopwords {
  
 	private: 
 		Stopwords();
+
+	public:
+		void destroy();
  
 	public:
 		static Stopwords* getInstance();

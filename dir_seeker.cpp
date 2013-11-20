@@ -108,12 +108,13 @@ int* parsear_archivos(const char* nombre_dir){
 
 int main(){
 	int t_inicio = time(NULL);
-	int* cantidades = parsear_archivos("Libros");
+	int* cantidades = parsear_archivos("Prueba");
 	cout << "Cantidad de archivos: "<< cantidades[0] << endl;
 	cout << "Cantidad de terminos: "<< cantidades[1] << endl;
 	int t_fin = time(NULL);
 	cout << "Tardo: " << t_fin - t_inicio << " segundos";
 	free(cantidades);
+	Stopwords::getInstance()->destroy();
 	return 0;
 }
 

@@ -22,7 +22,14 @@ Stopwords::Stopwords() {
 	while(getline(archivo,stopword,',')) {
 		diccionario[stopword] = 1;
 	}
+	archivo.close();
 }
+
+void Stopwords::destroy() {
+	delete instance;
+
+}
+
  
 Stopwords* Stopwords::getInstance() {
 	if (instance == NULL) {
