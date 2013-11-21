@@ -26,6 +26,10 @@ stopwords.o: stopwords/stopwords.cpp
 porter.o: porter/porter.c
 	
 	$(CC) $(FLAGS) -Wno-write-strings -c porter/porter.c -o porter/porter.o -lstdc++
+
+cluster.o: cluster/cluster.cpp 
+
+	$(G++) $(FLAGS) -c cluster/cluster.cpp -o cluster/cluster.o
 	
 		
 #Cleanup
@@ -33,4 +37,4 @@ clean:
 	rm *.o 
 	rm stopwords/*.o
 	rm porter/*.o
-	
+	rm cluster/*.o
