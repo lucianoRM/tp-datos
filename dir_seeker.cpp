@@ -3,11 +3,12 @@
 #include <map>
 #include <stdlib.h>
 #include <string>
-#include "parser.h"
+#include "parser/parser.h"
 #include <dirent.h>
 #include <string.h>
 #include <time.h>
 #include "porter/porter.h"
+#include "parser/vectorizador.h"
 
 
 using std::map;
@@ -96,8 +97,12 @@ int* parsear_archivos(const char* nombre_dir){
 	}
 	
 	filtrar_apariciones_unicas(&hash_frecuencias_globales,&hash_frecuencias_locales,&hash_apariciones_unicas,&cant_terminos);
+	calcular_pesos_globales(&hash_frecuencias_globales,cant_archivos);	
 	guardar_terminos(&hash_frecuencias_globales,&hash_frecuencias_locales);
 	
+
+		
+
 	closedir(dir_pointer);
 	
 	int* cantidades = (int*) malloc ( sizeof(int) * 2);
@@ -108,7 +113,7 @@ int* parsear_archivos(const char* nombre_dir){
 
 int main(){
 	int t_inicio = time(NULL);
-	int* cantidades = parsear_archivos("Prueba");
+	int* cantidades = parsear_archivos("Libros");
 	cout << "Cantidad de archivos: "<< cantidades[0] << endl;
 	cout << "Cantidad de terminos: "<< cantidades[1] << endl;
 	int t_fin = time(NULL);

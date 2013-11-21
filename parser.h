@@ -5,7 +5,7 @@
 #include <fstream>
 #include <map>
 #include <string>
-#include "stopwords/stopwords.h"
+#include "../stopwords/stopwords.h"
 #include "porter/porter.h"
 
 
