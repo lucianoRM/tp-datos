@@ -58,11 +58,19 @@ float Cluster::variacion_entropia(){
 	return entropia_sig - entropia_actual;
 }
 
-void Cluster::recalcular(string doc,map<unsigned int,float> centroide_aux,unsigned int cant_docs_aux){
-	docs += doc;
+void Cluster::recalcular(string* doc,map<unsigned int,float> centroide_aux,unsigned int cant_docs_aux){
+	unsigned int pos_actual;
+	char letra_actual;
+	unsigned int doc_size = (*doc).size();
+	docs += ';';
+	for(pos_actual = 0;pos_actual < doc_size ;pos_actual++){
+		letra_actual = (*doc)[pos_actual];		
+		docs += letra_actual;
+	}
 	map<unsigned int,float>::iterator it1;
 	map<unsigned int,float>::iterator it2;
-	unsigned int pos1,pos2,pos_actual;
+	pos_actual = 0;
+	unsigned int pos1,pos2;
 	float valor,valor_aux;
 	norma = 0;
 	cant_docs += cant_docs_aux;

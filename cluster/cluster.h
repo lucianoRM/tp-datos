@@ -22,7 +22,7 @@ class Cluster {
 		unsigned int get_cant_docs();
 		float get_norma();
 		std::string get_docs();
-		void recalcular(std::string doc,std::map<unsigned int,float> centroide_aux,unsigned int cant_docs_aux);
+		void recalcular(std::string* doc,std::map<unsigned int,float> centroide_aux,unsigned int cant_docs_aux);
 		//~Cluster();
 };
 
