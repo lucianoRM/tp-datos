@@ -34,7 +34,9 @@ cluster.o: cluster/cluster.cpp
 vectorizador.o: parser/vectorizador.cpp
 
 	$(G++) $(FLAGS) -c parser/vectorizador.cpp -o parser/vectorizador.o
-		
+	
+	
+	
 #Cleanup
 clean:
 	rm *.o 

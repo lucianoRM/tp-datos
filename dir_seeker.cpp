@@ -53,73 +53,58 @@ void guardar_terminos(map<string,unsigned int>* hash_frecuencias_globales,map<st
 
 
 
-/*Borra de los terminos los que solo aprecen 1 vez entre todos los documentos*/
-void filtrar_apariciones_unicas(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales,map<string,string>* hash_apariciones_unicas,int* cant_terminos){
-	
-	map<string,string>::iterator it_hash_apariciones_unicas;
-	
-	for(it_hash_apariciones_unicas = hash_apariciones_unicas->begin();it_hash_apariciones_unicas != hash_apariciones_unicas->end();++it_hash_apariciones_unicas){
-		(*hash_frecuencias_locales)[it_hash_apariciones_unicas->second].erase(it_hash_apariciones_unicas->first);
-		(*hash_frecuencias_globales).erase(it_hash_apariciones_unicas->first);
-		(*cant_terminos)--;
-	}
-}
 
 
 /*Funcion que recorre un directorio e imprime los nombres de los archivos que se encuentran dentro de el*/
-int* parsear_archivos(const char* nombre_dir){
+void parsear_archivos(string nombre_dir,Parser* parser){
 	
-	DIR* dir_pointer = opendir(nombre_dir);
+	DIR* dir_pointer = opendir(nombre_dir.c_str());
 	struct dirent* reg_buffer = readdir(dir_pointer);
 	string nombre_archivo;
 	string nombre_directorio = nombre_dir;
 	nombre_directorio += "/";
 	string linea;
 	ifstream archivo;
-	map<string,string> hash_apariciones_unicas; //Necesario para filtrar los terminos que aparecen solo en 1 documento.
-	map<string,map<string,unsigned int> > hash_frecuencias_locales; //Cada uno es un hash con clave: nombre_documento y dato: hash con frecuencias locales.
-	map<string,unsigned int> hash_frecuencias_globales;
-	map<string,short> hash_stopwords = Stopwords::getInstance()->getMap();
-	int cant_archivos = 0;
-	int cant_terminos = 0;
 	
 	while(reg_buffer != NULL){
 		nombre_archivo = (reg_buffer->d_name);
+		if(nombre_archivo == "." || nombre_archivo == ".."){
+			reg_buffer = readdir(dir_pointer);
+			continue;
+		}
 		cout << "Parsing: " << nombre_directorio + nombre_archivo << endl;
 		archivo.open((nombre_directorio + nombre_archivo).c_str());
 		while(getline(archivo,linea)){
 			linea += '\n'; //Lo agrego para que no se coma los terminos del final.
-			cargar_terminos(linea,&hash_frecuencias_globales,&hash_frecuencias_locales[nombre_archivo],&hash_stopwords,&cant_terminos,&hash_apariciones_unicas,nombre_archivo);
+			parser->cargar_terminos(linea,nombre_archivo);
 		}
 		archivo.close();
 		reg_buffer = readdir(dir_pointer);
-		cant_archivos++;
+		parser->incrementarDocs();
 	}
 	
-	filtrar_apariciones_unicas(&hash_frecuencias_globales,&hash_frecuencias_locales,&hash_apariciones_unicas,&cant_terminos);
-	calcular_pesos_globales(&hash_frecuencias_globales,cant_archivos);	
-	guardar_terminos(&hash_frecuencias_globales,&hash_frecuencias_locales);
+	parser->filtrarAparicionesUnicas();
+	
+	//parser->calcularPesosGlobales(&hash_frecuencias_globales,cant_archivos);	
+	
+	guardar_terminos(parser->getFrecuenciasGlobales(),parser->getFrecuenciasLocales());
 	
 
 		
 
 	closedir(dir_pointer);
 	
-	int* cantidades = (int*) malloc ( sizeof(int) * 2);
-	cantidades[0] = cant_archivos;
-	cantidades[1] = cant_terminos;
-	return cantidades;
 }
 
 int main(){
 	int t_inicio = time(NULL);
-	int* cantidades = parsear_archivos("Libros");
-	cout << "Cantidad de archivos: "<< cantidades[0] << endl;
-	cout << "Cantidad de terminos: "<< cantidades[1] << endl;
+	Parser* par =new Parser();
+	parsear_archivos("Prueba",par);
+	cout << "Cantidad de archivos: "<< par->getCantDocs() << endl;
+	cout << "Cantidad de terminos: "<< par->getCantTerms() << endl;
 	int t_fin = time(NULL);
 	cout << "Tardo: " << t_fin - t_inicio << " segundos";
-	free(cantidades);
-	Stopwords::getInstance()->destroy();
+	delete par;
 	return 0;
 }
 
