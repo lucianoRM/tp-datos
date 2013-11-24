@@ -6,7 +6,11 @@ CC = gcc
 FLAGS = -Wall -Wextra -g -pedantic 
 
 
+<<<<<<< HEAD
 all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o
+=======
+all: stopwords.o porter.o parser.o dir_seeker.o cluster.o test_cluster.o
+>>>>>>> f2898cb61921f67d09b2152f8188bcdad95c0933
 
 
 dir_seeker.o: dir_seeker.cpp
@@ -30,6 +34,10 @@ porter.o: porter/porter.c
 cluster.o: cluster/cluster.cpp 
 
 	$(G++) $(FLAGS) -c cluster/cluster.cpp -o cluster/cluster.o
+
+test_cluster.o: cluster/test_cluster.cpp
+
+	$(G++) $(FLAGS) cluster/cluster.o cluster/test_cluster.cpp -o cluster/test_cluster.o 
 	
 vectorizador.o: parser/vectorizador.cpp
 

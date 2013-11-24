@@ -85,7 +85,7 @@ void parsear_archivos(string nombre_dir,Parser* parser){
 	
 	parser->filtrarAparicionesUnicas();
 	
-	//parser->calcularPesosGlobales(&hash_frecuencias_globales,cant_archivos);	
+	calcular_pesos_globales(parser);
 	
 	guardar_terminos(parser->getFrecuenciasGlobales(),parser->getFrecuenciasLocales());
 	
@@ -98,13 +98,13 @@ void parsear_archivos(string nombre_dir,Parser* parser){
 
 int main(){
 	int t_inicio = time(NULL);
-	Parser* par =new Parser();
-	parsear_archivos("Prueba",par);
-	cout << "Cantidad de archivos: "<< par->getCantDocs() << endl;
-	cout << "Cantidad de terminos: "<< par->getCantTerms() << endl;
+	Parser* parser =new Parser();
+	parsear_archivos("Prueba",parser);
+	cout << "Cantidad de archivos: "<< parser->getCantDocs() << endl;
+	cout << "Cantidad de terminos: "<< parser->getCantTerms() << endl;
 	int t_fin = time(NULL);
 	cout << "Tardo: " << t_fin - t_inicio << " segundos";
-	delete par;
+	delete parser;
 	return 0;
 }
 
