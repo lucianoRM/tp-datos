@@ -6,16 +6,14 @@ CC = gcc
 FLAGS = -Wall -Wextra -g -pedantic 
 
 
-<<<<<<< HEAD
-all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o
-=======
-all: stopwords.o porter.o parser.o dir_seeker.o cluster.o test_cluster.o
->>>>>>> f2898cb61921f67d09b2152f8188bcdad95c0933
+
+all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o test_cluster.o main.o
+
 
 
 dir_seeker.o: dir_seeker.cpp
 
-	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o dir_seeker.cpp -o dir_seeker.o 
+	$(G++) $(FLAGS) -c dir_seeker.cpp -o dir_seeker.o 
 
 
 parser.o: parser/parser.cpp
@@ -42,7 +40,10 @@ test_cluster.o: cluster/test_cluster.cpp
 vectorizador.o: parser/vectorizador.cpp
 
 	$(G++) $(FLAGS) -c parser/vectorizador.cpp -o parser/vectorizador.o
-	
+
+main.o: main.cpp
+
+	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o dir_seeker.o main.cpp -o TpGrupo6
 	
 	
 #Cleanup

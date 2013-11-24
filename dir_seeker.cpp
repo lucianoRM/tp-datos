@@ -9,6 +9,7 @@
 #include <time.h>
 #include "porter/porter.h"
 #include "parser/vectorizador.h"
+#include "dir_seeker.h"
 
 
 using std::map;
@@ -56,9 +57,10 @@ void guardar_terminos(map<string,unsigned int>* hash_frecuencias_globales,map<st
 
 
 /*Funcion que recorre un directorio e imprime los nombres de los archivos que se encuentran dentro de el*/
-void parsear_archivos(string nombre_dir,Parser* parser){
+int parsear_archivos(string nombre_dir,Parser* parser){
 	
 	DIR* dir_pointer = opendir(nombre_dir.c_str());
+	if (dir_pointer == NULL) return 1;
 	struct dirent* reg_buffer = readdir(dir_pointer);
 	string nombre_archivo;
 	string nombre_directorio = nombre_dir;
@@ -84,27 +86,9 @@ void parsear_archivos(string nombre_dir,Parser* parser){
 	}
 	
 	parser->filtrarAparicionesUnicas();
-	
-	calcular_pesos_globales(parser);
-	
-	guardar_terminos(parser->getFrecuenciasGlobales(),parser->getFrecuenciasLocales());
-	
-
 		
 
 	closedir(dir_pointer);
-	
-}
-
-int main(){
-	int t_inicio = time(NULL);
-	Parser* parser =new Parser();
-	parsear_archivos("Prueba",parser);
-	cout << "Cantidad de archivos: "<< parser->getCantDocs() << endl;
-	cout << "Cantidad de terminos: "<< parser->getCantTerms() << endl;
-	int t_fin = time(NULL);
-	cout << "Tardo: " << t_fin - t_inicio << " segundos";
-	delete parser;
 	return 0;
 }
 
