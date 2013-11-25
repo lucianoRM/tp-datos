@@ -46,6 +46,8 @@ int main(int args,char* argv[]){
 				delete parser;
 				return retorno;
 			}
+			guardar_terminos(parser->getFrecuenciasGlobales(), parser->getFrecuenciasLocales());	
+			calcular_pesos_globales(parser);
 			cout << "Cantidad de archivos: "<< parser->getCantDocs() << endl;
 			cout << "Cantidad de terminos: "<< parser->getCantTerms() << endl;
 			int t_fin = time(NULL);
