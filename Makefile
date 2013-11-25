@@ -4,6 +4,7 @@
 G++ = g++ 
 CC = gcc
 FLAGS = -Wall -Wextra -g -pedantic 
+EXEC = TpGrupo6
 
 
 
@@ -43,11 +44,12 @@ vectorizador.o: parser/vectorizador.cpp
 
 main.o: main.cpp
 
-	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o dir_seeker.o main.cpp -o TpGrupo6
+	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o dir_seeker.o main.cpp -o $(EXEC)
 	
 	
 #Cleanup
 clean:
+	rm $(EXEC)
 	rm *.o 
 	rm stopwords/*.o
 	rm porter/*.o
