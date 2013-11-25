@@ -31,7 +31,6 @@ map<string,map<unsigned int,float> >* calcular_pesos_globales(Parser* parser){
 	}
 	
 	for(it_local_ext = parser->getFrecuenciasLocales()->begin(); it_local_ext != parser->getFrecuenciasLocales()->end(); ++it_local_ext){
-		cout << "ARCHIVO: " << it_local_ext->first << endl;		
 		for(it_local_int = it_local_ext->second.begin();it_local_int != it_local_ext->second.end();++it_local_int){
 			peso = ((float)it_local_int->second) * pesos_globales[it_local_int->first];
 			(*vectores)[it_local_ext->first][hash_referencias[it_local_int->first]] = peso; 
