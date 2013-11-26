@@ -16,6 +16,6 @@ using std::endl;
 
 
 /*Toma un diccionario de frecuencias globales y lo transforma en uno de pesos globales*/
-void calcular_pesos_globales(Parser* parser);
+map<string,map<unsigned int,float> >* vectorizar(Parser* parser);
 
 #endif //VECTORIZADOR_H

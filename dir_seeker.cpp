@@ -22,9 +22,8 @@ using std::ofstream;
 
 
 /*Carga todo lo que se guarda en los hashes en disco*/
-void guardar_terminos(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales){
-
-	string nombre_archivo;	
+void guardar_frecuencias(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales){
+	string nombre_archivo;
 	
 	map<string,unsigned int>::iterator it_hash_frecuencias_globales;
 	map<string,map<string,unsigned int> >::iterator	it_hash_frecuencias_locales;
@@ -67,6 +66,7 @@ int parsear_archivos(string nombre_dir,Parser* parser){
 	nombre_directorio += "/";
 	string linea;
 	ifstream archivo;
+	int i;
 	
 	while(reg_buffer != NULL){
 		nombre_archivo = (reg_buffer->d_name);
