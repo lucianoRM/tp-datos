@@ -16,16 +16,21 @@ using std::endl;
 
 int main(){
 	map<unsigned int,float> doc1 = map<unsigned int,float>();
-	doc1[1] = 23;
-	doc1[4] = 24;
-	doc1[7] = 1;
-	doc1[10] = 5;
+	doc1[98] = 232;
+	doc1[121] = 1242;
+	doc1[124] = 252;
 	string nombre_doc1 = "doc1.txt";
 	map<unsigned int,float> doc2 = map<unsigned int,float>();
-	doc2[3] = 26;
-	doc2[8] = 29;
-	doc2[7] = 9;
-	doc2[25] = 16;
+	doc2[121] = 44;
+	doc2[22] = 44;
+	doc2[353] = 66;
+	doc2[12] = 55;
+	doc2[1] = 6;
+	doc2[3] = 8;
+	doc2[9] = 25;
+	doc2[12]=11;
+	doc2[53]=93;
+	doc2[33]=32;
 	string nombre_doc2 = "doc2.txt";
 	Cluster cluster_doc1 = Cluster(&doc1,&nombre_doc1);
 	cout << "DOCS DEL CLUSTER 1:" << cluster_doc1.get_docs() <<endl;
@@ -51,7 +56,7 @@ int main(){
 	cout << "VARIACION DE ENTROPIA CLUSTER1 SI LLEGO A AGRUPARLO CON CLUSTER2: " << cluster_doc1.variacion_entropia() << endl;
 	cout << "VARIACION DE ENTROPIA CLUSTER2 SI LLEGO A AGRUPARLO CON CLUSTER1: " << cluster_doc2.variacion_entropia() << endl;
 	nombre_doc2 = cluster_doc2.get_docs();
-	cluster_doc1.recalcular(&nombre_doc2,cluster_doc2.get_centroide(),cluster_doc2.get_cant_docs());
+	cluster_doc1.recalcular(nombre_doc2,cluster_doc2.get_centroide(),cluster_doc2.get_cant_docs());
 	cout << "DOCS DEL CLUSTER 1 LUEGO DE AGRUPARSE: " << cluster_doc1.get_docs() <<endl;
 	cout << "NORMA DEL CLUSTER 1 AGRUPADO CON CLUSTER2: " << cluster_doc1.get_norma() << endl;
 	cout << "CANTIDAD DE DOCS DEL CLUSTER 1 AGRUPADO CON CLUSTER2: " << cluster_doc1.get_cant_docs() << endl;

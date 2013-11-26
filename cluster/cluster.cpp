@@ -2,12 +2,15 @@
 #include <fstream>
 #include <string>
 #include <cmath>
+#include <stdlib.h>
+#include <cstdlib>
+#include <sstream>
 #include "cluster.h"
 
 using std::map;
 using std::ifstream;
 using std::string;
-
+using std::ostringstream;
 
 Cluster::Cluster(map<unsigned int,float>* centroid,string* doc){
 	centroide = (*centroid);
@@ -16,6 +19,7 @@ Cluster::Cluster(map<unsigned int,float>* centroid,string* doc){
 	entropia_sig = 0;
 	norma = 0;
 	cant_docs = 1;
+	id = "";
 	map<unsigned int,float>::iterator it;
 	float valor;
 	for(it = centroide.begin(); it != centroide.end(); ++it){
@@ -49,6 +53,8 @@ float Cluster::calcular_distancia(map<unsigned int,float> centroide_aux,float no
 	return distancia;
 }
 
+
+
 float Cluster::variacion_entropia(){
 	float aux = 1 - distancia;
 	float logaux = log10(aux);
@@ -58,13 +64,13 @@ float Cluster::variacion_entropia(){
 	return entropia_sig - entropia_actual;
 }
 
-void Cluster::recalcular(string* doc,map<unsigned int,float> centroide_aux,unsigned int cant_docs_aux){
+void Cluster::recalcular(string doc,map<unsigned int,float> centroide_aux,unsigned int cant_docs_aux){
 	unsigned int pos_actual;
 	char letra_actual;
-	unsigned int doc_size = (*doc).size();
+	unsigned int doc_size = doc.size();
 	docs += ';';
 	for(pos_actual = 0;pos_actual < doc_size ;pos_actual++){
-		letra_actual = (*doc)[pos_actual];		
+		letra_actual = doc[pos_actual];		
 		docs += letra_actual;
 	}
 	map<unsigned int,float>::iterator it1;
@@ -128,9 +134,19 @@ unsigned int Cluster::get_cant_docs(){
 	return cant_docs;
 }
 
+void Cluster::setear_id(int id2){
+	id = static_cast<ostringstream*>( &(ostringstream() << id2) )->str();
+}
+
 float Cluster::get_norma(){
 	return norma;
 }
+
+
+string Cluster::get_id(){
+	return id;
+}
+
 
 string Cluster::get_docs(){
 	return docs;
