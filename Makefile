@@ -8,7 +8,7 @@ EXEC = TpGrupo6
 
 
 
-all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o test_cluster.o main.o algoritmo_cluster.o
+all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o test_cluster.o main.o algoritmo_cluster.o test_algoritmo_cluster.o
 
 
 
@@ -38,8 +38,12 @@ test_cluster.o: cluster/test_cluster.cpp
 
 	$(G++) $(FLAGS) cluster/cluster.o cluster/test_cluster.cpp -o cluster/test_cluster.o 
 	
-algoritmo_cluster.o: algoritmo_cluster.cpp
-	$(G++) $(FLAGS) cluster/cluster.o algoritmo_cluster.cpp -o algoritmo_cluster.o
+algoritmo_cluster.o: algoritmo_cluster/algoritmo_cluster.cpp
+	$(G++) $(FLAGS) cluster/cluster.o -c algoritmo_cluster/algoritmo_cluster.cpp -o algoritmo_cluster/algoritmo_cluster.o
+
+test_algoritmo_cluster.o: algoritmo_cluster/test_algoritmo_cluster.cpp
+
+	$(G++) $(FLAGS) cluster/cluster.o algoritmo_cluster/algoritmo_cluster.o algoritmo_cluster/test_algoritmo_cluster.cpp -o algoritmo_cluster/test_algoritmo_cluster.o
 
 vectorizador.o: parser/vectorizador.cpp
 
@@ -57,4 +61,5 @@ clean:
 	rm stopwords/*.o
 	rm porter/*.o
 	rm cluster/*.o
+	rm algoritmo_cluster/*.o
 	rm parser/*.o

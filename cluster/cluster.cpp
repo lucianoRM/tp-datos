@@ -151,3 +151,5 @@ string Cluster::get_id(){
 string Cluster::get_docs(){
 	return docs;
 }
+
+
