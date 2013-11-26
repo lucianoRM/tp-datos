@@ -17,7 +17,7 @@
 
 
 /*Carga todo lo que se guarda en los hashes en disco*/
-void guardar_terminos(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales);
+void guardar_frecuencias(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales);
 
 
 /*Funcion que recorre un directorio e imprime los nombres de los archivos que se encuentran dentro de el*/

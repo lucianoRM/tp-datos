@@ -46,13 +46,14 @@ int main(int args,char* argv[]){
 				delete parser;
 				return retorno;
 			}
-			guardar_terminos(parser->getFrecuenciasGlobales(), parser->getFrecuenciasLocales());	
-			calcular_pesos_globales(parser);
+			guardar_frecuencias(parser->getFrecuenciasGlobales(), parser->getFrecuenciasLocales());	
+			map<string, map<unsigned int, float> >* vectores = vectorizar(parser);
 			cout << "Cantidad de archivos: "<< parser->getCantDocs() << endl;
 			cout << "Cantidad de terminos: "<< parser->getCantTerms() << endl;
 			int t_fin = time(NULL);
 			cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
 			delete parser;
+			delete vectores;
 		}
 	}
 	return 0;
