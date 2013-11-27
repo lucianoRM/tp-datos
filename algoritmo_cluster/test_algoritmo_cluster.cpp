@@ -25,7 +25,7 @@ using std::make_pair;
 void test_agrupar_cluster_a_la_vez(){
 	map<unsigned int,Cluster*>* hash_clusters = new map<unsigned int,Cluster*>();
 	int t_inicio = time(NULL);
-	agrupar(hash_clusters,"../docs_clusters",5,2,0.2,0);
+	agrupar(hash_clusters,"../vectores",100,15,0.5,0);
 	map<unsigned int,Cluster*>::iterator it;
 	int t_fin = time(NULL);
 	cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
@@ -48,7 +48,7 @@ void test_agrupar_cluster_a_la_vez(){
 void test_agrupar_muchos_clusters_a_la_vez(){
 	map<unsigned int,Cluster*>* hash_clusters = new map<unsigned int,Cluster*>();
 	int t_inicio = time(NULL);
-	agrupar(hash_clusters,"../docs_clusters",5,2,0.2,1);
+	agrupar(hash_clusters,"../vectores",100,25,0.8,1);
 	map<unsigned int,Cluster*>::iterator it;
 	int t_fin = time(NULL);
 	cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
@@ -70,8 +70,8 @@ void test_agrupar_muchos_clusters_a_la_vez(){
 
 
 int main(){
-	cout << "ALGORITMO EN EL QUE SE AGRUPAN DOS CLUSTERS EN CADA PASADA" << endl;
-	test_agrupar_cluster_a_la_vez();
+	//cout << "ALGORITMO EN EL QUE SE AGRUPAN DOS CLUSTERS EN CADA PASADA" << endl;
+	//test_agrupar_cluster_a_la_vez();
 	cout << endl << "ALGORITMO EN EL QUE SE AGRUPAN DOS O MAS CLUSTERS EN CADA PASADA" << endl;
 	test_agrupar_muchos_clusters_a_la_vez();
 	return 0;

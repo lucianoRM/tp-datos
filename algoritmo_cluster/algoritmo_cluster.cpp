@@ -79,10 +79,11 @@ void agrupar_cluster(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters)
 
 
 /*ORIGINAL*/
-void agrupar_clusters_iniciales(map<pair<unsigned int,unsigned int>,float>* distancias_entre_clusters,map<unsigned int,Cluster*>* hash_clusters,unsigned int cant_clusters_iniciales,unsigned int cant_clusters_actuales,unsigned int cant_clusters_finales,unsigned int ultimo_cluster_agrupado,map<unsigned int,int>* posicion_prohibida){
+void agrupar_clusters_iniciales(map<pair<unsigned int,unsigned int>,float>* distancias_entre_clusters,map<unsigned int,Cluster*>* hash_clusters,unsigned int cant_clusters_iniciales,unsigned int cant_clusters_actuales,unsigned int cant_clusters_finales,int ultimo_cluster_agrup,map<unsigned int,int>* posicion_prohibida){
 	if(cant_clusters_actuales > cant_clusters_finales){
+		unsigned int ultimo_cluster_agrupado = ultimo_cluster_agrup;
 		unsigned int count_aux = 0;
-		if(cant_clusters_actuales == cant_clusters_iniciales)
+		if(cant_clusters_actuales == cant_clusters_iniciales || ultimo_cluster_agrup == -1)
 			calcular_distancias_iniciales(cant_clusters_iniciales,distancias_entre_clusters,hash_clusters);
 		else{
 			while(count_aux < cant_clusters_iniciales){
@@ -101,7 +102,7 @@ void agrupar_clusters_iniciales(map<pair<unsigned int,unsigned int>,float>* dist
 		pair<unsigned int,unsigned int> prox_a_agruparse;
 		map<pair<unsigned int, unsigned int>,float>::iterator it2; 
 		for(it2 = (*distancias_entre_clusters).begin(); it2 != (*distancias_entre_clusters).end();++it2){
-			if(dist_actual < it2->second){
+			if(dist_actual< it2->second){
 				dist_actual = it2->second;
 				prox_a_agruparse = it2->first;
 			}    //ACA NO HAGO NADA DE LA ENTROPIA. SI QUEREMOS DESPUES LO METEMOS POR ACA
@@ -119,19 +120,25 @@ void agrupar_clusters_iniciales(map<pair<unsigned int,unsigned int>,float>* dist
 }
 
 /*UN DOC EN MÁS DE UN CLUSTER*/
-void agrupar_cluster_alternativo(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters,unsigned int cant_clusters_finales,float cota){
-	unsigned int count;
+void agrupar_cluster_alternativo(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters,float cota){
 	float dist;
-	for(count = 0; count < cant_clusters_finales;count++){
-		dist = (*((*hash_clusters)[count])).calcular_distancia((*cluster).get_centroide(),(*cluster).get_norma());
-		if(dist > cota)
-			(*((*hash_clusters)[count])).recalcular((*cluster).get_docs(),(*cluster).get_centroide(),(*cluster).get_cant_docs());
+	int count = 0;
+	map<unsigned int,Cluster*>::iterator it;
+	for(it = (*hash_clusters).begin(); it != (*hash_clusters).end();++it){
+		dist = (*(it->second)).calcular_distancia((*cluster).get_centroide(),(*cluster).get_norma());
+		if(dist > cota){
+			(*(it->second)).recalcular((*cluster).get_docs(),(*cluster).get_centroide(),(*cluster).get_cant_docs());
+			count++;
+		}
 	}
-	delete cluster;
+	if(count == 0)
+		agrupar_cluster(cluster,hash_clusters);
+	else
+		delete cluster;
 }
 
 /*UN DOC EN MÁS DE UN CLUSTER*/
-void agrupar_clusters_iniciales_alternativo(map<unsigned int,Cluster*>* hash_clusters,unsigned int cant_clusters_actuales,unsigned int cant_clusters_finales,float* cota){
+void agrupar_clusters_iniciales_alternativo(map<unsigned int,Cluster*>* hash_clusters,unsigned int cant_clusters_actuales,unsigned int cant_clusters_finales,float cota){
 	if(cant_clusters_actuales > cant_clusters_finales){
 		unsigned int contador = 0;
 		unsigned int count_aux = 0;
@@ -142,7 +149,7 @@ void agrupar_clusters_iniciales_alternativo(map<unsigned int,Cluster*>* hash_clu
 		map<unsigned int,Cluster*> new_hash_clusters = map<unsigned int,Cluster*>();
 		string docs;
 		map<unsigned int,float> centroide;
-		if(cota != 0){
+		if(cota > 0){
 			while(contador < cant_clusters_actuales){
 				while(count_aux < cant_clusters_actuales){
 					if(cant + pos == cant_clusters_finales)
@@ -150,7 +157,7 @@ void agrupar_clusters_iniciales_alternativo(map<unsigned int,Cluster*>* hash_clu
 					if(count_aux != contador){
 						if(contador > count_aux){
 							dist = (*((*hash_clusters)[contador])).calcular_distancia((*((*hash_clusters)[count_aux])).get_centroide(),(*((*hash_clusters)[count_aux])).get_norma());
-							if(dist > (*cota)){
+							if(dist > cota){
 								centroide = ((*((*hash_clusters)[contador])).get_centroide());
 								docs = ((*((*hash_clusters)[contador])).get_docs());
 								new_hash_clusters[pos] = new Cluster(&centroide,&docs);
@@ -172,28 +179,26 @@ void agrupar_clusters_iniciales_alternativo(map<unsigned int,Cluster*>* hash_clu
 				count_aux = 0;
 				contador++;
 			}
-		}
-		else{
-			map<pair<unsigned int,unsigned int>,float>* distancias_entre_clusters = new map<pair<unsigned int,unsigned int>,float>();
-			map<unsigned int,int>* posicion_prohibida = new map<unsigned int,int>();
-			agrupar_clusters_iniciales(distancias_entre_clusters,hash_clusters,cant_clusters_actuales,cant_clusters_actuales,cant_clusters_finales,0,posicion_prohibida);
-			delete distancias_entre_clusters;
-			delete posicion_prohibida;
-		}
-		if(pos!= 0){
-			for(contador = 0;contador < cant_clusters_actuales ;contador++){
-				if(clusters_a_borrar[contador] == 1)
-					delete (*hash_clusters)[contador];
-				else{
-					new_hash_clusters[pos] = (*hash_clusters)[contador];
-					pos++;
+			if(pos!= 0){
+				for(contador = 0;contador < cant_clusters_actuales ;contador++){
+					if(clusters_a_borrar[contador] == 1)
+						delete (*hash_clusters)[contador];
+					else{
+						new_hash_clusters[pos] = (*hash_clusters)[contador];
+						pos++;
+					}
 				}
+				(*hash_clusters) = new_hash_clusters;
+				agrupar_clusters_iniciales_alternativo(hash_clusters,pos,cant_clusters_finales,cota);
 			}
-			(*hash_clusters) = new_hash_clusters;
+			else{
+				map<pair<unsigned int,unsigned int>,float>* distancias_entre_clusters = new map<pair<unsigned int,unsigned int>,float>();
+				map<unsigned int,int>* posicion_prohibida = new map<unsigned int,int>();
+				agrupar_clusters_iniciales(distancias_entre_clusters,hash_clusters,cant_clusters_actuales,cant_clusters_actuales,cant_clusters_finales,-1,posicion_prohibida);
+				delete distancias_entre_clusters;
+				delete posicion_prohibida;	
+			}
 		}
-		else
-			(*cota) = 0;
-		agrupar_clusters_iniciales_alternativo(hash_clusters,pos,cant_clusters_finales,cota);
 	}
 }
 	
@@ -244,7 +249,7 @@ void agrupar(map<unsigned int,Cluster*>* hash_clusters,const char* nombre_dir,in
 				if(multi == 0)
 					agrupar_clusters_iniciales(distancias_entre_clusters,hash_clusters,cant_docs_iniciales,cant_docs_iniciales,cant_clusters_finales,0,posicion_prohibida);
 				else
-					agrupar_clusters_iniciales_alternativo(hash_clusters,cant_docs_iniciales,cant_clusters_finales,&cota);
+					agrupar_clusters_iniciales_alternativo(hash_clusters,cant_docs_iniciales,cant_clusters_finales,cota);
 				setear_id_para_clusters(hash_clusters);
 				delete posicion_prohibida;
 				count++;
@@ -252,7 +257,7 @@ void agrupar(map<unsigned int,Cluster*>* hash_clusters,const char* nombre_dir,in
 				if(multi == 0)
 					agrupar_cluster(new Cluster(hash_frecuencias,nombre_doc),hash_clusters);
 				else
-					agrupar_cluster_alternativo(new Cluster(hash_frecuencias,nombre_doc),hash_clusters,cant_clusters_finales,cota);
+					agrupar_cluster_alternativo(new Cluster(hash_frecuencias,nombre_doc),hash_clusters,cota);
 			}
 		}
 		check_no_temp = 0;
