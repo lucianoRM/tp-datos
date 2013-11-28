@@ -1,4 +1,3 @@
-
 #Project Builder
 #General
 G++ = g++ 
@@ -8,7 +7,7 @@ EXEC = TpGrupo6
 
 
 
-all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o test_cluster.o main.o algoritmo_cluster.o test_algoritmo_cluster.o
+all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o test_cluster.o main.o algoritmo_cluster.o agrupador.o test_algoritmo_cluster.o
 
 
 
@@ -38,12 +37,15 @@ test_cluster.o: cluster/test_cluster.cpp
 
 	$(G++) $(FLAGS) cluster/cluster.o cluster/test_cluster.cpp -o cluster/test_cluster.o 
 	
-algoritmo_cluster.o: algoritmo_cluster/algoritmo_cluster.cpp
-	$(G++) $(FLAGS) cluster/cluster.o -c algoritmo_cluster/algoritmo_cluster.cpp -o algoritmo_cluster/algoritmo_cluster.o
+algoritmo_cluster.o: cluster/cluster.o algoritmo_cluster/algoritmo_cluster.cpp
+	$(G++) $(FLAGS)  -c algoritmo_cluster/algoritmo_cluster.cpp -o algoritmo_cluster/algoritmo_cluster.o
+
+agrupador.o: cluster/cluster.o algoritmo_cluster/algoritmo_cluster.o algoritmo_cluster/agrupador.cpp
+	$(G++) $(FLAGS) -c algoritmo_cluster/agrupador.cpp -o algoritmo_cluster/agrupador.o
 
 test_algoritmo_cluster.o: algoritmo_cluster/test_algoritmo_cluster.cpp
 
-	$(G++) $(FLAGS) cluster/cluster.o algoritmo_cluster/algoritmo_cluster.o algoritmo_cluster/test_algoritmo_cluster.cpp -o algoritmo_cluster/test_algoritmo_cluster.o
+	$(G++) $(FLAGS) cluster/cluster.o algoritmo_cluster/algoritmo_cluster.o algoritmo_cluster/agrupador.o algoritmo_cluster/test_algoritmo_cluster.cpp -o algoritmo_cluster/test_algoritmo_cluster.o
 
 vectorizador.o: parser/vectorizador.cpp
 

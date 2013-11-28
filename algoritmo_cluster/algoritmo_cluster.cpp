@@ -74,7 +74,8 @@ void eliminar_distancias(unsigned int out,unsigned int cant_clusters_iniciales,m
 }
 
 /*ORIGINAL*/
-void agrupar_cluster(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters){
+string agrupar_cluster(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters){
+	string clusters = ""; 
 	float dist;
 	float dist_actual = NEGATIVO;
 	unsigned int pareja,cant1,cant2,cant_actual;
@@ -92,8 +93,10 @@ void agrupar_cluster(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters)
 			}
 		}
 	}
+	clusters = ((*((*hash_clusters)[pareja])).get_id());
 	(*((*hash_clusters)[pareja])).recalcular((*cluster).get_docs(),(*cluster).get_centroide(),(*cluster).get_cant_docs());
 	delete cluster;
+	return clusters;
 }
 
 
@@ -149,21 +152,25 @@ void agrupar_clusters_iniciales(map< pair<unsigned int,unsigned int>,pair<unsign
 }
 
 /*UN DOC EN MÁS DE UN CLUSTER*/
-void agrupar_cluster_alternativo(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters,float cota){
+string agrupar_cluster_alternativo(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters,float cota){
 	float dist;
 	int count = 0;
+	string clusters = "";
 	map<unsigned int,Cluster*>::iterator it;
 	for(it = (*hash_clusters).begin(); it != (*hash_clusters).end();++it){
 		dist = (*(it->second)).calcular_distancia((*cluster).get_centroide(),(*cluster).get_norma());
 		if(dist > cota){
 			(*(it->second)).recalcular((*cluster).get_docs(),(*cluster).get_centroide(),(*cluster).get_cant_docs());
+			clusters += (*(it->second)).get_id();
 			count++;
 		}
 	}
 	if(count == 0)
-		agrupar_cluster(cluster,hash_clusters);
-	else
+		return agrupar_cluster(cluster,hash_clusters);
+	else{
+		return clusters;
 		delete cluster;
+	}
 }
 
 /*UN DOC EN MÁS DE UN CLUSTER*/
@@ -230,7 +237,32 @@ void agrupar_clusters_iniciales_alternativo(map<unsigned int,Cluster*>* hash_clu
 		}
 	}
 }
-	
+
+
+map<unsigned int,float>* generar_hash_frecuencias(string doc){
+	map<unsigned int,float>* hash_frecuencias = new map<unsigned int,float>();
+	char letra_actual;
+	int linea_size,pos_actual;
+	string ubicacion,frecuencia,parseo_actual,linea;
+	ifstream archivo_frecuencias(doc.c_str());
+	while(getline(archivo_frecuencias,linea)){
+		parseo_actual = "";
+		linea_size = linea.size();
+		for(pos_actual = 0;pos_actual < linea_size;pos_actual++){
+			letra_actual = linea[pos_actual];
+			if(letra_actual == ':'){ 
+				ubicacion = parseo_actual;
+				parseo_actual = "";		
+			}
+			else
+				parseo_actual += letra_actual; 
+		}
+		frecuencia = parseo_actual;
+		(*hash_frecuencias)[atoi(ubicacion.c_str())] = atof(frecuencia.c_str());
+	}
+	archivo_frecuencias.close();
+	return hash_frecuencias;
+}
 
 void agrupar(map<unsigned int,Cluster*>* hash_clusters,const char* nombre_dir,int cant_docs_iniciales,int cant_clusters_finales,float cota,int multi){
 	DIR* dir_pointer = opendir(nombre_dir);
@@ -238,58 +270,32 @@ void agrupar(map<unsigned int,Cluster*>* hash_clusters,const char* nombre_dir,in
 	struct dirent* reg_buffer = readdir(dir_pointer);
 	nombre_directorio+= '/';
 	int count = 0;
-	ifstream archivo_frecuencias;
 	map<unsigned int,float>* hash_frecuencias;
 	map< pair<unsigned int,unsigned int>,pair<unsigned int,float> >* distancias_entre_clusters = new map< pair<unsigned int,unsigned int>,pair<unsigned int,float> >();
-	string parseo_actual,linea,ubicacion,frecuencia;
 	string* nombre_doc;
-	char letra_actual;
-	int pos_actual,linea_size;
-	int check_no_temp = 0;
 	while(reg_buffer != NULL){
 		nombre_doc = new string(reg_buffer->d_name);
-		archivo_frecuencias.open((nombre_directorio + (*nombre_doc)).c_str());
-		hash_frecuencias = new map<unsigned int, float>(); 
-		while(getline(archivo_frecuencias,linea)){
-			check_no_temp = 1;
-			parseo_actual = "";
-			linea_size = linea.size();
-			for(pos_actual = 0;pos_actual < linea_size;pos_actual++){
-				letra_actual = linea[pos_actual];
-				if(letra_actual == ':'){ 
-					ubicacion = parseo_actual;
-					parseo_actual = "";		
-				}
-				else
-					parseo_actual += letra_actual; 
-			}
-			frecuencia = parseo_actual;
-			(*hash_frecuencias)[atoi(ubicacion.c_str())] = atof(frecuencia.c_str());
+		hash_frecuencias = generar_hash_frecuencias((nombre_directorio + (*nombre_doc)));
+		if(count < cant_docs_iniciales - 1){
+			(*hash_clusters)[count] = new Cluster(hash_frecuencias,nombre_doc);
+			count++;
 		}
-		archivo_frecuencias.close();
-		if(check_no_temp != 0){
-			if(count < cant_docs_iniciales - 1){
-				(*hash_clusters)[count] = new Cluster(hash_frecuencias,nombre_doc);
-				count++;
-			}
-			else if(count == cant_docs_iniciales - 1){
-				(*hash_clusters)[count] = new Cluster(hash_frecuencias,nombre_doc);
-				map<unsigned int,int>* posicion_prohibida = new map<unsigned int,int>();
-				if(multi == 0)
-					agrupar_clusters_iniciales(distancias_entre_clusters,hash_clusters,cant_docs_iniciales,cant_docs_iniciales,cant_clusters_finales,0,posicion_prohibida);
-				else
-					agrupar_clusters_iniciales_alternativo(hash_clusters,cant_docs_iniciales,cant_clusters_finales,cota);
-				setear_id_para_clusters(hash_clusters);
-				delete posicion_prohibida;
-				count++;
-			}else{
-				if(multi == 0)
-					agrupar_cluster(new Cluster(hash_frecuencias,nombre_doc),hash_clusters);
-				else
-					agrupar_cluster_alternativo(new Cluster(hash_frecuencias,nombre_doc),hash_clusters,cota);
-			}
+		else if(count == cant_docs_iniciales - 1){
+			(*hash_clusters)[count] = new Cluster(hash_frecuencias,nombre_doc);
+			map<unsigned int,int>* posicion_prohibida = new map<unsigned int,int>();
+			if(multi == 0)
+				agrupar_clusters_iniciales(distancias_entre_clusters,hash_clusters,cant_docs_iniciales,cant_docs_iniciales,cant_clusters_finales,0,posicion_prohibida);
+			else
+				agrupar_clusters_iniciales_alternativo(hash_clusters,cant_docs_iniciales,cant_clusters_finales,cota);
+			setear_id_para_clusters(hash_clusters);
+			delete posicion_prohibida;
+			count++;
+		}else{
+			if(multi == 0)
+				agrupar_cluster(new Cluster(hash_frecuencias,nombre_doc),hash_clusters);
+			else
+				agrupar_cluster_alternativo(new Cluster(hash_frecuencias,nombre_doc),hash_clusters,cota);
 		}
-		check_no_temp = 0;
 		reg_buffer = readdir(dir_pointer);
 		delete hash_frecuencias;
 		delete nombre_doc;
@@ -298,36 +304,5 @@ void agrupar(map<unsigned int,Cluster*>* hash_clusters,const char* nombre_dir,in
 	closedir(dir_pointer);
 }
 
-
-map<unsigned int,Cluster*>* generar_clusters(unsigned int cant_docs,unsigned int cant_clusters,unsigned int multicluster){
-	if(cant_clusters == UNDEFINED)
-		cant_clusters = sqrt(cant_docs);
-	int t_inicio = time(NULL);
-	unsigned int muestra_datos = cant_docs/TAM;
-	map<unsigned int,Cluster*>* hash_clusters = new map<unsigned int,Cluster*>();
- 	agrupar(hash_clusters,"../vectores",muestra_datos,cant_clusters,COTA,multicluster);
- 	int t_fin = time(NULL);
-	cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
-	ofstream clusters;
-	map<unsigned int,Cluster*>::iterator it;
-	for(it = (*hash_clusters).begin();it != (*hash_clusters).end();++it){
-		cout << "DOCS: " << (*(it->second)).get_docs() << endl;
-		cout << "CANT_DOCS: " << (*(it->second)).get_cant_docs() << endl;
-		clusters.open((((*it->second)).get_id()).c_str());
-		clusters << (*(it->second)).get_cant_docs() << ";" << (*(it->second)).get_docs() << endl;
-		clusters.close();
-	}
- 	return hash_clusters;
-}
-
-void destruir_clusters(map<unsigned int,Cluster*>* hash_clusters){
-	map<unsigned int,Cluster*>::iterator it;
-	while(!(*hash_clusters).empty()){
-		it = (*hash_clusters).begin();
-		delete it->second;
-		(*hash_clusters).erase((*hash_clusters).begin());
-	}
-	delete hash_clusters;
-}
 
 

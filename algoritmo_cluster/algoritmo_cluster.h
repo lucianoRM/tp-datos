@@ -20,19 +20,18 @@ void calcular_distancias_iniciales(unsigned int cant_clusters_iniciales,std::map
 
 void eliminar_distancias(unsigned int out,unsigned int cant_clusters_iniciales,std::map<unsigned int,int>* posicion_prohibida,std::map<std::pair<unsigned int,unsigned int>,std::pair<unsigned int,float> >* distancias_entre_clusters);
 
-void agrupar_cluster(Cluster* cluster,std::map<unsigned int,Cluster*>* hash_clusters);
+std::string agrupar_cluster(Cluster* cluster,std::map<unsigned int,Cluster*>* hash_clusters);
 
 void agrupar_clusters_iniciales(std::map<std::pair<unsigned int,unsigned int>,std::pair<unsigned int,float> >* distancias_entre_clusters,std::map<unsigned int,Cluster*>* hash_clusters,unsigned int cant_clusters_iniciales,unsigned int cant_clusters_actuales,unsigned int cant_clusters_finales,unsigned int ultimo_cluster_agrup,std::map<unsigned int,int>* posicion_prohibida);
 
-void agrupar_cluster_alternativo(Cluster* cluster,std::map<unsigned int,Cluster*>* hash_clusters,float cota);
+std::string agrupar_cluster_alternativo(Cluster* cluster,std::map<unsigned int,Cluster*>* hash_clusters,float cota);
 
 void agrupar_clusters_iniciales_alternativo(std::map<unsigned int,Cluster*>* hash_clusters,unsigned int cant_clusters_actuales,unsigned int cant_clusters_finales,float cota);
 
+std::map<unsigned int,float>* generar_hash_frecuencias(std::string doc);
+
 void agrupar(std::map<unsigned int,Cluster*>* hash_clusters,const char* nombre_dir,int cant_docs_iniciales,int cant_clusters_finales,float cota,int multi);
 
-std::map<unsigned int,Cluster*>* generar_clusters(unsigned int cant_docs,unsigned int cant_clusters,unsigned int multicluster);
-
-void destruir_clusters(std::map<unsigned int,Cluster*>* hash_clusters);
 
 #endif //ALGORITMO_CLUSTER_H
 
