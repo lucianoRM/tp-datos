@@ -3,6 +3,7 @@
 #include <fstream>
 #include <dirent.h>
 #include <map>
+#include <math.h>
 #include <stdlib.h>
 #include <string>
 #include <string.h>
@@ -20,6 +21,14 @@ using std::endl;
 using std::ofstream;
 using std::make_pair;
 
+#define PERTENECE 1
+#define INF 100000
+#define COTA_AUX 0.3
+#define NEGATIVO -1
+#define MULTICLUSTER -1
+#define UNDEFINED 0
+#define TAM 6
+#define COTA 0.8
 
 void setear_id_para_clusters(map<unsigned int,Cluster*>* hash_clusters){
 	map<unsigned int,Cluster*>::iterator it;
@@ -31,14 +40,18 @@ void setear_id_para_clusters(map<unsigned int,Cluster*>* hash_clusters){
 }
 
 
-void calcular_distancias_iniciales(unsigned int cant_clusters_iniciales,map<pair<unsigned int,unsigned int>,float>* distancias_entre_clusters,map<unsigned int,Cluster*>* hash_clusters){
+void calcular_distancias_iniciales(unsigned int cant_clusters_iniciales,map< pair<unsigned int,unsigned int>,pair<unsigned int,float> >* distancias_entre_clusters,map<unsigned int,Cluster*>* hash_clusters){
 	unsigned int contador = 0;
 	unsigned int count_aux = 0;
+	unsigned int cant1,cant2;
 	while(contador < cant_clusters_iniciales){
+		cant1 = (*((*hash_clusters)[contador])).get_cant_docs();
 		while(count_aux < cant_clusters_iniciales){
 			if(count_aux != contador){
-				if(contador > count_aux)
-					(*distancias_entre_clusters)[make_pair(count_aux,contador)] = (*((*hash_clusters)[contador])).calcular_distancia((*((*hash_clusters)[count_aux])).get_centroide(),(*((*hash_clusters)[count_aux])).get_norma());
+				if(contador > count_aux){
+					cant2 = (*((*hash_clusters)[count_aux])).get_cant_docs();
+					(*distancias_entre_clusters)[make_pair(count_aux,contador)] = make_pair(cant1 + cant2,(*((*hash_clusters)[contador])).calcular_distancia((*((*hash_clusters)[count_aux])).get_centroide(),(*((*hash_clusters)[count_aux])).get_norma()));
+				}
 			}
 			count_aux++;
 		}
@@ -48,10 +61,10 @@ void calcular_distancias_iniciales(unsigned int cant_clusters_iniciales,map<pair
 }
 
 //elimino del hash las distancias en las que interviene el cluster que se agrupó
-void eliminar_distancias(unsigned int out,unsigned int cant_clusters_iniciales,map<unsigned int,int>* posicion_prohibida,map<pair<unsigned int,unsigned int>,float>* distancias_entre_clusters){
+void eliminar_distancias(unsigned int out,unsigned int cant_clusters_iniciales,map<unsigned int,int>* posicion_prohibida,map< pair<unsigned int,unsigned int>,pair<unsigned int,float> >* distancias_entre_clusters){
 	unsigned int contador;	
 	for(contador = 0;contador < cant_clusters_iniciales;contador++){
-		if((*posicion_prohibida)[contador] != 1){
+		if((*posicion_prohibida)[contador] != PERTENECE){
 			if(out > contador)
 				(*distancias_entre_clusters).erase(make_pair(contador,out));
 			else
@@ -62,15 +75,21 @@ void eliminar_distancias(unsigned int out,unsigned int cant_clusters_iniciales,m
 
 /*ORIGINAL*/
 void agrupar_cluster(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters){
-	int dist = -1;
-	int dist_actual;
-	unsigned int pareja;
+	float dist;
+	float dist_actual = NEGATIVO;
+	unsigned int pareja,cant1,cant2,cant_actual;
+	cant1 = (*cluster).get_cant_docs();
+	cant_actual = INF;
 	map<unsigned int,Cluster*>::iterator it;
 	for(it = (*hash_clusters).begin();it!= (*hash_clusters).end();++it){
-		dist_actual = (*(it->second)).calcular_distancia((*cluster).get_centroide(),(*cluster).get_norma());
-		if(dist < dist_actual){
-			dist = dist_actual;
-			pareja = it->first;
+		dist = (*(it->second)).calcular_distancia((*cluster).get_centroide(),(*cluster).get_norma());
+		cant2 = (*(it->second)).get_cant_docs();
+		if(dist_actual < dist){
+			if(cant_actual > (cant1 + cant2) || (dist - dist_actual) > COTA_AUX){
+				dist_actual = dist;
+				pareja = it->first;
+				cant_actual = cant1 + cant2;
+			}
 		}
 	}
 	(*((*hash_clusters)[pareja])).recalcular((*cluster).get_docs(),(*cluster).get_centroide(),(*cluster).get_cant_docs());
@@ -79,33 +98,43 @@ void agrupar_cluster(Cluster* cluster,map<unsigned int,Cluster*>* hash_clusters)
 
 
 /*ORIGINAL*/
-void agrupar_clusters_iniciales(map<pair<unsigned int,unsigned int>,float>* distancias_entre_clusters,map<unsigned int,Cluster*>* hash_clusters,unsigned int cant_clusters_iniciales,unsigned int cant_clusters_actuales,unsigned int cant_clusters_finales,int ultimo_cluster_agrup,map<unsigned int,int>* posicion_prohibida){
+void agrupar_clusters_iniciales(map< pair<unsigned int,unsigned int>,pair<unsigned int,float> >* distancias_entre_clusters,map<unsigned int,Cluster*>* hash_clusters,unsigned int cant_clusters_iniciales,unsigned int cant_clusters_actuales,unsigned int cant_clusters_finales,int ultimo_cluster_agrup,map<unsigned int,int>* posicion_prohibida){
 	if(cant_clusters_actuales > cant_clusters_finales){
 		unsigned int ultimo_cluster_agrupado = ultimo_cluster_agrup;
 		unsigned int count_aux = 0;
-		if(cant_clusters_actuales == cant_clusters_iniciales || ultimo_cluster_agrup == -1)
+		unsigned int cant1,cant2;
+		if(cant_clusters_actuales == cant_clusters_iniciales || ultimo_cluster_agrup == MULTICLUSTER)
 			calcular_distancias_iniciales(cant_clusters_iniciales,distancias_entre_clusters,hash_clusters);
 		else{
+			cant1 = (*((*hash_clusters)[ultimo_cluster_agrupado])).get_cant_docs();
 			while(count_aux < cant_clusters_iniciales){
 				if(count_aux != ultimo_cluster_agrupado){
-					if((*posicion_prohibida)[count_aux] != 1){
+					if((*posicion_prohibida)[count_aux] != PERTENECE){
+						cant2 = (*((*hash_clusters)[count_aux])).get_cant_docs();
 						if(ultimo_cluster_agrupado > count_aux)
-							(*distancias_entre_clusters)[make_pair(count_aux,ultimo_cluster_agrupado)] = (*((*hash_clusters)[ultimo_cluster_agrupado])).calcular_distancia((*((*hash_clusters)[count_aux])).get_centroide(),(*((*hash_clusters)[count_aux])).get_norma());
+							(*distancias_entre_clusters)[make_pair(count_aux,ultimo_cluster_agrupado)] = make_pair(cant1 + cant2,(*((*hash_clusters)[ultimo_cluster_agrupado])).calcular_distancia((*((*hash_clusters)[count_aux])).get_centroide(),(*((*hash_clusters)[count_aux])).get_norma()));
 						else
-							(*distancias_entre_clusters)[make_pair(ultimo_cluster_agrupado,count_aux)] = (*((*hash_clusters)[ultimo_cluster_agrupado])).calcular_distancia((*((*hash_clusters)[count_aux])).get_centroide(),(*((*hash_clusters)[count_aux])).get_norma());
+							(*distancias_entre_clusters)[make_pair(ultimo_cluster_agrupado,count_aux)] = make_pair(cant1 + cant2,(*((*hash_clusters)[ultimo_cluster_agrupado])).calcular_distancia((*((*hash_clusters)[count_aux])).get_centroide(),(*((*hash_clusters)[count_aux])).get_norma()));
 					}	
 				}
 				count_aux++;
 			}
 		}
-		float dist_actual = -1;
+		cant1 = INF;
+		float dist_actual = NEGATIVO;
+		float dist_aux;
 		pair<unsigned int,unsigned int> prox_a_agruparse;
-		map<pair<unsigned int, unsigned int>,float>::iterator it2; 
+		map<pair<unsigned int, unsigned int>,pair<unsigned int,float> >::iterator it2; 
 		for(it2 = (*distancias_entre_clusters).begin(); it2 != (*distancias_entre_clusters).end();++it2){
-			if(dist_actual< it2->second){
-				dist_actual = it2->second;
-				prox_a_agruparse = it2->first;
-			}    //ACA NO HAGO NADA DE LA ENTROPIA. SI QUEREMOS DESPUES LO METEMOS POR ACA
+			cant2 = (it2->second).first;
+			dist_aux = (it2->second).second;
+			if(dist_actual < dist_aux){
+				if(cant2 < cant1 || (dist_aux - dist_actual) > COTA_AUX){
+					dist_actual = dist_aux;
+					prox_a_agruparse = it2->first;
+				}
+			}    
+			//ACA NO HAGO NADA DE LA ENTROPIA. SI QUEREMOS DESPUES LO METEMOS POR ACA
 		}
 		unsigned int prox,out;
 		(*(*hash_clusters)[prox_a_agruparse.second]).recalcular((*(((*hash_clusters)[prox_a_agruparse.first]))).get_docs(),(*((*hash_clusters)[prox_a_agruparse.first])).get_centroide(),(*((*hash_clusters)[prox_a_agruparse.first])).get_cant_docs());
@@ -162,12 +191,12 @@ void agrupar_clusters_iniciales_alternativo(map<unsigned int,Cluster*>* hash_clu
 								docs = ((*((*hash_clusters)[contador])).get_docs());
 								new_hash_clusters[pos] = new Cluster(&centroide,&docs);
 								(*(new_hash_clusters[pos])).recalcular((*((*hash_clusters)[count_aux])).get_docs(),(*((*hash_clusters)[count_aux])).get_centroide(),(*((*hash_clusters)[count_aux])).get_cant_docs());
-								if(clusters_a_borrar[contador] != 1){
-									clusters_a_borrar[contador] = 1;
+								if(clusters_a_borrar[contador] != PERTENECE){
+									clusters_a_borrar[contador] = PERTENECE;
 									cant -= 1;
 								}
-								if(clusters_a_borrar[count_aux] != 1){
-									clusters_a_borrar[count_aux] = 1;
+								if(clusters_a_borrar[count_aux] != PERTENECE){
+									clusters_a_borrar[count_aux] = PERTENECE;
 									cant-= 1;
 								}
 								pos++;
@@ -181,7 +210,7 @@ void agrupar_clusters_iniciales_alternativo(map<unsigned int,Cluster*>* hash_clu
 			}
 			if(pos!= 0){
 				for(contador = 0;contador < cant_clusters_actuales ;contador++){
-					if(clusters_a_borrar[contador] == 1)
+					if(clusters_a_borrar[contador] == PERTENECE)
 						delete (*hash_clusters)[contador];
 					else{
 						new_hash_clusters[pos] = (*hash_clusters)[contador];
@@ -192,9 +221,9 @@ void agrupar_clusters_iniciales_alternativo(map<unsigned int,Cluster*>* hash_clu
 				agrupar_clusters_iniciales_alternativo(hash_clusters,pos,cant_clusters_finales,cota);
 			}
 			else{
-				map<pair<unsigned int,unsigned int>,float>* distancias_entre_clusters = new map<pair<unsigned int,unsigned int>,float>();
+				map< pair<unsigned int,unsigned int>, pair<unsigned int,float> >* distancias_entre_clusters = new map< pair<unsigned int,unsigned int>,pair<unsigned int,float> >();
 				map<unsigned int,int>* posicion_prohibida = new map<unsigned int,int>();
-				agrupar_clusters_iniciales(distancias_entre_clusters,hash_clusters,cant_clusters_actuales,cant_clusters_actuales,cant_clusters_finales,-1,posicion_prohibida);
+				agrupar_clusters_iniciales(distancias_entre_clusters,hash_clusters,cant_clusters_actuales,cant_clusters_actuales,cant_clusters_finales,MULTICLUSTER,posicion_prohibida);
 				delete distancias_entre_clusters;
 				delete posicion_prohibida;	
 			}
@@ -211,7 +240,7 @@ void agrupar(map<unsigned int,Cluster*>* hash_clusters,const char* nombre_dir,in
 	int count = 0;
 	ifstream archivo_frecuencias;
 	map<unsigned int,float>* hash_frecuencias;
-	map<pair<unsigned int,unsigned int>,float>* distancias_entre_clusters = new map<pair<unsigned int,unsigned int>,float>();
+	map< pair<unsigned int,unsigned int>,pair<unsigned int,float> >* distancias_entre_clusters = new map< pair<unsigned int,unsigned int>,pair<unsigned int,float> >();
 	string parseo_actual,linea,ubicacion,frecuencia;
 	string* nombre_doc;
 	char letra_actual;
@@ -270,14 +299,17 @@ void agrupar(map<unsigned int,Cluster*>* hash_clusters,const char* nombre_dir,in
 }
 
 
-/*int main(){
-	map<unsigned int,Cluster*>* hash_clusters = new map<unsigned int,Cluster*>();
+map<unsigned int,Cluster*>* generar_clusters(unsigned int cant_docs,unsigned int cant_clusters,unsigned int multicluster){
+	if(cant_clusters == UNDEFINED)
+		cant_clusters = sqrt(cant_docs);
 	int t_inicio = time(NULL);
-	agrupar(hash_clusters,"docs_clusters",5,2,0.2,1);
-	map<unsigned int,Cluster*>::iterator it;
-	int t_fin = time(NULL);
+	unsigned int muestra_datos = cant_docs/TAM;
+	map<unsigned int,Cluster*>* hash_clusters = new map<unsigned int,Cluster*>();
+ 	agrupar(hash_clusters,"../vectores",muestra_datos,cant_clusters,COTA,multicluster);
+ 	int t_fin = time(NULL);
 	cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
 	ofstream clusters;
+	map<unsigned int,Cluster*>::iterator it;
 	for(it = (*hash_clusters).begin();it != (*hash_clusters).end();++it){
 		cout << "DOCS: " << (*(it->second)).get_docs() << endl;
 		cout << "CANT_DOCS: " << (*(it->second)).get_cant_docs() << endl;
@@ -285,11 +317,17 @@ void agrupar(map<unsigned int,Cluster*>* hash_clusters,const char* nombre_dir,in
 		clusters << (*(it->second)).get_cant_docs() << ";" << (*(it->second)).get_docs() << endl;
 		clusters.close();
 	}
+ 	return hash_clusters;
+}
+
+void destruir_clusters(map<unsigned int,Cluster*>* hash_clusters){
+	map<unsigned int,Cluster*>::iterator it;
 	while(!(*hash_clusters).empty()){
 		it = (*hash_clusters).begin();
 		delete it->second;
 		(*hash_clusters).erase((*hash_clusters).begin());
 	}
 	delete hash_clusters;
-	return 0;
-}*/
+}
+
+

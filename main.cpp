@@ -10,6 +10,7 @@
 #include "porter/porter.h"
 #include "parser/vectorizador.h"
 #include "dir_seeker.h"
+#include "algoritmo_cluster/algoritmo_cluster.h"
 
 #define NOMBRE_TP "./TpGrupo6"
 
