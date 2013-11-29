@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iostream>
 #include <fstream>
 #include <dirent.h>
 #include <map>
@@ -29,11 +28,11 @@ void test_agrupar_cluster_a_la_vez(){
 	map<unsigned int,Cluster*>::iterator it;
 	int t_fin = time(NULL);
 	cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
-	ofstream clusters;
 	for(it = (*hash_clusters).begin();it != (*hash_clusters).end();++it){
 		cout << "DOCS: " << (*(it->second)).get_docs() << endl;
 		cout << "CANT_DOCS: " << (*(it->second)).get_cant_docs() << endl;
-		clusters.open((((*it->second)).get_id()).c_str());
+		cout << (*it->second).get_id() << endl;
+		ofstream clusters((((*it->second)).get_id()).c_str());
 		clusters << (*(it->second)).get_cant_docs() << ";" << (*(it->second)).get_docs() << endl;
 		clusters.close();
 	}
@@ -52,11 +51,10 @@ void test_agrupar_muchos_clusters_a_la_vez(){
 	map<unsigned int,Cluster*>::iterator it;
 	int t_fin = time(NULL);
 	cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
-	ofstream clusters;
 	for(it = (*hash_clusters).begin();it != (*hash_clusters).end();++it){
 		cout << "DOCS: " << (*(it->second)).get_docs() << endl;
 		cout << "CANT_DOCS: " << (*(it->second)).get_cant_docs() << endl;
-		clusters.open((((*it->second)).get_id()).c_str());
+		ofstream clusters((((*it->second)).get_id()).c_str());
 		clusters << (*(it->second)).get_cant_docs() << ";" << (*(it->second)).get_docs() << endl;
 		clusters.close();
 	}

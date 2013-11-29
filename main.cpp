@@ -10,6 +10,8 @@
 #include "porter/porter.h"
 #include "parser/vectorizador.h"
 #include "dir_seeker.h"
+#include "cluster/cluster.h"
+#include "kmeans.h"
 
 #define NOMBRE_TP "./TpGrupo6"
 
@@ -29,6 +31,7 @@ void help(){
 
 int main(int args,char* argv[]){
 	
+	
 	if (args == 1){
 		help();
 		return 0;
@@ -38,6 +41,7 @@ int main(int args,char* argv[]){
 				help();
 				return 1;
 			}
+			//int i;
 			int t_inicio = time(NULL);
 			Parser* parser =new Parser();
 			int retorno = parsear_archivos(argv[2],parser);
@@ -48,12 +52,35 @@ int main(int args,char* argv[]){
 			}
 			guardar_frecuencias(parser->getFrecuenciasGlobales(), parser->getFrecuenciasLocales());	
 			map<string, map<unsigned int, float> >* vectores = vectorizar(parser);
+			/*map<string, map<unsigned int, float> >* vectores_iniciales = new map<string, map<unsigned int, float> >;
+			map<string,map<unsigned int,float> >::iterator it_vectores;		
+			for(it_vectores = vectores->begin(),i = 0;it_vectores != vectores->end() && i<100;++it_vectores,i++){
+				(*vectores_iniciales)[it_vectores->first] = it_vectores->second;
+			}*/
+			map<string,Cluster*>* clusters = k_means(vectores,4,parser->getCantTerms(),0.99);
+			delete vectores;
+			/*string mas_cercano;
+			map<string,map<unsigned int,float> >::iterator it_vectores2;
+			for(it_vectores2 = vectores->begin();it_vectores2 != vectores->end();++it_vectores2){
+				mas_cercano = distancia_minima(clusters,&it_vectores->second,calcular_norma(it_vectores->second));
+				(*clusters)[mas_cercano]->agregar_vector(&it_vectores2->second,it_vectores2->first);
+			}*/
+			map<string,Cluster*>::iterator it;
+			for(it = clusters->begin(); it!= clusters->end() ; ++it){
+				ofstream salida(("Clusters/" + it->first).c_str());
+				salida << it->second->get_docs() << endl;
+				salida.close();
+				delete it->second;
+			}
+			delete clusters;
+			
+			
 			cout << "Cantidad de archivos: "<< parser->getCantDocs() << endl;
 			cout << "Cantidad de terminos: "<< parser->getCantTerms() << endl;
 			int t_fin = time(NULL);
 			cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
 			delete parser;
-			delete vectores;
+			//delete vectores;
 		}
 	}
 	return 0;

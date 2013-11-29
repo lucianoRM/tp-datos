@@ -66,7 +66,6 @@ int parsear_archivos(string nombre_dir,Parser* parser){
 	nombre_directorio += "/";
 	string linea;
 	ifstream archivo;
-	int i;
 	
 	while(reg_buffer != NULL){
 		nombre_archivo = (reg_buffer->d_name);

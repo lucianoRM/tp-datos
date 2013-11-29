@@ -3,12 +3,12 @@
 #General
 G++ = g++ 
 CC = gcc
-FLAGS = -Wall -Wextra -g -pedantic 
+FLAGS = -Wall -Wextra -g -pedantic -O3 
 EXEC = TpGrupo6
 
 
 
-all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o test_cluster.o main.o algoritmo_cluster.o test_algoritmo_cluster.o
+all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o kmeans.o  main.o 
 
 
 
@@ -34,24 +34,17 @@ cluster.o: cluster/cluster.cpp
 
 	$(G++) $(FLAGS) -c cluster/cluster.cpp -o cluster/cluster.o
 
-test_cluster.o: cluster/test_cluster.cpp
-
-	$(G++) $(FLAGS) cluster/cluster.o cluster/test_cluster.cpp -o cluster/test_cluster.o 
-	
-algoritmo_cluster.o: algoritmo_cluster/algoritmo_cluster.cpp
-	$(G++) $(FLAGS) cluster/cluster.o -c algoritmo_cluster/algoritmo_cluster.cpp -o algoritmo_cluster/algoritmo_cluster.o
-
-test_algoritmo_cluster.o: algoritmo_cluster/test_algoritmo_cluster.cpp
-
-	$(G++) $(FLAGS) cluster/cluster.o algoritmo_cluster/algoritmo_cluster.o algoritmo_cluster/test_algoritmo_cluster.cpp -o algoritmo_cluster/test_algoritmo_cluster.o
-
 vectorizador.o: parser/vectorizador.cpp
 
 	$(G++) $(FLAGS) -c parser/vectorizador.cpp -o parser/vectorizador.o
 
 main.o: main.cpp
 
-	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o dir_seeker.o main.cpp -o $(EXEC)
+	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o cluster/cluster.o kmeans.o dir_seeker.o main.cpp -o $(EXEC)
+	
+kmeans.o: kmeans.cpp
+		
+	$(G++) $(FLAGS) -c	kmeans.cpp -o kmeans.o
 	
 	
 #Cleanup

@@ -61,14 +61,15 @@ map<string,map<unsigned int,float> >* vectorizar(Parser* parser){
 			(*vectores)[it_local_ext->first][hash_referencias[it_local_int->first]] = peso;
 		}
 		archivos_procesados++;
-		if(archivos_procesados > MAX){
+		/*if(archivos_procesados > MAX){
 				cout << "WRITING" << endl;
 				cargar_a_disco(vectores);
 				delete vectores;
 				vectores = new map<string,map<unsigned int,float> >;
 				archivos_procesados = 0;
-		}
+		}*/
 	}
+	cargar_a_disco(vectores);
 	return vectores;
 }
 
