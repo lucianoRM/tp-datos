@@ -1470,6 +1470,7 @@ disc: 1
 discern: 7
 disciplinari: 1
 discipline: 16
+disclaim: 1
 disclos: 8
 disclose: 1
 disclosure: 1
@@ -1574,6 +1575,7 @@ doubtfulli: 1
 doubtingli: 2
 doubtless: 2
 doughnut: 1
+downcast: 1
 downright: 5
 downstair: 7
 downward: 5
@@ -1619,6 +1621,7 @@ drought: 1
 drove: 5
 drown: 1
 drowsi: 1
+drowsili: 2
 drug: 4
 druid: 1
 drum: 6
@@ -1920,6 +1923,7 @@ faint: 16
 faintest: 2
 faintli: 3
 fair: 13
+fairest: 1
 fairi: 2
 fairli: 7
 faith: 7
@@ -2066,6 +2070,7 @@ float: 3
 flock: 6
 flood: 4
 floor: 24
+florid: 3
 flow: 6
 flower: 33
 floweri: 1
@@ -2543,6 +2548,7 @@ holidai: 1
 hollerin: 1
 hollow: 3
 home: 62
+homestead: 1
 homeward: 5
 hommel: 1
 homogene: 1
@@ -5851,6 +5857,7 @@ whatev: 33
 wheedl: 1
 wheel: 7
 wheelbarrow: 1
+wheelwright: 3
 whenev: 5
 wherein: 1
 wherev: 4

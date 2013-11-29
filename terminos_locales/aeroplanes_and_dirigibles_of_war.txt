@@ -2543,6 +2543,7 @@ repeatedli: 2
 repel: 3
 replac: 1
 repli: 2
+replica: 1
 report: 15
 repos: 1
 repres: 31
@@ -2947,6 +2948,7 @@ strengthen: 4
 strenuou: 2
 stress: 4
 stretch: 14
+strew: 1
 stricken: 1
 strictest: 2
 stride: 2

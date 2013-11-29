@@ -6,14 +6,12 @@ action: 1
 adapt: 1
 administ: 1
 admir: 2
-admitt: 1
 adopt: 1
 advanc: 3
 aesthet: 1
 afar: 1
 affair: 2
 affect: 1
-aforement: 1
 agent: 1
 agoni: 1
 agre: 1
@@ -24,7 +22,6 @@ allow: 4
 alreadi: 1
 although: 1
 among: 4
-amphitheat: 2
 ancestor: 1
 anguish: 1
 anoth: 2
@@ -52,7 +49,6 @@ aw: 1
 awai: 1
 band: 1
 barbar: 12
-barleycorn: 1
 base: 1
 beast: 1
 beastli: 1
@@ -64,8 +60,6 @@ behind: 4
 bell: 3
 beneath: 4
 better: 2
-bland: 1
-blander: 1
 bless: 1
 blood: 4
 bloodi: 1
@@ -96,7 +90,6 @@ charg: 2
 cheek: 1
 cheerili: 1
 children: 1
-chorist: 1
 clang: 1
 combin: 1
 come: 3
@@ -203,7 +196,6 @@ fang: 1
 fate: 5
 father: 1
 fervent: 1
-fervid: 1
 fiercest: 2
 find: 1
 fine: 1
@@ -223,7 +215,6 @@ found: 1
 frame: 1
 frank: 2
 front: 1
-futur: 1
 gain: 1
 galleri: 3
 gather: 2
@@ -233,9 +224,7 @@ girl: 1
 give: 1
 given: 4
 glad: 2
-gladiat: 1
 glanc: 3
-gnash: 1
 gold: 1
 golden: 1
 gone: 1
@@ -295,7 +284,6 @@ incorrupt: 2
 indic: 1
 inevit: 1
 influenc: 2
-ingraft: 1
 innoc: 4
 inside: 1
 instanc: 1
@@ -337,7 +325,6 @@ littl: 1
 live: 2
 long: 1
 look: 2
-looker: 1
 lost: 3
 love: 10
 loveliest: 1
@@ -347,7 +334,6 @@ made: 3
 maiden: 4
 majesti: 2
 make: 3
-malone: 1
 mani: 1
 manli: 1
 marri: 2
@@ -477,7 +463,6 @@ retribut: 1
 return: 1
 reveri: 1
 reward: 5
-rhapsodi: 1
 rich: 1
 right: 5
 ring: 1
@@ -610,7 +595,6 @@ went: 2
 whenev: 1
 whether: 4
 white: 1
-whiter: 1
 whole: 2
 wholli: 1
 whose: 2

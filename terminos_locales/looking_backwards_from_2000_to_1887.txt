@@ -951,6 +951,7 @@ dead: 10
 deaf: 1
 deal: 14
 dear: 8
+dearer: 1
 dearli: 1
 death: 10
 debauch: 3

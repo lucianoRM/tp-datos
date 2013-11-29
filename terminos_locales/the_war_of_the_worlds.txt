@@ -761,6 +761,7 @@ cooler: 1
 coordin: 1
 cope: 2
 copi: 3
+copious: 1
 copper: 2
 cops: 2
 cordon: 1
@@ -2063,6 +2064,7 @@ larger: 6
 largest: 1
 lark: 1
 lash: 1
+lassi: 1
 lassitude: 1
 last: 69
 latch: 2
@@ -2293,6 +2295,7 @@ minist: 1
 minute: 23
 miracl: 3
 mirror: 5
+misadventure: 2
 miscellani: 1
 mischief: 1
 mischiev: 1

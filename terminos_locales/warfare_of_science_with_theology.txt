@@ -127,6 +127,7 @@ advis: 11
 advoc: 15
 aerea: 1
 aerial: 1
+aesthet: 3
 afar: 3
 affair: 9
 affect: 13
@@ -304,6 +305,7 @@ antagon: 6
 antagonist: 3
 anteced: 1
 anthoni: 6
+anthropolog: 29
 anti: 12
 antic: 1
 anticip: 19
@@ -1112,6 +1114,7 @@ chariot: 1
 charit: 5
 chariti: 13
 charl: 38
+charlatan: 3
 charleston: 2
 charm: 10
 charmingli: 1
@@ -1661,6 +1664,7 @@ damian: 5
 damn: 8
 damnabl: 5
 damnate: 11
+damsel: 1
 dan: 11
 danc: 16
 dane: 2
@@ -1944,6 +1948,7 @@ discov: 55
 discover: 2
 discoveri: 189
 discredit: 17
+discreetli: 4
 discrep: 11
 discret: 3
 discrimin: 1
@@ -2952,6 +2957,7 @@ gift: 72
 gilbert: 1
 gile: 4
 gilt: 1
+girdl: 4
 girl: 20
 give: 207
 given: 279
@@ -3474,6 +3480,7 @@ incident: 5
 inclement: 1
 inclin: 14
 incline: 1
+inclos: 4
 inclose: 3
 includ: 20
 include: 2
@@ -5006,6 +5013,7 @@ petru: 1
 petti: 10
 petul: 1
 peupl: 7
+pfarrer: 1
 pforzheim: 1
 phalanx: 3
 pharaoh: 3
@@ -7039,6 +7047,7 @@ tyranni: 4
 tyrant: 2
 tyre: 1
 tyrol: 1
+ulrich: 2
 ultim: 6
 ultra: 3
 ulyss: 1
@@ -7167,6 +7176,7 @@ unsparingli: 1
 unspeak: 3
 unsubstanti: 1
 unsuccess: 1
+unsuccessfulli: 1
 unsuit: 1
 unsupport: 1
 untam: 1
@@ -7572,6 +7582,7 @@ worth: 7
 worthi: 39
 worthless: 9
 wound: 5
+wove: 1
 woven: 1
 wrangl: 3
 wrap: 3

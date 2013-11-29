@@ -2167,6 +2167,7 @@ carson: 2
 cart: 1
 cartagena: 5
 cartago: 1
+cartel: 1
 cartier: 11
 caruana: 1
 carv: 2

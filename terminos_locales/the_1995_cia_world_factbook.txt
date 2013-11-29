@@ -2217,6 +2217,7 @@ canindeyu: 1
 cankiri: 1
 cankuzo: 1
 canlaon: 1
+cann: 1
 cannabi: 54
 canneri: 5
 cannon: 1

@@ -12,6 +12,7 @@
 #include "dir_seeker.h"
 #include "cluster/cluster.h"
 #include "kmeans.h"
+#include <cstdlib>
 
 #define NOMBRE_TP "./TpGrupo6"
 
@@ -57,7 +58,10 @@ int main(int args,char* argv[]){
 			for(it_vectores = vectores->begin(),i = 0;it_vectores != vectores->end() && i<100;++it_vectores,i++){
 				(*vectores_iniciales)[it_vectores->first] = it_vectores->second;
 			}*/
-			map<string,Cluster*>* clusters = k_means(vectores,4,parser->getCantTerms(),0.99);
+			unsigned int cant_terms = parser->getCantTerms();
+			unsigned int cant_docs = parser->getCantDocs();
+			delete parser;
+			map<string,Cluster*>* clusters = k_means(vectores,atoi(argv[3]),cant_terms,0.99);
 			delete vectores;
 			/*string mas_cercano;
 			map<string,map<unsigned int,float> >::iterator it_vectores2;
@@ -67,20 +71,22 @@ int main(int args,char* argv[]){
 			}*/
 			map<string,Cluster*>::iterator it;
 			for(it = clusters->begin(); it!= clusters->end() ; ++it){
-				ofstream salida(("Clusters/" + it->first).c_str());
-				salida << it->second->get_docs() << endl;
-				salida.close();
+				if(it->second->get_cant_docs() != 0){
+					ofstream salida(("Clusters/" + it->first).c_str());
+					cout << it->first << endl << it->second->get_docs() << endl;
+					salida << it->second->get_docs() << endl;
+					salida.close();
+				}
 				delete it->second;
 			}
 			delete clusters;
 			
 			
-			cout << "Cantidad de archivos: "<< parser->getCantDocs() << endl;
-			cout << "Cantidad de terminos: "<< parser->getCantTerms() << endl;
+			cout << "Cantidad de archivos: "<< cant_docs << endl;
+			cout << "Cantidad de terminos: "<< cant_terms << endl;
 			int t_fin = time(NULL);
 			cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
-			delete parser;
-			//delete vectores;
+			
 		}
 	}
 	return 0;

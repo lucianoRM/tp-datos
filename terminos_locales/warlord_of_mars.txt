@@ -243,6 +243,7 @@ await: 16
 awake: 1
 awaken: 6
 aware: 3
+awesome: 2
 awoke: 1
 ax: 1
 back: 97

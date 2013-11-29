@@ -46,7 +46,7 @@ map<unsigned int,float>* generar_centroide_aleatorio(unsigned int cant_terminos)
 	while(j <= cant_terminos){		
 		peso = (rand() % 27 + 7)/(float)7; //es primo, genera numeros float entre 1 y 4, 4 nunca.
 		(*centroide)[j] = peso; //Numero entre 1 y 4 (es mayor a 1 porque van a ser todos asi, y menor a 4 porque es un peso normal para un termino.)
-		suma = rand() % 10 + 1;		
+		suma = rand() % 100 + 1;		
 		j += suma;	
 	}
 	
@@ -81,42 +81,48 @@ void resetear_clusters(map<string,Cluster*>* clusters){
 		it->second->resetear_cluster();
 }
 
-
+void agregar_centroides_aleatorios(vector<map<unsigned int,float>* >* centroides,unsigned int cant_centroides,unsigned int cant_terms){
+	unsigned int i;	
+	for (i= 0; i < cant_centroides;i++)
+			centroides->push_back(generar_centroide_aleatorio(cant_terms));
+}
+	
 
 
 
 map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,unsigned int cant_clusters,unsigned int cant_terms,float tolerancia){
 	
-	unsigned int i;
+	unsigned int i,j;
 	Cluster* cluster;
 	map<string,Cluster*>* clusters = new map<string,Cluster*>;
 	ostringstream numero;
 	string mas_cercano;
 	unsigned int agregados;
 	map<string,map<unsigned int,float> >::iterator it_vectores;
-	vector<map<unsigned int,float>* >* centroides = new vector<map<unsigned int,float>* >;// = generar_centroides_aleatorios(cant_clusters,cant_terms);
-	for(it_vectores = vectores->begin(),agregados = 0;it_vectores != vectores->end() && agregados < cant_clusters;++it_vectores, agregados++)
+	vector<map<unsigned int,float>* >* centroides = new vector<map<unsigned int,float>* >;
+	unsigned int size_vectores = vectores->size();
+	unsigned int salto = size_vectores/cant_clusters;//para no agarrar entre los primeros y agarrar sobre toda la lista.
+	if(salto == 0) salto = 1;
+	for(it_vectores = vectores->begin(),agregados = 0;it_vectores != vectores->end() && agregados < cant_clusters;agregados++){
 		centroides->push_back(&it_vectores->second);
-	 
-	unsigned int size = centroides->size();
-	cout << "size:" << centroides->size() << " Cant clusters: " << cant_clusters << endl;
-	if(size < cant_clusters){
-		cout << "diferencias: " << cant_clusters - size << endl;
-		for (i= 0; i < (cant_clusters - size);i++)
-			centroides->push_back(generar_centroide_aleatorio(cant_terms));
+		for(j=0;j<salto;j++) ++it_vectores;
 	}
+	unsigned int size = centroides->size();
+	//si faltan centroides para completar los necesarios para la cantidad de clusters		
+	if(size < cant_clusters)
+		agregar_centroides_aleatorios(centroides,(cant_clusters - size),cant_terms);
 	//Lleno clusters con los generados con centroides aleatorios
 	for(i = 0; i < cant_clusters;i++){
 		string nombre("cluster");
 		numero << i;
 		nombre += numero.str();
-		
+	
 		cluster = new Cluster((*centroides)[i],nombre,cant_terms);
+		//libera los centroides generados aleatoriamente		
 		if(i>=size)
 			delete (*centroides)[i];
 		(*clusters)[nombre] = cluster;
 		numero.str("");
-	
 	}
 	i = 0;
 	while(cambiaron_centroides(clusters,tolerancia) != false){
@@ -131,5 +137,8 @@ map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,uns
 	delete centroides;
 	return clusters;
 }
+
+
+
 
 	

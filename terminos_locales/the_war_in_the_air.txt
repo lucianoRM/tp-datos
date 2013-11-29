@@ -2349,6 +2349,7 @@ heretofore: 1
 hermann: 5
 hero: 4
 heroic: 10
+herr: 12
 hesit: 12
 heterogene: 1
 hidden: 25
@@ -3346,6 +3347,7 @@ obscur: 1
 obscure: 1
 obsequi: 1
 observ: 17
+obsess: 1
 obsolete: 3
 obstacl: 1
 obstin: 3
@@ -5389,6 +5391,7 @@ voic: 42
 void: 2
 volcano: 1
 vollei: 2
+volubl: 1
 volume: 1
 volunt: 3
 voluntari: 1

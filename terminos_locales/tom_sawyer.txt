@@ -2402,6 +2402,7 @@ modern: 1
 modest: 1
 modesti: 1
 modifi: 1
+moieti: 1
 moment: 74
 momentarili: 1
 monarch: 1
@@ -2735,6 +2736,7 @@ petit: 3
 petition: 1
 petrifi: 1
 pew: 2
+pewter: 1
 phase: 2
 philosoph: 1
 phrase: 1
@@ -3247,6 +3249,7 @@ scuffl: 3
 scuttl: 2
 sea: 7
 seal: 2
+sear: 2
 search: 21
 searcher: 5
 season: 5
@@ -4393,3 +4396,4 @@ youth: 4
 zeal: 1
 zebra: 1
 zenith: 1
+zephyr: 1
