@@ -6,145 +6,39 @@
 #include <cstdlib>
 #include <sstream>
 #include "cluster.h"
+#include <vector>
 
 using std::map;
 using std::ifstream;
 using std::string;
 using std::ostringstream;
+using std::vector;
 
-Cluster::Cluster(map<unsigned int,float>* centroid,string* doc){
-	centroide = (*centroid);
-	docs = (*doc);
-	entropia_actual = 0;
-	entropia_sig = 0;
-	norma = 0;
-	cant_docs = 1;
-	id = "";
-	map<unsigned int,float>::iterator it;
-	float valor;
-	for(it = centroide.begin(); it != centroide.end(); ++it){
-		valor = it->second;
-		norma += (valor*valor);
-	}
-	norma = sqrt(norma);
-	distancia = 0;
-}
 
 //Devuelve -1 si norma_aux es igual a 0.
-float Cluster::calcular_distancia(map<unsigned int,float> centroide_aux,float norma_aux){
-	distancia = 0;
-	entropia_sig = entropia_actual;
-	if(norma_aux == 0) return -1;
-	map<unsigned int,float>::iterator it1;
-	map<unsigned int,float>::iterator it2;
-	unsigned int pos1,pos2;
-	for(it1 = centroide.begin(),it2 = centroide_aux.begin(); it1 != centroide.end() && it2 != centroide_aux.end();){
-		pos1 = it1->first;
-		pos2 = it2->first;
-		if(pos1 < pos2) it1++;
-		else if(pos1 == pos2){
-			distancia += ((it1->second)*(it2->second)); 
-			it1++;
-			it2++;
+float calcular_distancia(map<unsigned int,float>* centroide,float norma,map<unsigned int,float>* centroide_aux,float norma_aux){
+	float distancia = 0;
+	map<unsigned int,float>::iterator it;
+	for(it = centroide->begin(); it != centroide->end();++it){
+		if((*centroide_aux)[it->first] == 0) {	
+			continue;
 		}
-		else it2++;
+		distancia += ((*centroide)[it->first]) * ((*centroide_aux)[it->first]);
 	}
-	distancia /= (norma*norma_aux);
+	
+	distancia = distancia/(norma*norma_aux);
+	
 	return distancia;
 }
 
-
-
-float Cluster::variacion_entropia(){
-	float aux = 1 - distancia;
-	float logaux = log10(aux);
-	float logdistance = log10(distancia);
-	entropia_sig = (distancia*logdistance)+(aux*logaux);
-	if(entropia_sig < 0) entropia_sig *= -1;
-	return entropia_sig - entropia_actual;
-}
-
-void Cluster::recalcular(string doc,map<unsigned int,float> centroide_aux,unsigned int cant_docs_aux){
-	unsigned int pos_actual;
-	char letra_actual;
-	unsigned int doc_size = doc.size();
-	docs += ';';
-	for(pos_actual = 0;pos_actual < doc_size ;pos_actual++){
-		letra_actual = doc[pos_actual];		
-		docs += letra_actual;
-	}
-	map<unsigned int,float>::iterator it1;
-	map<unsigned int,float>::iterator it2;
-	pos_actual = 0;
-	unsigned int pos1,pos2;
-	float valor,valor_aux;
-	norma = 0;
-	cant_docs += cant_docs_aux;
-	map<unsigned int,float> nuevo_centroide = map<unsigned int,float>();
-	for(it1 = centroide.begin() , it2 = centroide_aux.begin();it1 != centroide.end() || it2 != centroide_aux.end();){
-		if(it1 != centroide.end() && it2 != centroide_aux.end()){
-			pos1 = it1->first;
-			pos2 = it2->first;
-			if(pos1 > pos2){
-				pos_actual = pos2;
-				valor = it2->second;
-				valor *= cant_docs_aux;
-				it2++;
-			}
-			else{
-				pos_actual = pos1;
-				valor = it1->second;
-				valor *= (cant_docs - cant_docs_aux);
-				if(pos1 == pos2){
-					valor_aux = it2->second;
-					valor_aux *= cant_docs_aux;
-					valor += valor_aux;
-					it2++;
-				}
-				it1++;
-			}
-		}
-		else if(it1 != centroide.end()){
-			pos_actual = pos1;
-			valor = it1->second;
-			valor *= (cant_docs - cant_docs_aux);
-			it1++;
-		}
-		else{
-			pos_actual = pos2;
-			valor = it2->second;
-			valor *= cant_docs_aux;
-			it2++;
-		}
-		valor /= cant_docs;
-		norma += (valor*valor);
-		nuevo_centroide[pos_actual] = valor; 
-	}
-	norma = sqrt(norma);
-	entropia_actual = entropia_sig;
-	centroide = nuevo_centroide;
-}
-
-
-map<unsigned int,float> Cluster::get_centroide(){
-	return centroide;
-}
-
-unsigned int Cluster::get_cant_docs(){
-	return cant_docs;
-}
-
-void Cluster::setear_id(int id2){
-	id = static_cast<ostringstream*>( &(ostringstream() << id2) )->str();
-}
-
-float Cluster::get_norma(){
+float calcular_norma(map<unsigned int,float> vector){
+	float norma = 0;
+	map<unsigned int,float>::iterator it;
+	for(it = vector.begin(); it != vector.end();++it)
+		norma += vector[it->first] * vector[it->first];
+	norma  = sqrt(norma);
+	if (norma == 0) return 0.00001;
 	return norma;
-}
-
-
-string Cluster::get_id(){
-	return id;
 }
 
 
@@ -152,4 +46,72 @@ string Cluster::get_docs(){
 	return docs;
 }
 
+map<unsigned int,float>* Cluster::get_centroide(){
+	return &centroide_actual;
+}
 
+float Cluster::get_norma(){
+	return norma;
+}
+
+unsigned int Cluster::get_cant_docs(){
+	return cant_docs;
+}
+
+Cluster::Cluster(map<unsigned int,float>* centroid,string nombre,unsigned int cantidad_terms){
+	centroide_actual = (*centroid);
+	cant_terms = cantidad_terms;
+	docs = "";
+	entropia_actual = 0;
+	entropia_sig = 0;
+	norma = calcular_norma(centroide_actual);
+	cant_docs = 0;
+	id = nombre;
+	distancia = 0;
+}
+
+bool Cluster::cambio_centroide(float tolerancia){
+	float distancia = calcular_distancia(&centroide_actual,calcular_norma(centroide_actual),&centroide_anterior,calcular_norma(centroide_anterior));
+	if(distancia > tolerancia) return false;
+	return true;
+}
+
+void Cluster::recalcular_centroide(map<unsigned int,float>* vector,unsigned int cant_terms){
+	map<unsigned int, float>* nuevo_centroide = new map<unsigned int,float>;
+	unsigned int i;
+	float valor;
+	unsigned int cant_docs = get_cant_docs();
+	for(i=0;i<cant_terms;i++){
+		if((*vector)[i] == 0){
+			if(centroide_actual[i] == 0) continue;
+			(*nuevo_centroide)[i] = (centroide_actual[i] * (cant_docs + 1)/(cant_docs + 2)); // 1 porque si el cluster esta vacio tiene 0 docs pero no se debe multiplicar por 0, 2 es por el nuevo doc;
+		}else{
+			valor = centroide_actual[i];
+			(*nuevo_centroide)[i] = (valor * (cant_docs + 1) + (*vector)[i])/(cant_docs + 2);
+		}
+	}
+	centroide_actual = (*nuevo_centroide);
+	delete nuevo_centroide;
+}
+	
+
+
+void Cluster::agregar_vector(map<unsigned int,float>* vector,string nombre){
+	if (docs != "")	
+		docs+=";";
+	docs += nombre;
+	recalcular_centroide(vector,cant_terms);
+	cant_docs++;
+	norma = calcular_norma(centroide_actual);
+}
+
+
+
+/*Borra todos los documentos, pero mantiene el centroide*/
+void Cluster::resetear_cluster(){
+	docs = "";
+	cant_docs = 0;
+	centroide_anterior = centroide_actual;
+
+	
+}
