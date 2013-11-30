@@ -4,23 +4,30 @@
 #include <dirent.h>
 #include "indice.h"
 #include <sstream>
+#include <cstdlib>
+
+# define PATH_INDICE "../Indices\ Archivos/"
 
 using std::map;
 using std::vector;
 using std::string;
 using std::ifstream;
 using std::istringstream;
+using std::ios;
 using std::cout;
 using std::endl;
+using std::fstream;
 
-Indice::Indice(string nombre_dir)
+
+void crearIndice(string nombre_dir)
 {
-    indice = map < string,vector<string> >();
+    map < string,vector<string> > indice = map < string,vector<string> >();
 
     DIR* dir_pointer = opendir(nombre_dir.c_str());
 	//if (dir_pointer == NULL)
 	struct dirent* reg_buffer = readdir(dir_pointer);
 
+	string path = "../Indices\ Archivos/";
 	string nombre_archivo;
 	string nombre_directorio = nombre_dir;
 	nombre_directorio+="/";
@@ -37,7 +44,7 @@ Indice::Indice(string nombre_dir)
 		}
 		
 		nombre_cluster = nombre_archivo.substr(0, nombre_archivo.length()- 4);
-		archivo.open((nombre_directorio + nombre_archivo).c_str());
+		archivo.open((nombre_directorio + nombre_archivo).c_str());		
 		
 		getline(archivo, cantidad_terminos, ';');
         for(int i = 0; i < atoi( cantidad_terminos.c_str() ) - 1; i++){
@@ -45,13 +52,23 @@ Indice::Indice(string nombre_dir)
             getline(archivo, termino_actual, ';');
 
             indice[termino_actual].push_back(nombre_cluster);
-        }
+            
+            fstream archivo_indice;
+			archivo_indice.open((path+termino_actual).c_str(), std::fstream::in | std::fstream::out | std::fstream::app);
+			archivo_indice << nombre_cluster << ";";
+			archivo_indice.close();
+		}
         
         //Levanto el ultimo texto
         string termino_actual;
         getline(archivo, termino_actual);
         indice[termino_actual].push_back(nombre_cluster);
-
+		
+		fstream archivo_indice;
+		archivo_indice.open ((path+termino_actual).c_str(), std::fstream::in | std::fstream::out | std::fstream::app); 
+		archivo_indice << nombre_cluster << ";";
+		archivo_indice.close();
+		
 		archivo.close();
 		reg_buffer = readdir(dir_pointer);
 	}
@@ -59,11 +76,13 @@ Indice::Indice(string nombre_dir)
 	closedir(dir_pointer);
 }
 
-vector<string> Indice::obtenerClustersDeTermino(string termino){
-		return indice[termino];
-}
-
-Indice::~Indice()
-{
-    //dtor
+vector<string> obtenerClustersDeTermino(string termino){
+	ifstream archivoIndices;
+	archivoIndices.open(("../Indices\ Archivos/"+termino).c_str());
+	string nombre_cluster;
+	vector<string> clusters;
+	while(getline(archivoIndices, nombre_cluster, ';'))
+		clusters.push_back(nombre_cluster);
+		
+	return clusters;
 }

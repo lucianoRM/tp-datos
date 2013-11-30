@@ -10,15 +10,10 @@ using std::map;
 using std::string;
 using std::vector;
 
-class Indice
-{
-    private:
-         map < string, vector<string> > indice;
-         
-    public:
-        Indice(string nombre);
-        vector<string> obtenerClustersDeTermino(string termino);
-        virtual ~Indice();   
-};
+
+    
+void crearIndice(string nombre);
+vector<string> obtenerClustersDeTermino(string termino);   
+
 
 #endif // INDICE_H
