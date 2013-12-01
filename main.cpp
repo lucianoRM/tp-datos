@@ -70,13 +70,26 @@ int main(int args,char* argv[]){
 			}
 			
 			string mas_cercano;
+			vector<string> mas_cercanos;
 			/*Para que pueda entrar el mismo archivo en varios clusters poner el ultimo parametro en 1*/
-			map<string,Cluster*>* clusters = k_means(vectores_aux,atoi(argv[3]),cant_terms,0.99,1);
+			map<string,Cluster*>* clusters = k_means(vectores_aux,atoi(argv[3]),cant_terms,0.99,0.8);
 			delete vectores_aux;
 			//vector<Cluster*>* clusters = hierarchical(vectores,cant_terms,0.5);
-			for(it2 = vectores->begin();it2 != vectores->end();++it2){
+			
+			//SE USA SI EL PARAMETRO ES 1(COTA)
+			/*for(it2 = vectores->begin();it2 != vectores->end();++it2){
 				mas_cercano = distancia_minima_key(clusters,&it2->second,calcular_norma(it2->second));
 				(*clusters)[mas_cercano]->agregar_vector(&it2->second,it2->first);
+				vectores->erase(it2);
+			}*/
+			//SE USA SI EL PARAMETRO ES MENOR A 1 (COTA)
+			for(it2 = vectores->begin();it2 != vectores->end();++it2){
+				mas_cercanos = min_distances(clusters,&it2->second,calcular_norma(it2->second),0.8);
+				if(mas_cercanos.size() == 0) mas_cercanos.push_back(distancia_minima_key(clusters,&it2->second,calcular_norma(it2->second)));
+				for(unsigned int h = 0; h<mas_cercanos.size();h++){
+					(*clusters)[mas_cercanos[h]]->agregar_vector(&it2->second,it2->first);
+					cout << mas_cercanos[h] << endl;
+				}
 				vectores->erase(it2);
 			}
 			/*vector<Cluster*>::iterator it;
