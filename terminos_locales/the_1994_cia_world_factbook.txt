@@ -592,7 +592,6 @@ andalucia: 1
 andalusian: 1
 andaman: 4
 andean: 3
-andel: 1
 anden: 1
 anderson: 2
 anderton: 2
@@ -776,7 +775,6 @@ arabsat: 16
 arad: 1
 arafura: 1
 aragon: 1
-aragonese: 1
 aragonite: 3
 aragua: 1
 arai: 1
@@ -900,7 +898,6 @@ aruban: 8
 arunach: 1
 arusha: 1
 arutyunyan: 1
-arvo: 1
 aryan: 1
 arzallu: 1
 arzew: 1
@@ -1168,7 +1165,6 @@ bachir: 1
 back: 16
 backbone: 5
 background: 3
-backlash: 1
 backtrack: 5
 backward: 3
 bacolod: 1
@@ -1630,7 +1626,6 @@ betio: 1
 betsileo: 1
 betsimisaraka: 1
 better: 12
-betwen: 1
 beverage: 68
 beverli: 1
 beween: 1
@@ -1990,7 +1985,6 @@ brightest: 1
 bring: 10
 brisbane: 3
 britain: 8
-britian: 2
 british: 115
 briton: 2
 brizola: 1
@@ -2249,7 +2243,6 @@ camera: 2
 cameroon: 87
 cameroonian: 4
 camiguin: 1
-camil: 1
 camilo: 1
 camp: 3
 campaign: 2
@@ -2653,7 +2646,6 @@ chernihiv: 2
 chernivet: 1
 chernomyrdin: 1
 cheryl: 1
-chese: 1
 cheshire: 1
 chesterfield: 2
 chestnut: 1
@@ -2978,7 +2970,6 @@ comecon: 4
 comfort: 3
 comilla: 1
 comino: 1
-comitte: 1
 command: 41
 commemor: 1
 comment: 1
@@ -3337,7 +3328,6 @@ crown: 33
 crozet: 4
 crucial: 1
 crude: 138
-cruickshank: 1
 cruis: 1
 crunch: 1
 crusade: 1
@@ -3795,7 +3785,6 @@ diko: 3
 dilaudid: 1
 dilja: 1
 dillen: 1
-dima: 1
 dimani: 1
 dimashq: 2
 dimbokro: 1
@@ -4296,7 +4285,6 @@ emir: 28
 emirian: 5
 emiss: 26
 emitt: 1
-emma: 1
 emmanuel: 3
 emomili: 1
 emot: 3
@@ -4844,7 +4832,6 @@ flax: 1
 flec: 3
 flecha: 1
 fled: 7
-fledg: 1
 flee: 1
 fleet: 15
 fleme: 1
@@ -5248,7 +5235,6 @@ gendarmeri: 30
 gener: 443
 genera: 1
 generale: 4
-genest: 1
 genet: 1
 geneva: 2
 geneve: 1
@@ -5273,7 +5259,6 @@ georgievski: 1
 geotherm: 5
 gerai: 1
 gerakan: 1
-gerald: 1
 gerard: 5
 gerardo: 2
 gerichtshof: 2
@@ -5281,7 +5266,6 @@ german: 68
 germani: 321
 germanium: 1
 gerri: 2
-gervai: 1
 gesner: 1
 get: 1
 gevgelija: 1
@@ -5392,7 +5376,6 @@ golan: 9
 gold: 116
 golden: 8
 goldenberg: 1
-goldfield: 1
 goldson: 1
 golf: 1
 golfito: 1
@@ -5495,7 +5478,6 @@ great: 48
 greater: 23
 greatest: 1
 greatli: 7
-greav: 1
 grebenicek: 1
 grebo: 1
 greec: 123
@@ -5820,7 +5802,6 @@ hassanali: 2
 hassaniya: 1
 hassel: 1
 hasten: 1
-hata: 3
 hatai: 4
 hath: 1
 hato: 1
@@ -5829,8 +5810,9 @@ hauraki: 1
 hausa: 5
 haut: 7
 havana: 3
-have: 1
+have: 28
 havel: 2
+haven: 5
 havr: 2
 hawaii: 27
 hawaiian: 1
@@ -5878,7 +5860,6 @@ heiberg: 1
 heidi: 1
 height: 12
 heilongjiang: 1
-heinz: 1
 heir: 12
 held: 786
 helder: 1
@@ -6014,7 +5995,6 @@ hojjatiyeh: 1
 hokianga: 1
 hokkaido: 2
 hokkien: 1
-holbrook: 1
 hold: 24
 holder: 1
 holdov: 1
@@ -6166,7 +6146,6 @@ hviezdoslavovo: 1
 hwangha: 4
 hybrid: 1
 hyde: 1
-hyderabad: 1
 hydrate: 1
 hydrocarbon: 6
 hydroelectr: 5
@@ -6400,7 +6379,6 @@ instabl: 12
 instal: 11
 instanc: 2
 instead: 1
-instil: 1
 institut: 19
 institute: 4
 instrument: 11
@@ -7534,7 +7512,6 @@ kukho: 1
 kuku: 1
 kulbok: 1
 kuldiga: 1
-kuma: 1
 kumamoto: 1
 kumanovo: 1
 kumar: 1
@@ -7781,7 +7758,6 @@ lazaryan: 1
 lazdiju: 1
 lazio: 1
 lazlo: 1
-lazzaro: 1
 ldc: 19
 lddp: 3
 leach: 1
@@ -8604,7 +8580,6 @@ markka: 3
 markkaa: 1
 marko: 1
 marlborough: 1
-marlow: 1
 marmara: 3
 marmolejo: 1
 maronite: 2
@@ -8781,7 +8756,6 @@ meanchei: 2
 meaning: 2
 meant: 1
 meanwhile: 3
-meara: 1
 measur: 11
 measure: 29
 meat: 59
@@ -8830,7 +8804,6 @@ mekong: 2
 mekonyo: 1
 meksi: 1
 melaka: 2
-melanesia: 4
 melanesian: 13
 melbourn: 4
 melchior: 2
@@ -9075,7 +9048,6 @@ missile: 6
 mission: 384
 missionari: 3
 mississippi: 3
-missl: 1
 missouri: 2
 mist: 1
 mista: 1
@@ -9115,7 +9087,6 @@ modin: 2
 modrica: 1
 moengo: 1
 mofe: 1
-moffitt: 1
 moga: 1
 mogadishu: 4
 moggi: 1
@@ -9836,9 +9807,7 @@ nonfuel: 1
 nong: 1
 nongovern: 3
 nongovernment: 1
-noni: 1
 nonindigen: 2
-nonmemb: 1
 nonmetal: 2
 nonmilitari: 2
 nonoil: 3
@@ -10079,7 +10048,6 @@ ogasawara: 1
 ogdensburg: 1
 ogilvi: 1
 oginga: 1
-ogli: 1
 ognyan: 1
 ogoou: 5
 ogou: 1
@@ -10257,7 +10225,6 @@ orthodoxi: 1
 ortiz: 1
 oruro: 1
 oruzgan: 1
-orvil: 1
 osaka: 4
 osborn: 1
 oscar: 6
@@ -10368,13 +10335,11 @@ overh: 2
 overharvest: 1
 overhaul: 1
 overhead: 1
-overheat: 1
 overhunt: 1
 overijssel: 1
 overlaid: 1
 overlap: 5
 overli: 1
-overpaid: 1
 overpopul: 4
 overregul: 1
 overrid: 1
@@ -10685,7 +10650,6 @@ peak: 8
 peanut: 31
 pearl: 8
 pearman: 1
-peas: 1
 peasant: 20
 peat: 6
 pec: 1
@@ -10900,7 +10864,6 @@ pier: 2
 pieria: 1
 pierr: 39
 pierrot: 1
-pieter: 1
 pig: 21
 pigeon: 1
 pigment: 1
@@ -10935,7 +10898,6 @@ pistor: 1
 pita: 2
 pitcairn: 20
 pitr: 1
-pittsburg: 1
 pittsburgh: 1
 piura: 2
 pivdenn: 1
@@ -11505,7 +11467,6 @@ rabin: 2
 rabindranath: 1
 rabinovich: 1
 rabuka: 3
-racan: 1
 race: 3
 racha: 1
 rachade: 1
@@ -11972,7 +11933,6 @@ richest: 2
 richi: 1
 richli: 3
 richmond: 1
-richter: 2
 rico: 69
 ridg: 8
 riel: 2
@@ -11990,7 +11950,6 @@ rigor: 1
 riigikogu: 1
 rijeka: 4
 riksdag: 2
-rile: 1
 rim: 1
 rimanta: 1
 ring: 7
@@ -12002,7 +11961,6 @@ rio: 4
 rioja: 2
 riordan: 1
 riot: 1
-ripa: 1
 riparian: 6
 risaralda: 1
 rise: 52
@@ -12104,7 +12062,6 @@ rose: 15
 roseau: 3
 rosewood: 1
 rosi: 1
-rosine: 1
 roskild: 1
 ross: 9
 rossa: 1
@@ -12155,7 +12112,6 @@ rudimentari: 3
 rudnik: 1
 rudo: 1
 rudolf: 3
-rudolphu: 1
 rufiyaa: 2
 rug: 55
 ruggel: 1
@@ -12350,7 +12306,6 @@ samarqand: 1
 sambanemanja: 1
 samchi: 1
 samdrup: 1
-same: 28
 samhar: 1
 sami: 6
 sammarinese: 3
@@ -12893,7 +12848,6 @@ shortfal: 3
 shortli: 3
 shortwave: 25
 shoto: 6
-shoul: 1
 show: 6
 shower: 5
 shown: 2
@@ -13186,7 +13140,6 @@ socioeconom: 2
 socotra: 2
 soda: 3
 sodano: 1
-sode: 1
 sodermanland: 1
 sodium: 1
 sodor: 1
@@ -14534,7 +14487,6 @@ turmoil: 6
 turn: 7
 turnhal: 1
 turnip: 2
-turnov: 1
 turnu: 1
 turtl: 9
 tusk: 1
@@ -14636,7 +14588,6 @@ umdd: 2
 umma: 3
 umno: 2
 unabl: 5
-unaccept: 1
 unaccustom: 1
 unaffili: 5
 unag: 1
@@ -14651,7 +14602,6 @@ unclear: 1
 uncommerci: 1
 uncommon: 1
 uncompetit: 1
-uncondition: 2
 unconnect: 2
 uncontest: 1
 uncontrol: 1
@@ -14686,7 +14636,6 @@ undifferenti: 4
 undof: 7
 undp: 9
 undul: 10
-uneconom: 1
 unemploi: 18
 unemploy: 314
 unep: 3
@@ -14758,7 +14707,6 @@ unprofor: 36
 unprofro: 1
 unrecord: 1
 unregist: 3
-unreport: 1
 unresolv: 9
 unrest: 6
 unripe: 1
@@ -14776,7 +14724,6 @@ unsurfac: 1
 unsurpass: 1
 unsustain: 1
 untac: 48
-untreat: 12
 untso: 22
 unus: 1
 unusu: 6

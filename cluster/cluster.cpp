@@ -10,6 +10,7 @@
 
 using std::map;
 using std::ifstream;
+using std::ofstream;
 using std::string;
 using std::ostringstream;
 using std::vector;
@@ -62,6 +63,13 @@ float Cluster::get_norma(){
 
 unsigned int Cluster::get_cant_docs(){
 	return cant_docs;
+}
+
+void Cluster::escribir_a_disco(){
+	ofstream archivo_cluster;
+	archivo_cluster.open(("Clusters/" + id).c_str());
+	archivo_cluster << docs;
+	archivo_cluster.close();
 }
 
 Cluster::Cluster(map<unsigned int,float>* centroid,string nombre,unsigned int cantidad_terms){
