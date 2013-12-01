@@ -1988,6 +1988,8 @@ impel: 4
 impend: 3
 imperfect: 1
 imperfectli: 1
+imperio: 1
+imperium: 2
 impertin: 2
 impli: 10
 implic: 3
@@ -2800,6 +2802,7 @@ palace: 1
 palati: 1
 pale: 3
 pamphlet: 1
+panem: 1
 pang: 1
 panic: 3
 pant: 3
@@ -3057,6 +3060,7 @@ profess: 18
 profession: 10
 professor: 2
 proffer: 1
+profici: 1
 profit: 16
 profound: 11
 profoundest: 1
@@ -3436,6 +3440,7 @@ scotch: 1
 scotu: 1
 scrambl: 1
 screw: 3
+scribbler: 1
 sculptur: 1
 seal: 1
 seaside: 1
@@ -4158,6 +4163,7 @@ unmarri: 1
 unmistak: 3
 unnatur: 3
 unnecessari: 4
+unnumb: 1
 unoffici: 2
 unorgan: 3
 unparallel: 1

@@ -44,7 +44,7 @@ map<unsigned int,float>* generar_centroide_aleatorio(unsigned int cant_terminos)
 string distancia_minima_key(map<string,Cluster*>* clusters,map<unsigned int,float>* vector,float norma);
 	
 /*Devuelve la distancia minima entre vector y los centroides*/
-float distancia_minima(map<string,Cluster*>* clusters,map<unsigned int,float>* vector,float norma);
+float distancia_minima(vector<map<unsigned int,float>* >* centroides,map<unsigned int,float>* vector,float norma);
 		
 void resetear_clusters(map<string,Cluster*>* clusters);
 

@@ -349,6 +349,7 @@ skeleton: 1
 slain: 1
 slowli: 1
 small: 1
+solu: 1
 south: 3
 southern: 1
 spent: 1
@@ -368,6 +369,7 @@ street: 1
 stuf: 1
 subsid: 1
 successfulli: 1
+sufficit: 1
 suit: 1
 sultan: 1
 sultri: 1
@@ -400,6 +402,7 @@ tumultu: 1
 upon: 6
 usage: 1
 vain: 1
+vero: 1
 view: 2
 violent: 1
 virgin: 1

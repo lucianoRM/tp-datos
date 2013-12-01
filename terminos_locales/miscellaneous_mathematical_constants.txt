@@ -14,6 +14,7 @@ annal: 1
 anoth: 5
 anyth: 1
 anywai: 1
+aperi: 2
 appear: 1
 appli: 1
 applic: 1

@@ -3868,6 +3868,7 @@ dormant: 3
 dornbush: 1
 dornod: 1
 dornogovi: 1
+dorothi: 1
 dorset: 1
 dorum: 1
 dosso: 1
@@ -4644,6 +4645,7 @@ fernand: 1
 fernandez: 7
 fernandino: 1
 fernando: 15
+ferr: 1
 ferreira: 1
 ferri: 2
 ferro: 1
@@ -5075,6 +5077,7 @@ garden: 7
 gardner: 2
 gare: 1
 garfield: 1
+gari: 1
 garifuna: 2
 garland: 1
 garment: 12
@@ -7985,6 +7988,7 @@ macao: 1
 macau: 40
 maccarthi: 1
 mace: 3
+macedo: 1
 macedonia: 63
 macedonian: 13
 macenta: 1
@@ -8780,6 +8784,7 @@ minya: 1
 minyar: 1
 miquel: 2
 miquelon: 23
+mira: 1
 miramar: 1
 miranda: 4
 mircea: 3
@@ -14694,6 +14699,7 @@ volga: 1
 volgograd: 2
 volksuni: 1
 volksvertegenwoordig: 1
+volo: 1
 volodymyr: 3
 vologda: 1
 volta: 6

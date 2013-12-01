@@ -70,6 +70,7 @@ alia: 3
 alike: 1
 alive: 7
 allei: 6
+aller: 1
 alli: 1
 allow: 12
 almanac: 2
@@ -132,6 +133,7 @@ appoint: 3
 apprehens: 1
 approv: 2
 apron: 2
+aquila: 31
 arbit: 1
 arch: 5
 archbishop: 21
@@ -1077,6 +1079,7 @@ echo: 1
 eclips: 1
 eddi: 48
 edg: 25
+edom: 1
 educ: 2
 edward: 1
 effectu: 1
@@ -1314,6 +1317,7 @@ folk: 50
 folli: 2
 follow: 32
 fond: 8
+font: 4
 food: 1
 fool: 36
 fooleri: 1
@@ -1579,6 +1583,7 @@ hatr: 2
 haul: 3
 haunt: 1
 havr: 6
+haw: 3
 hawk: 2
 hazi: 1
 head: 98
@@ -1812,6 +1817,7 @@ jone: 3
 jostl: 1
 journei: 3
 joy: 1
+joyfulli: 1
 joyou: 3
 judg: 21
 judgement: 1
@@ -2426,6 +2432,7 @@ peopl: 103
 pepper: 1
 perceiv: 2
 perch: 1
+perda: 1
 perfect: 3
 perfectli: 4
 perhap: 11
@@ -2686,6 +2693,7 @@ reckon: 32
 recov: 3
 rectifi: 1
 rector: 1
+redder: 1
 redeem: 1
 reef: 3
 reel: 3
@@ -2694,6 +2702,7 @@ refuge: 1
 refus: 1
 regard: 2
 regiment: 1
+regionum: 1
 regist: 1
 regular: 2
 regularli: 1
@@ -2763,6 +2772,7 @@ ripen: 3
 rise: 8
 risen: 2
 risk: 6
+riski: 2
 river: 11
 riverine: 1
 road: 45
@@ -2897,6 +2907,7 @@ second: 16
 secondli: 1
 secret: 7
 secretari: 2
+secundo: 1
 see: 12
 seed: 1
 seein: 2
@@ -3157,6 +3168,7 @@ spake: 2
 spaniard: 5
 spanish: 22
 spare: 4
+spargen: 1
 sparkl: 1
 sparrow: 1
 spatter: 1
@@ -3592,6 +3604,8 @@ truth: 13
 truthfulli: 1
 try: 7
 tryin: 1
+tuae: 1
+tuba: 1
 tuck: 3
 tudor: 1
 tuft: 1
@@ -3689,6 +3703,7 @@ verit: 2
 vermin: 1
 vers: 1
 vex: 1
+viae: 1
 vice: 5
 victim: 1
 victori: 2

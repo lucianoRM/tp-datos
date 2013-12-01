@@ -3022,6 +3022,7 @@ constitu: 13
 constitucion: 1
 constitut: 417
 constitute: 8
+constituti: 1
 constitution: 1
 constitutionalist: 2
 constitutionnel: 2
@@ -5186,6 +5187,7 @@ gliwice: 2
 global: 10
 globe: 3
 glori: 1
+gloria: 1
 glorieus: 2
 glorioso: 13
 gloucest: 1
@@ -12614,6 +12616,7 @@ socialist: 138
 socialst: 1
 societ: 1
 societi: 25
+socio: 1
 socioeconom: 1
 socotra: 2
 soda: 3

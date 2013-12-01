@@ -6196,6 +6196,7 @@ liaison: 2
 liancourt: 3
 liaon: 1
 liber: 131
+libere: 1
 liberia: 19
 liberian: 10
 libert: 1
@@ -7676,6 +7677,7 @@ nograd: 1
 noir: 3
 nomad: 9
 nomin: 15
+nomine: 1
 nomo: 1
 nomoi: 1
 nonagricultur: 4

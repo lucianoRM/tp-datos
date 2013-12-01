@@ -10704,6 +10704,7 @@ selva: 1
 semarang: 1
 sembilan: 1
 sembler: 1
+semen: 3
 semiarid: 18
 semiconductor: 2
 semidesert: 2

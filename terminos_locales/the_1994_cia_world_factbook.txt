@@ -11931,6 +11931,7 @@ richest: 2
 richi: 1
 richli: 3
 richmond: 1
+richter: 2
 rico: 69
 ridg: 8
 riel: 2
@@ -11959,6 +11960,7 @@ rio: 4
 rioja: 2
 riordan: 1
 riot: 1
+ripa: 1
 riparian: 6
 risaralda: 1
 rise: 52

@@ -331,6 +331,7 @@ author: 9
 authorit: 1
 autobiographi: 1
 autonom: 1
+av: 1
 avail: 4
 avalanch: 1
 aven: 10
@@ -1460,6 +1461,7 @@ doll: 1
 dollar: 1
 dome: 2
 domin: 7
+domino: 1
 done: 43
 doom: 2
 door: 41
@@ -1848,6 +1850,7 @@ felt: 30
 female: 2
 feminine: 2
 fenc: 7
+feri: 3
 feroci: 2
 ferri: 2
 fest: 2
@@ -2686,6 +2689,7 @@ ironi: 4
 irradi: 1
 irrate: 1
 irregular: 8
+irrelev: 3
 irrelevantli: 1
 irresist: 1
 irrespons: 1
@@ -3284,6 +3288,7 @@ next: 21
 niagara: 35
 nibbl: 1
 nice: 7
+nicht: 1
 nickname: 1
 nigger: 1
 nigh: 1
@@ -4031,6 +4036,7 @@ reproduct: 2
 reptile: 1
 repudi: 2
 repuls: 1
+requiem: 1
 requir: 2
 requisit: 2
 rescu: 3
@@ -5168,6 +5174,7 @@ type: 17
 typic: 1
 tyre: 11
 ugli: 4
+ullo: 2
 ultim: 5
 ultimatum: 2
 umbrella: 1

@@ -10,6 +10,9 @@
 #include "kmeans.h"
 
 #define COTA 0.8
+
+
+
 using std::vector;
 using std::map;
 using std::cout;
@@ -54,16 +57,17 @@ map<unsigned int,float>* generar_centroide_aleatorio(unsigned int cant_terminos)
 	return centroide;
 }
 
-float distancia_minima(map<string,Cluster*>* clusters,map<unsigned int,float>* vector,float norma){
+float distancia_minima(vector<map<unsigned int,float>* >* centroides,map<unsigned int,float>* archivo,float norma){
 	float min_distance = -1.0;
 	float act_distance = 0.0;
-	map<string,Cluster*>::iterator it;
-	for(it = clusters->begin();it != clusters->end(); ++it ){
+	vector<map<unsigned int,float>* >::iterator it;
+	
+	for(it = centroides->begin();it != centroides->end(); ++it ){
 		if(min_distance == -1.0) {
-			min_distance = calcular_distancia(it->second->get_centroide(),it->second->get_norma(),vector,norma);
+			min_distance = calcular_distancia((*it),calcular_norma(*(*it)),archivo,norma);
 			continue;
 		}
-		act_distance = calcular_distancia(it->second->get_centroide(),it->second->get_norma(),vector,norma);
+		act_distance = calcular_distancia((*it),calcular_norma(*(*it)),archivo,norma);
 		if (act_distance > min_distance){
 			min_distance = act_distance;
 		}
@@ -122,7 +126,8 @@ map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,uns
 	unsigned int salto = size_vectores/cant_clusters;//para no agarrar entre los primeros y agarrar sobre toda la lista.
 	if(salto == 0) salto = 1;
 	for(it_vectores = vectores->begin(),agregados = 0;it_vectores != vectores->end() && agregados < cant_clusters;agregados++){
-		min_distance = distancia_minima(clusters,&it_vectores->second,calcular_norma(it_vectores->second));
+		min_distance = distancia_minima(centroides,&it_vectores->second,calcular_norma(it_vectores->second));
+		cout << min_distance << endl;
 		if(min_distance > COTA) ++it_vectores;
 		else centroides->push_back(&it_vectores->second);
 		for(j=0;j<salto;j++) ++it_vectores;
