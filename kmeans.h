@@ -13,7 +13,7 @@
 #include <cmath>
 #include <sstream>
 
-#define CANT_TERMS 3
+
 
 using std::vector;
 using std::map;
@@ -45,13 +45,17 @@ string distancia_minima_key(map<string,Cluster*>* clusters,map<unsigned int,floa
 	
 /*Devuelve la distancia minima entre vector y los centroides*/
 float distancia_minima(vector<map<unsigned int,float>* >* centroides,map<unsigned int,float>* vector,float norma);
+
+
+/*Devuelve todas las claves de los centroides cuyas distancias son mayores a la cota*/
+vector<string> min_distances(map<string,Cluster*>* clusters,map<unsigned int,float>* vector,float norma,float cota);
 		
 void resetear_clusters(map<string,Cluster*>* clusters);
 
 
 
 
-map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,unsigned int cant_clusters,unsigned int cant_terms,float tolerancia);
+map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,unsigned int cant_clusters,unsigned int cant_terms,float tolerancia,float cota);
 
 
 #endif //K_MEANS_H

@@ -54,19 +54,31 @@ int main(int args,char* argv[]){
 			}
 			guardar_frecuencias(parser->getFrecuenciasGlobales(), parser->getFrecuenciasLocales());	
 			map<string, map<unsigned int, float> >* vectores = vectorizar(parser);
-			/*map<string, map<unsigned int, float> >* vectores_iniciales = new map<string, map<unsigned int, float> >;
-			map<string,map<unsigned int,float> >::iterator it_vectores;		
-			for(it_vectores = vectores->begin(),i = 0;it_vectores != vectores->end() && i<100;++it_vectores,i++){
-				(*vectores_iniciales)[it_vectores->first] = it_vectores->second;
-			}*/
 			unsigned int cant_terms = parser->getCantTerms();
 			unsigned int cant_docs = parser->getCantDocs();
 			delete parser;
-			map<string,Cluster*>* clusters = k_means(vectores,atoi(argv[3]),cant_terms,0.99);
-			//vector<Cluster*>* clusters = hierarchical(vectores,cant_terms,0.5);
-			delete vectores;
+			map<string, map<unsigned int, float> >* vectores_aux = new map<string, map<unsigned int, float> >;
+			map<string, map<unsigned int, float> >::iterator it2;
+			unsigned int l = 0;
+			unsigned int muestra = cant_docs * 0.3;
+			cout << "size" << vectores->size()  << " muestra "<< muestra <<endl;
+			for(it2 = vectores->begin(); it2 != vectores->end();++it2){ 
+				if(l > muestra) break;
+				(*vectores_aux)[it2->first] = it2->second;
+				vectores->erase(it2);
+				l++;
+			}
 			
-			map<string,Cluster*>::iterator it;
+			string mas_cercano;
+			/*Para que pueda entrar el mismo archivo en varios clusters poner el ultimo parametro en 1*/
+			map<string,Cluster*>* clusters = k_means(vectores_aux,atoi(argv[3]),cant_terms,0.99,1);
+			delete vectores_aux;
+			//vector<Cluster*>* clusters = hierarchical(vectores,cant_terms,0.5);
+			for(it2 = vectores->begin();it2 != vectores->end();++it2){
+				mas_cercano = distancia_minima_key(clusters,&it2->second,calcular_norma(it2->second));
+				(*clusters)[mas_cercano]->agregar_vector(&it2->second,it2->first);
+				vectores->erase(it2);
+			}
 			/*vector<Cluster*>::iterator it;
 			for(it = clusters->begin(); it!= clusters->end() ; ++it){
 					cout <<(*it)->get_id() << endl << endl << (*it)->get_docs() << endl;
@@ -74,6 +86,7 @@ int main(int args,char* argv[]){
 					delete (*it);
 			}	*/	
 					
+			map<string,Cluster*>::iterator it;
 			for(it = clusters->begin();it != clusters->end();++it){
 				if(it->second->get_cant_docs() != 0){
 					ofstream salida(("Clusters/" + it->first).c_str());
