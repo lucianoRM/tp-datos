@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdlib.h>	
 #include <iostream>
 #include <fstream>
 #include <dirent.h>
@@ -8,8 +8,8 @@ using std::vector;
 using std::cout;
 
 int main(){
-	Indice* indice = new Indice("Clusters");
-	vector<string> cluster_A = indice->obtenerClustersDeTermino("A.txt");
+	crearIndice("../Clusters");
+	vector<string> cluster_A = obtenerClustersDeTermino("A.txt");
 	cout << "clusters de A: \n";
 	for(int i = 0; i < cluster_A.size(); i++){
 		cout << cluster_A[i] << "\n";
