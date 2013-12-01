@@ -12,6 +12,7 @@
 #include "dir_seeker.h"
 #include "cluster/cluster.h"
 #include "kmeans.h"
+#include "hierarchical.h"
 #include <cstdlib>
 
 #define NOMBRE_TP "./TpGrupo6"
@@ -62,15 +63,18 @@ int main(int args,char* argv[]){
 			unsigned int cant_docs = parser->getCantDocs();
 			delete parser;
 			map<string,Cluster*>* clusters = k_means(vectores,atoi(argv[3]),cant_terms,0.99);
+			//vector<Cluster*>* clusters = hierarchical(vectores,cant_terms,0.5);
 			delete vectores;
-			/*string mas_cercano;
-			map<string,map<unsigned int,float> >::iterator it_vectores2;
-			for(it_vectores2 = vectores->begin();it_vectores2 != vectores->end();++it_vectores2){
-				mas_cercano = distancia_minima(clusters,&it_vectores->second,calcular_norma(it_vectores->second));
-				(*clusters)[mas_cercano]->agregar_vector(&it_vectores2->second,it_vectores2->first);
-			}*/
+			
 			map<string,Cluster*>::iterator it;
+			/*vector<Cluster*>::iterator it;
 			for(it = clusters->begin(); it!= clusters->end() ; ++it){
+					cout <<(*it)->get_id() << endl << endl << (*it)->get_docs() << endl;
+					cout << "--------------------------------------------------------------" << endl;
+					delete (*it);
+			}	*/	
+					
+			for(it = clusters->begin();it != clusters->end();++it){
 				if(it->second->get_cant_docs() != 0){
 					ofstream salida(("Clusters/" + it->first).c_str());
 					cout << it->first << endl << it->second->get_docs() << endl;

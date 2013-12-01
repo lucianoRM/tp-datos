@@ -15,6 +15,8 @@ using std::ostringstream;
 using std::vector;
 
 
+
+
 //Devuelve -1 si norma_aux es igual a 0.
 float calcular_distancia(map<unsigned int,float>* centroide,float norma,map<unsigned int,float>* centroide_aux,float norma_aux){
 	float distancia = 0;
@@ -41,6 +43,10 @@ float calcular_norma(map<unsigned int,float> vector){
 	return norma;
 }
 
+
+string Cluster::get_id(){
+	return id;
+}
 
 string Cluster::get_docs(){
 	return docs;

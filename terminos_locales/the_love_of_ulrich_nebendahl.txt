@@ -61,7 +61,9 @@ brood: 1
 brought: 1
 brow: 1
 bulli: 1
+burkei: 1
 burn: 4
+burner: 1
 burnt: 1
 busi: 1
 buzz: 1
@@ -115,12 +117,14 @@ creature: 1
 creep: 1
 crept: 2
 cross: 2
+crotcheti: 1
 crowd: 1
 cumber: 1
 curs: 1
 dai: 1
 danc: 1
 danger: 2
+dank: 1
 dark: 1
 dawn: 1
 dead: 3
@@ -160,6 +164,7 @@ ei: 1
 elbow: 1
 elm: 1
 els: 1
+elsa: 6
 empti: 1
 even: 5
 ever: 3
@@ -252,8 +257,10 @@ hatr: 1
 head: 4
 heard: 2
 heart: 3
+heartburn: 1
 hearth: 1
 heavi: 1
+hedwig: 3
 heedless: 1
 help: 1
 helpless: 2
@@ -283,6 +290,7 @@ jerome: 6
 join: 1
 just: 1
 keep: 1
+kelver: 1
 kill: 1
 kindli: 1
 knapsack: 1
@@ -295,6 +303,7 @@ lad: 1
 lai: 1
 laid: 3
 land: 2
+landwehr: 1
 lanki: 2
 larg: 1
 lassi: 1
@@ -309,6 +318,7 @@ leav: 3
 left: 1
 leg: 1
 li: 1
+liesel: 1
 life: 8
 lift: 1
 light: 1
@@ -333,8 +343,10 @@ maiden: 2
 make: 2
 mani: 2
 march: 3
+margot: 5
 maria: 1
 marri: 6
+matchmak: 1
 mead: 2
 mean: 1
 melancholi: 1
@@ -453,6 +465,7 @@ rush: 1
 sacr: 1
 said: 3
 sake: 1
+same: 1
 savage: 1
 save: 2
 saxon: 3
@@ -526,6 +539,7 @@ suggest: 1
 suitabl: 1
 summer: 1
 sure: 5
+susanna: 1
 swarm: 1
 sweep: 1
 sweet: 2
@@ -547,6 +561,7 @@ thin: 1
 thing: 9
 think: 7
 third: 1
+thomt: 1
 though: 1
 thought: 4
 thousand: 3
@@ -579,7 +594,9 @@ try: 1
 turn: 1
 twice: 4
 twilight: 1
+twitter: 1
 ulrich: 45
+unburden: 1
 understand: 2
 understood: 1
 uneasili: 1
@@ -607,6 +624,7 @@ warfare: 1
 watch: 2
 water: 1
 wave: 1
+wayward: 1
 wear: 1
 weari: 2
 week: 2
@@ -622,6 +640,7 @@ whole: 2
 wife: 1
 wild: 3
 will: 7
+winckelmann: 1
 wind: 2
 wipe: 1
 wither: 1

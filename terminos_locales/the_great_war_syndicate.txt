@@ -1296,7 +1296,6 @@ make: 36
 man: 1
 manag: 2
 mani: 27
-manifesto: 1
 manner: 4
 manoeuvr: 2
 manufacture: 1
@@ -2023,7 +2022,6 @@ stern: 54
 still: 20
 stipul: 3
 stir: 1
-stockton: 2
 stoker: 1
 stone: 2
 stood: 13

@@ -3063,7 +3063,6 @@ snivel: 1
 sober: 1
 soft: 1
 soldier: 97
-soldieri: 1
 sole: 6
 solemnli: 1
 solicitude: 1

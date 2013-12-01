@@ -7,7 +7,7 @@ EXEC = TpGrupo6
 
 
 
-all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o kmeans.o  main.o 
+all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o kmeans.o hierarchical.o  main.o 
 
 
 
@@ -42,12 +42,16 @@ vectorizador.o: parser/vectorizador.cpp
 
 main.o: main.cpp
 
-	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o cluster/cluster.o kmeans.o dir_seeker.o main.cpp -o $(EXEC)
+	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o cluster/cluster.o kmeans.o hierarchical.o dir_seeker.o main.cpp -o $(EXEC)
 	
 kmeans.o: kmeans.cpp
 		
 	$(G++) $(FLAGS) -c	kmeans.cpp -o kmeans.o
 	
+
+hierarchical.o: hierarchical.cpp
+	
+	$(G++) $(FLAGS) -c hierarchical.cpp -o hierarchical.o
 	
 #Cleanup
 clean:

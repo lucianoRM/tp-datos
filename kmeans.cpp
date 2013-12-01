@@ -7,8 +7,9 @@
 #include "cluster/cluster.h"
 #include <cmath>
 #include <sstream>
+#include "kmeans.h"
 
-
+#define COTA 0.8
 using std::vector;
 using std::map;
 using std::cout;
@@ -52,9 +53,26 @@ map<unsigned int,float>* generar_centroide_aleatorio(unsigned int cant_terminos)
 	
 	return centroide;
 }
+
+float distancia_minima(map<string,Cluster*>* clusters,map<unsigned int,float>* vector,float norma){
+	float min_distance = -1.0;
+	float act_distance = 0.0;
+	map<string,Cluster*>::iterator it;
+	for(it = clusters->begin();it != clusters->end(); ++it ){
+		if(min_distance == -1.0) {
+			min_distance = calcular_distancia(it->second->get_centroide(),it->second->get_norma(),vector,norma);
+			continue;
+		}
+		act_distance = calcular_distancia(it->second->get_centroide(),it->second->get_norma(),vector,norma);
+		if (act_distance > min_distance){
+			min_distance = act_distance;
+		}
+	}
+	return min_distance;
+}
 		
 /*Devuelve la clave dentro del map donde esta el cluster con distancia minima al vector*/
-string distancia_minima(map<string,Cluster*>* clusters,map<unsigned int,float>* vector,float norma){
+string distancia_minima_key(map<string,Cluster*>* clusters,map<unsigned int,float>* vector,float norma){
 	string retorno = "";
 	float min_distance;
 	float act_distance;
@@ -70,7 +88,6 @@ string distancia_minima(map<string,Cluster*>* clusters,map<unsigned int,float>* 
 			retorno = it->first;
 			min_distance = act_distance;
 		}
-		//cout << "min_distance: " << min_distance << endl;
 	}
 	return retorno;
 }
@@ -97,6 +114,7 @@ map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,uns
 	map<string,Cluster*>* clusters = new map<string,Cluster*>;
 	ostringstream numero;
 	string mas_cercano;
+	float min_distance;
 	unsigned int agregados;
 	map<string,map<unsigned int,float> >::iterator it_vectores;
 	vector<map<unsigned int,float>* >* centroides = new vector<map<unsigned int,float>* >;
@@ -104,7 +122,9 @@ map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,uns
 	unsigned int salto = size_vectores/cant_clusters;//para no agarrar entre los primeros y agarrar sobre toda la lista.
 	if(salto == 0) salto = 1;
 	for(it_vectores = vectores->begin(),agregados = 0;it_vectores != vectores->end() && agregados < cant_clusters;agregados++){
-		centroides->push_back(&it_vectores->second);
+		min_distance = distancia_minima(clusters,&it_vectores->second,calcular_norma(it_vectores->second));
+		if(min_distance > COTA) ++it_vectores;
+		else centroides->push_back(&it_vectores->second);
 		for(j=0;j<salto;j++) ++it_vectores;
 	}
 	unsigned int size = centroides->size();
@@ -124,17 +144,17 @@ map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,uns
 		(*clusters)[nombre] = cluster;
 		numero.str("");
 	}
+	delete centroides;
 	i = 0;
 	while(cambiaron_centroides(clusters,tolerancia) != false){
 		cout << i << endl;
 		i++;
 		resetear_clusters(clusters);
 		for(it_vectores = vectores->begin();it_vectores != vectores->end();++it_vectores){
-			mas_cercano = distancia_minima(clusters,&it_vectores->second,calcular_norma(it_vectores->second));
+			mas_cercano = distancia_minima_key(clusters,&it_vectores->second,calcular_norma(it_vectores->second));
 			(*clusters)[mas_cercano]->agregar_vector(&it_vectores->second,it_vectores->first);
 		}
 	}	
-	delete centroides;
 	return clusters;
 }
 
