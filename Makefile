@@ -1,3 +1,4 @@
+
 #Project Builder
 #General
 G++ = g++ 
@@ -7,15 +8,13 @@ EXEC = TpGrupo6
 
 
 
-all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o kmeans.o hierarchical.o  main.o 
-
+all: stopwords.o porter.o parser.o vectorizador.o dir_seeker.o cluster.o kmeans.o hierarchical.o indice.o main.o 
 
 
 
 dir_seeker.o: dir_seeker.cpp
 
 	$(G++) $(FLAGS) -c dir_seeker.cpp -o dir_seeker.o 
-
 
 parser.o: parser/parser.cpp
 	
@@ -40,9 +39,13 @@ vectorizador.o: parser/vectorizador.cpp
 
 	$(G++) $(FLAGS) -c parser/vectorizador.cpp -o parser/vectorizador.o
 
+indice.o: indice/indice.cpp
+
+	$(G++) $(FLAGS) -c indice/indice.cpp -o indice/indice.o 
+
 main.o: main.cpp
 
-	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o cluster/cluster.o kmeans.o hierarchical.o dir_seeker.o main.cpp -o $(EXEC)
+	$(G++) $(FLAGS) porter/porter.o parser/vectorizador.o stopwords/stopwords.o parser/parser.o cluster/cluster.o kmeans.o hierarchical.o dir_seeker.o indice/indice.o main.cpp -o $(EXEC)
 	
 kmeans.o: kmeans.cpp
 		
@@ -61,4 +64,5 @@ clean:
 	rm porter/*.o
 	rm cluster/*.o
 	rm algoritmo_cluster/*.o
+	rm indice/*.o
 	rm parser/*.o
