@@ -39,7 +39,7 @@ map<string,float> recuperar_pesos_globales(){
 		}
 		else
 			peso_global = atof(linea.c_str());
-		cout++;
+		count++;
 	}
 	return pesos_globales;
 }
