@@ -194,7 +194,6 @@ map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,uns
 	delete centroides;
 	i = 0;
 	while(cambiaron_centroides(clusters,tolerancia) != false){
-		cout << i << endl;
 		i++;
 		resetear_clusters(clusters);
 		if(cota == 1){

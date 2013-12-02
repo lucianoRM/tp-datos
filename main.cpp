@@ -127,11 +127,10 @@ void listar_documentos() {
 			continue;
 		}
 		
-		archivo.open(("Indices" + nombre_archivo).c_str());		
-		getline(archivo, nombre_cluster, ';');
-        while( strcmp(nombre_cluster.c_str(),"") != 0){
+		archivo.open(("Indices/" + nombre_archivo).c_str());
+		cout << nombre_archivo << ": ";	
+		while(getline(archivo, nombre_cluster, ';')){
 			cout << nombre_cluster << ", ";
-			getline(archivo, nombre_cluster, ';');
 		}
 		cout << "\n";
         

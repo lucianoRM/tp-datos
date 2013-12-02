@@ -28,7 +28,7 @@ void crearIndice(string nombre_dir)
 	//if (dir_pointer == NULL)
 	struct dirent* reg_buffer = readdir(dir_pointer);
 
-	string path = "Indices\ Archivos/";
+	string path = "Indices/";
 	string nombre_archivo;
 	string nombre_directorio = nombre_dir;
 	nombre_directorio+="/";
@@ -57,16 +57,6 @@ void crearIndice(string nombre_dir)
 			archivo_indice.close();
 		}
         
-        //Levanto el ultimo texto
-        /*string termino_actual;
-        getline(archivo, termino_actual);
-        indice[termino_actual].push_back(nombre_cluster);
-		
-		fstream archivo_indice;
-		archivo_indice.open ((path+termino_actual).c_str(), std::fstream::in | std::fstream::out | std::fstream::app); 
-		archivo_indice << nombre_cluster << ";";
-		archivo_indice.close();
-		*/
 		archivo.close();
 		reg_buffer = readdir(dir_pointer);
 	}
@@ -76,7 +66,7 @@ void crearIndice(string nombre_dir)
 
 vector<string> obtenerClustersDeTermino(string termino){
 	ifstream archivoIndices;
-	archivoIndices.open(("../Indices\ Archivos/"+termino).c_str());
+	archivoIndices.open(("Indices/"+termino).c_str());
 	string nombre_cluster;
 	vector<string> clusters;
 	while(getline(archivoIndices, nombre_cluster, ';'))
