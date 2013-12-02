@@ -13,6 +13,7 @@
 #include "cluster/cluster.h"
 #include "kmeans.h"
 #include "hierarchical.h"
+#include "indice/indice.h"
 #include <cstdlib>
 
 #define NOMBRE_TP "./TpGrupo6"
@@ -24,10 +25,8 @@ using std::cout;
 using std::endl;
 using std::ofstream;
 
-int vectorizar_documentos(string path, Parser* parser, map<string, map<unsigned int, float> >* vectores) {
-	int t_inicio = time(NULL);
-	parser =new Parser();
-	int retorno = parsear_archivos(argv[2],parser);
+int vectorizar_documentos(string path, Parser* parser) {
+	int retorno = parsear_archivos(path,parser);
 	if (retorno != 0){
 		cout << "No existe directorio\n";
 		delete parser;
@@ -35,7 +34,6 @@ int vectorizar_documentos(string path, Parser* parser, map<string, map<unsigned 
 	}
 	
 	guardar_frecuencias(parser->getFrecuenciasGlobales(), parser->getFrecuenciasLocales());	
-	vectores = vectorizar(parser);
 	
 	return 0;
 }
@@ -157,22 +155,30 @@ int main(int args,char* argv[]){
 		return 0;
 	}
 	
+	int t_inicio = time(NULL);
+	Parser *parser = new Parser();
+	map<string, map<unsigned int, float> >* vectores;
+	map<string, map<unsigned int, float> >* vectores_iniciales;
+	unsigned int cant_terms;
+	unsigned int cant_docs;
+	int retorno;
+	
 	switch(argv[1][1]) {
 		case 'd':
 			if(args < 3) return mensaje_error();
 			
-			Parser *parser;
-			map<string, map<unsigned int, float> >* vectores;
-			int retorno = vectorizar_documentos(argv[2], parser, vectores);
+			
+			retorno = vectorizar_documentos(argv[2], parser);
 			if (retorno != 0)
 				return retorno;
 			
-			map<string, map<unsigned int, float> >* vectores_iniciales = obtener_muestra_vectores(vectores);
-			unsigned int cant_terms = parser->getCantTerms();
-			unsigned int cant_docs = parser->getCantDocs();
+			vectores = vectorizar(parser);
+			vectores_iniciales = obtener_muestra_vectores(vectores);
+			cant_terms = parser->getCantTerms();
+			cant_docs = parser->getCantDocs();
 			delete parser;
 			
-			map<string,Cluster*>* clusters
+			map<string,Cluster*>* clusters;
 			
 			if(strcmp(argv[3], "-c") == 0){
 				if(args < 7) return mensaje_error();
@@ -187,29 +193,26 @@ int main(int args,char* argv[]){
 				
 				delete vectores_iniciales;
 			
-				agregado_resto_de_vectores(clusters, vectores)				
+				agregado_resto_de_vectores(clusters, vectores);
 				escribir_clusters_en_disco(clusters);
 				
 				cout << "Cantidad de archivos: "<< cant_docs << endl;
 				cout << "Cantidad de terminos: "<< cant_terms << endl;
 				int t_fin = time(NULL);
 				cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
-				vectorizar_documentos(argv[2]);	
-				cout << "Vectorizo los documentos\n";
 				
 			}else{
 				if(strcmp(argv[3], "-o") != 0) return mensaje_error();
 				
 				if(args < 5) return mensaje_error();
 				
-				if(strcmp(argv[6], "Y") == 0)
+				/*if(strcmp(argv[6], "Y") == 0)
 					//Jerarquico
 				else 
-					//Jerarquico
+					//Jerarquico*/
 			}
-			Indice* indice = new Indice("Clusters");
-			delete(indice);
 			
+			crearIndice("Clusters");
 			break;
 			
 		case 'l':
