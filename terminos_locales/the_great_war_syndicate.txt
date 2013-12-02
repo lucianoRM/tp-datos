@@ -1,3 +1,4 @@
+abaft: 2
 abandon: 1
 abil: 4
 abl: 9
@@ -105,6 +106,7 @@ answer: 15
 antagonist: 4
 anti: 2
 anticip: 1
+anvil: 1
 anxieti: 2
 anxiou: 9
 anxious: 1
@@ -141,6 +143,7 @@ around: 10
 arrang: 5
 arriv: 19
 art: 1
+artfulli: 1
 artilleri: 10
 artillerist: 1
 ascend: 1
@@ -256,9 +259,11 @@ boom: 9
 border: 4
 bore: 5
 born: 5
+both: 26
 bottom: 7
 bought: 1
 bounc: 1
+bouncer: 1
 bound: 4
 boundari: 1
 bow: 2
@@ -270,6 +275,7 @@ braveri: 2
 bravest: 2
 break: 4
 breakfast: 1
+breakwat: 5
 breath: 4
 breez: 3
 breezi: 1
@@ -306,12 +312,14 @@ calcul: 10
 calibr: 2
 call: 9
 calm: 2
+calmest: 1
 came: 47
 campaign: 2
 canada: 19
 canadian: 15
 canal: 1
 cannon: 31
+cannonad: 3
 cannonade: 4
 canopi: 2
 capabl: 6
@@ -328,6 +336,7 @@ career: 1
 carefulli: 7
 carri: 31
 case: 16
+cask: 1
 cast: 5
 castel: 3
 cataract: 5
@@ -389,7 +398,9 @@ club: 1
 coal: 3
 coast: 48
 coastward: 1
+coastwise: 1
 coat: 3
+codfish: 1
 collect: 1
 collis: 2
 colour: 2
@@ -402,6 +413,7 @@ command: 69
 commenc: 3
 comment: 2
 commerci: 1
+comminut: 1
 commiss: 5
 commit: 1
 committe: 2
@@ -441,6 +453,7 @@ congratul: 1
 congress: 2
 connect: 10
 conquer: 2
+conscienceless: 1
 consciou: 1
 consent: 2
 consequ: 11
@@ -491,6 +504,7 @@ courage: 4
 cours: 26
 cover: 7
 cow: 1
+cowcatch: 1
 crab: 251
 crack: 3
 craft: 20
@@ -510,6 +524,7 @@ crunch: 2
 crush: 14
 cull: 1
 culmin: 1
+cumbrou: 1
 curios: 2
 curiou: 2
 curious: 1
@@ -528,6 +543,7 @@ dark: 2
 darken: 1
 dart: 3
 dash: 4
+davit: 5
 daylight: 1
 dead: 2
 deaden: 1
@@ -692,10 +708,12 @@ effectu: 2
 efficaci: 1
 effici: 4
 effort: 4
+effronteri: 2
 eight: 4
 eighteen: 1
 eighth: 1
 either: 7
+eject: 2
 elabor: 1
 elaps: 1
 elast: 5
@@ -705,6 +723,8 @@ elementari: 1
 elev: 9
 eleven: 1
 elimin: 1
+eliza: 10
+ellipt: 1
 els: 1
 elud: 1
 elude: 1
@@ -875,7 +895,9 @@ fool: 1
 foot: 3
 forbade: 1
 forc: 34
+forcep: 10
 forcibl: 1
+forebore: 1
 foreign: 3
 foremost: 10
 foresight: 1
@@ -930,6 +952,7 @@ gale: 2
 game: 1
 gang: 1
 garrison: 11
+gatl: 1
 gauntlet: 1
 gave: 11
 gaze: 2
@@ -962,6 +985,7 @@ gradual: 1
 graduat: 4
 grai: 2
 grand: 2
+grang: 1
 grapnel: 4
 grasp: 9
 gratif: 1
@@ -997,6 +1021,7 @@ half: 24
 hall: 1
 hammer: 4
 hand: 7
+handrail: 1
 hang: 4
 happen: 23
 happi: 2
@@ -1067,6 +1092,7 @@ humor: 1
 hundr: 14
 hung: 5
 hurl: 6
+hutchin: 2
 hydraul: 1
 idea: 8
 idiot: 1
@@ -1107,6 +1133,7 @@ inch: 2
 incid: 3
 inclin: 1
 includ: 1
+incorrect: 1
 increas: 4
 incred: 1
 incredul: 2
@@ -1160,6 +1187,7 @@ interfere: 4
 interior: 2
 intern: 2
 interrupt: 1
+interstice: 1
 interv: 3
 invad: 1
 invas: 4
@@ -1170,6 +1198,7 @@ invit: 2
 involuntari: 2
 involv: 3
 inward: 1
+irate: 1
 ireland: 3
 irish: 1
 iron: 18
@@ -1194,10 +1223,12 @@ journal: 1
 jubil: 1
 judgment: 4
 judici: 2
+julep: 1
 juli: 1
 juncture: 2
 just: 5
 jut: 1
+kari: 1
 keel: 2
 keep: 15
 kept: 9
@@ -1234,11 +1265,13 @@ learn: 1
 leas: 1
 least: 8
 leav: 13
+leck: 1
 ledg: 1
 leeward: 2
 left: 16
 leg: 1
 length: 5
+lenox: 31
 less: 19
 letter: 8
 level: 5
@@ -1296,6 +1329,7 @@ make: 36
 man: 1
 manag: 2
 mani: 27
+manifesto: 1
 manner: 4
 manoeuvr: 2
 manufacture: 1
@@ -1330,6 +1364,7 @@ messeng: 1
 metal: 3
 method: 13
 middl: 2
+midocean: 1
 midst: 7
 might: 82
 mighti: 4
@@ -1346,6 +1381,7 @@ miracul: 1
 mischief: 3
 misgiv: 1
 mishap: 1
+missive: 2
 mistake: 2
 misti: 1
 mistress: 1
@@ -1416,6 +1452,7 @@ night: 26
 nimbl: 1
 nine: 3
 nineteenth: 1
+nipper: 10
 nobl: 1
 nobodi: 2
 nois: 3
@@ -1423,6 +1460,7 @@ none: 2
 noon: 2
 normal: 2
 north: 12
+northerli: 1
 northern: 8
 note: 16
 noth: 15
@@ -1447,6 +1485,7 @@ occupi: 7
 occur: 7
 occurr: 1
 ocean: 15
+of: 4
 offenc: 6
 offer: 12
 offic: 53
@@ -1457,6 +1496,7 @@ onset: 1
 onslaught: 1
 open: 17
 oper: 21
+opin: 1
 opinion: 14
 oppon: 2
 opportun: 8
@@ -1539,6 +1579,7 @@ peril: 3
 period: 2
 permit: 2
 perpendicular: 3
+perpendicularli: 4
 perplex: 2
 persist: 1
 person: 12
@@ -1549,8 +1590,11 @@ photograph: 1
 pick: 2
 picture: 1
 piec: 6
+pilcher: 9
 pile: 2
 pilot: 1
+pincer: 4
+pincher: 1
 pipe: 10
 pirate: 2
 pitch: 1
@@ -1631,6 +1675,7 @@ produc: 7
 produce: 3
 profess: 1
 profit: 3
+profitless: 1
 profound: 2
 progress: 4
 prohibit: 4
@@ -1707,6 +1752,7 @@ rate: 1
 rather: 2
 ratifi: 1
 ration: 1
+rattler: 1
 rave: 1
 ravish: 1
 reach: 26
@@ -1797,6 +1843,7 @@ rippl: 1
 rise: 7
 risk: 4
 rivalri: 1
+riven: 1
 river: 1
 roam: 1
 roar: 17
@@ -1814,6 +1861,7 @@ row: 6
 royal: 6
 rubber: 1
 rudder: 27
+rudderless: 1
 ruin: 2
 rule: 1
 ruler: 1
@@ -1828,6 +1876,7 @@ said: 11
 sail: 20
 sailor: 4
 salut: 1
+same: 20
 sand: 3
 satisfact: 5
 satisfactori: 4
@@ -1837,6 +1886,7 @@ save: 6
 scale: 8
 scan: 1
 scar: 1
+scarabaeu: 21
 scarc: 9
 scatter: 1
 scene: 7
@@ -1851,6 +1901,8 @@ screw: 9
 scum: 2
 sea: 2
 seaboard: 2
+seacoast: 1
+seaport: 5
 search: 1
 seat: 1
 seaward: 6
@@ -1974,6 +2026,7 @@ sound: 4
 south: 7
 southward: 5
 space: 2
+spanker: 1
 spare: 1
 spark: 1
 speak: 8
@@ -2022,6 +2075,8 @@ stern: 54
 still: 20
 stipul: 3
 stir: 1
+stockbridg: 4
+stockton: 2
 stoker: 1
 stone: 2
 stood: 13
@@ -2071,6 +2126,7 @@ suburb: 1
 succe: 1
 success: 12
 successfulli: 2
+succour: 1
 suck: 1
 sudden: 7
 suddenli: 7
@@ -2100,6 +2156,7 @@ supreme: 2
 sure: 5
 surface: 17
 surg: 5
+surmis: 2
 surmise: 2
 surpris: 6
 surprise: 4
@@ -2116,6 +2173,7 @@ sweep: 2
 swell: 3
 swept: 2
 swift: 8
+swiftest: 3
 swiftli: 3
 swim: 1
 swing: 1
@@ -2239,6 +2297,7 @@ trust: 2
 try: 1
 tube: 10
 tug: 4
+tugboat: 1
 tumult: 1
 turbul: 1
 turmoil: 3
@@ -2251,6 +2310,8 @@ twist: 5
 type: 1
 ultim: 1
 unaccustom: 1
+unappreci: 1
+unarmour: 1
 uncontrol: 1
 undergo: 1
 underli: 2
@@ -2264,6 +2325,7 @@ undesir: 1
 undisturb: 2
 uneasi: 1
 unexampl: 1
+unexcit: 1
 unfavor: 1
 unfavour: 1
 unfinish: 5

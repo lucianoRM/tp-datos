@@ -4,7 +4,7 @@
 G++ = g++ 
 CC = gcc
 FLAGS = -Wall -Wextra -g -pedantic -O3 
-EXEC = TpGrupo6
+EXEC = TpGrupo1
 
 
 

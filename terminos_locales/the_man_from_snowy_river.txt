@@ -2009,6 +2009,7 @@ sake: 3
 salamand: 1
 sale: 3
 saltbush: 13
+same: 4
 sand: 4
 sang: 2
 sank: 1
@@ -2724,6 +2725,7 @@ warn: 3
 warpath: 1
 warrant: 1
 wash: 1
+wasn: 12
 wast: 7
 watch: 14
 watcher: 1

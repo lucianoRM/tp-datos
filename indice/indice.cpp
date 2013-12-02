@@ -16,7 +16,8 @@ using std::istringstream;
 using std::ios;
 using std::cout;
 using std::endl;
-using std::fstream;
+using std::ofstream;
+
 
 
 void crearIndice(string nombre_dir)
@@ -37,7 +38,6 @@ void crearIndice(string nombre_dir)
 	
 	while(reg_buffer != NULL){
         nombre_archivo = (reg_buffer->d_name);
-        
 		if(nombre_archivo == "." || nombre_archivo == ".."){
 			reg_buffer = readdir(dir_pointer);
 			continue;
@@ -51,8 +51,8 @@ void crearIndice(string nombre_dir)
 
             indice[termino_actual].push_back(nombre_cluster);
             
-            fstream archivo_indice;
-			archivo_indice.open((path+termino_actual).c_str(), std::fstream::in | std::fstream::out | std::fstream::app);
+            ofstream archivo_indice;
+			archivo_indice.open((path+termino_actual).c_str());
 			archivo_indice << nombre_archivo << ";";
 			archivo_indice.close();
 		}

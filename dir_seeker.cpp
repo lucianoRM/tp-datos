@@ -32,10 +32,10 @@ void remove_dir(string name){
 
 
 /*Carga todo lo que se guarda en los hashes en disco*/
-void guardar_frecuencias(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales){
+void guardar_frecuencias(map<string,float>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales){
 	string nombre_archivo;
 	
-	map<string,unsigned int>::iterator it_hash_frecuencias_globales;
+	map<string,float>::iterator it_hash_frecuencias_globales;
 	map<string,map<string,unsigned int> >::iterator	it_hash_frecuencias_locales;
 	map<string,unsigned int>::iterator it_local;
 
@@ -62,8 +62,24 @@ void guardar_frecuencias(map<string,unsigned int>* hash_frecuencias_globales,map
 }
 
 
-
-
+int parsear_archivo(string nombre_directorio,string nombre_archivo,Parser* parser){
+	
+	char* path = (char*)malloc((nombre_directorio + nombre_archivo).size() + 1);
+	strcpy(path,(nombre_directorio + nombre_archivo).c_str());
+	cout << "Parsing: " << nombre_archivo << endl;
+	string linea;
+	ifstream archivo;
+	archivo.open(path);
+	
+	while(getline(archivo,linea)){
+		linea += '\n'; //Lo agrego para que no se coma los terminos del final.
+		parser->cargar_terminos(linea,nombre_archivo);
+	}
+	archivo.close();
+	free(path);
+	parser->incrementarDocs();
+	return 0;
+}
 
 /*Funcion que recorre un directorio e imprime los nombres de los archivos que se encuentran dentro de el*/
 int parsear_archivos(string nombre_dir,Parser* parser){
@@ -74,8 +90,7 @@ int parsear_archivos(string nombre_dir,Parser* parser){
 	string nombre_archivo;
 	string nombre_directorio = nombre_dir;
 	nombre_directorio += "/";
-	string linea;
-	ifstream archivo;
+	
 	
 	while(reg_buffer != NULL){
 		nombre_archivo = (reg_buffer->d_name);
@@ -83,15 +98,9 @@ int parsear_archivos(string nombre_dir,Parser* parser){
 			reg_buffer = readdir(dir_pointer);
 			continue;
 		}
-		cout << "Parsing: " << nombre_directorio + nombre_archivo << endl;
-		archivo.open((nombre_directorio + nombre_archivo).c_str());
-		while(getline(archivo,linea)){
-			linea += '\n'; //Lo agrego para que no se coma los terminos del final.
-			parser->cargar_terminos(linea,nombre_archivo);
-		}
-		archivo.close();
+		parsear_archivo(nombre_directorio,nombre_archivo,parser);
 		reg_buffer = readdir(dir_pointer);
-		parser->incrementarDocs();
+		
 	}
 	
 	parser->filtrarAparicionesUnicas();

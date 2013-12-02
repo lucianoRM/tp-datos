@@ -16,7 +16,7 @@
 #include "indice/indice.h"
 #include <cstdlib>
 
-#define NOMBRE_TP "./TpGrupo6"
+#define NOMBRE_TP "./TpGrupo1"
 
 using std::map;
 using std::string;
@@ -24,6 +24,8 @@ using std::ifstream;
 using std::cout;
 using std::endl;
 using std::ofstream;
+
+
 
 
 map<string,Cluster*>* convertir(vector<Cluster*>* clusters){
@@ -58,53 +60,49 @@ void escribir_centroide_en_disco(Cluster* cluster){
 	map<unsigned int,float>::iterator it;
 	ofstream archivo_centroide;
 	archivo_centroide.open(("Centroides/"+cluster->get_id()).c_str());
-	
 	for(it = centroide ->begin(); it != centroide->end(); ++it){
 		archivo_centroide << it->first << ";" << it->second << "\n";
 	}
 	archivo_centroide.close();
 }
 
-void escribir_clusters_en_disco(map<string,Cluster*>* clusters){
+void escribir_clusters_en_disco(map<string,Cluster*>* clusters,string caracter){
 	map<string,Cluster*>::iterator it;
 	for(it = clusters->begin(); it!= clusters->end() ; ++it){
-		it->second->escribir_a_disco();
+		it->second->escribir_a_disco(caracter);
 		escribir_centroide_en_disco(it->second);
 		delete it->second;
 	}
 	delete clusters;
 }
 
-void cargar_centroides(map< string , map<unsigned int,float> >* centroides){
+
+void cargar_clusters(map<string,Cluster*>* clusters,unsigned int cant_terms){
 	
 	DIR* dir_pointer = opendir("Centroides");
-	
+	map<unsigned int,float> centroide;
 	struct dirent* reg_buffer = readdir(dir_pointer);
-	
 	string nombre_archivo;
 	ifstream archivo;
 	
-	while(reg_buffer != NULL){
-        nombre_archivo = (reg_buffer->d_name);
-        
+	while(reg_buffer != NULL){    
+		nombre_archivo = (reg_buffer->d_name);
+ 		cout << nombre_archivo << endl;
 		if(nombre_archivo == "." || nombre_archivo == ".."){
 			reg_buffer = readdir(dir_pointer);
 			continue;
 		}
-		
 		archivo.open(("Centroides/" + nombre_archivo).c_str());		
 		string posicion;
 		string valor;
-		
         while( getline(archivo, posicion, ';') ){
 			getline(archivo, valor);
-			
-			(*centroides)[nombre_archivo][atoi(posicion.c_str())] = atof(valor.c_str());
+			centroide[atoi(posicion.c_str())] = atof(valor.c_str());
 		}
-        
-		archivo.close();
-        
-		reg_buffer = readdir(dir_pointer);
+        archivo.close();
+		Cluster* cluster = new Cluster(&centroide,nombre_archivo,cant_terms);
+		(*clusters)[nombre_archivo] = cluster;
+        reg_buffer = readdir(dir_pointer);
 	}
 
 	closedir(dir_pointer);
@@ -130,7 +128,6 @@ void listar_documentos() {
 		}
 		
 		archivo.open(("Indices\ Archivos/" + nombre_archivo).c_str());		
-		cout << "Documento " << nombre_archivo << ": ";
 		getline(archivo, nombre_cluster, ';');
         while( strcmp(nombre_cluster.c_str(),"") != 0){
 			cout << nombre_cluster << ", ";
@@ -166,13 +163,13 @@ void listar_clusters(){
 		}
 		
 		archivo.open(("Clusters/" + nombre_cluster).c_str());		
-		cout << "Cluster " << nombre_cluster << ": ";
+		cout << nombre_cluster << ": \n";
 		
 		while(getline(archivo, nombre_archivo, ';')){
-			cout << nombre_archivo <<", ";
+			cout << nombre_archivo <<endl;
 		}
 		
-		cout << "\n";
+		cout << "\n\n";
         
 		archivo.close();
         
@@ -209,7 +206,7 @@ int main(int args,char* argv[]){
 	unsigned int cant_terms;
 	unsigned int cant_docs;
 	int retorno;
-	map<string,Cluster*>* clusters;
+	map<string,Cluster*>* clusters = new map<string,Cluster*>;
 	switch(argv[1][1]) {
 		case 'd':
 			if(args < 5) return mensaje_error();
@@ -241,13 +238,11 @@ int main(int args,char* argv[]){
 				if(strcmp(argv[5], "-o") != 0) return mensaje_error();
 				
 				if(strcmp(argv[6], "Y") == 0){
-					cout << "KMEANS-Y" << endl;
 					clusters = k_means(vectores_iniciales,atoi(argv[4]),cant_terms,0.99,0.8);
 					delete vectores_iniciales;
 					agregado_resto_de_vectores_KY(clusters, vectores);
 				}
 				else{
-					cout << "KMEANS-N" << endl;
 					clusters = k_means(vectores_iniciales,atoi(argv[4]),cant_terms,0.99,1);
 					delete vectores_iniciales;
 					agregado_resto_de_vectores_KN(clusters, vectores);
@@ -265,19 +260,17 @@ int main(int args,char* argv[]){
 				delete vectores_iniciales;
 				
 				if(strcmp(argv[4], "Y") == 0){
-					cout << "HIER-Y" << endl;
 					agregado_resto_de_vectores_HY(clusters_aux, vectores);
 				}
 				else {
-					cout << "HIER-N" << endl;
 					agregado_resto_de_vectores_HN(clusters_aux, vectores);
 				}
 				clusters = convertir(clusters_aux);
 			}
 			
 
-			escribir_clusters_en_disco(clusters);
-				
+			escribir_clusters_en_disco(clusters,"");
+		
 			cout << "Cantidad de archivos: "<< cant_docs << endl;
 			cout << "Cantidad de terminos: "<< cant_terms << endl;
 			t_fin = time(NULL);
@@ -294,8 +287,18 @@ int main(int args,char* argv[]){
 			break;
 			
 		case 'a':
-			map< string, map<unsigned int,float> >* centroides = new map< string, map<unsigned int,float> >;
-			cargar_centroides(centroides);
+			map<string,float> pesos_globales = recuperar_pesos_globales();
+			string nombrearchivo = argv[2];
+			unsigned int pos = nombrearchivo.find_last_of("/");
+			string path = nombrearchivo.substr(0,pos+1);
+			nombrearchivo = nombrearchivo.substr(pos+1);
+			parsear_archivo(path,nombrearchivo,parser);
+			parser->setFrecuenciasGlobales(pesos_globales);
+			cargar_clusters(clusters,parser->getCantTerms());
+			vectores = vectorizar(parser);
+			agregado_resto_de_vectores_KN(clusters, vectores);
+			escribir_clusters_en_disco(clusters,";");
+			crearIndice("Clusters");
 	}
 	
 	

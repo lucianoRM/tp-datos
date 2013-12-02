@@ -1,4 +1,5 @@
 #include <map>
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <cmath>
@@ -9,11 +10,14 @@
 #include <vector>
 
 using std::map;
+using std::fstream;
 using std::ifstream;
 using std::ofstream;
 using std::string;
 using std::ostringstream;
 using std::vector;
+using std::cout;
+using std::endl;
 
 
 
@@ -65,19 +69,17 @@ unsigned int Cluster::get_cant_docs(){
 	return cant_docs;
 }
 
-void Cluster::escribir_a_disco(){
-	ofstream archivo_cluster;
-	archivo_cluster.open(("Clusters/" + id).c_str());
-	archivo_cluster << docs;
+void Cluster::escribir_a_disco(string caracter){
+	fstream archivo_cluster;
+	archivo_cluster.open(("Clusters/" + id).c_str(),std::fstream::in | std::fstream::out | std::fstream::app );
+	archivo_cluster << caracter + docs ;
 	archivo_cluster.close();
 }
 
-Cluster::Cluster(map<unsigned int,float>* centroid,string nombre,unsigned int cantidad_terms){
+Cluster::Cluster(map<unsigned int,float>* centroid,string nombre,unsigned int cantidad_terms){	
 	centroide_actual = (*centroid);
 	cant_terms = cantidad_terms;
 	docs = "";
-	entropia_actual = 0;
-	entropia_sig = 0;
 	norma = calcular_norma(centroide_actual);
 	cant_docs = 0;
 	id = nombre;

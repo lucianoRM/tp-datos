@@ -25,6 +25,7 @@ abdelkad: 1
 abdellatif: 1
 abdou: 4
 abdoulay: 3
+abdu: 1
 abdujalil: 1
 abdul: 13
 abdulhashim: 1
@@ -138,6 +139,7 @@ adelaid: 1
 adeli: 11
 adema: 2
 aden: 12
+adenau: 1
 adeniyi: 1
 adequ: 40
 adher: 5
@@ -271,6 +273,7 @@ ahamad: 1
 ahardane: 1
 ahau: 1
 ahead: 6
+ahern: 1
 ahm: 20
 ahmad: 8
 ahmadi: 4
@@ -279,6 +282,7 @@ ahoyo: 1
 ahra: 1
 ahtisaari: 2
 ahuachapan: 1
+ahvaz: 1
 ahvenanmaa: 1
 aiadmk: 3
 aichi: 1
@@ -318,6 +322,7 @@ akasaka: 1
 akau: 1
 akayev: 3
 akbar: 6
+akbari: 2
 akel: 3
 akershu: 1
 akfm: 1
@@ -375,6 +380,7 @@ aleje: 1
 aleka: 1
 aleksand: 4
 aleksandr: 5
+alema: 1
 aleman: 2
 alemann: 2
 alene: 1
@@ -428,6 +434,7 @@ allevi: 1
 alleyn: 1
 alli: 5
 allianc: 92
+allig: 1
 alloc: 8
 allow: 16
 alluvi: 3
@@ -456,6 +463,7 @@ alreadi: 12
 alsace: 1
 alsatian: 1
 also: 166
+alston: 1
 alta: 1
 altaf: 2
 altagracia: 1
@@ -502,6 +510,7 @@ ambassade: 1
 ambassador: 323
 amber: 3
 ambiti: 6
+ambriz: 1
 ambrosio: 1
 amelia: 2
 amelior: 2
@@ -544,6 +553,7 @@ amvrosiyevich: 1
 amyt: 1
 anabar: 1
 anach: 1
+anadyr: 1
 anak: 1
 analog: 5
 analogu: 1
@@ -570,6 +580,7 @@ anchorage: 26
 anchovi: 2
 anciaux: 1
 ancient: 4
+ancona: 1
 and: 9
 andalucia: 1
 andaman: 6
@@ -617,6 +628,7 @@ anguillan: 2
 anguita: 2
 anhalt: 1
 anhui: 1
+ani: 1
 anib: 1
 anibare: 1
 anil: 1
@@ -658,10 +670,13 @@ antep: 1
 anthoni: 4
 anthropogen: 1
 anti: 4
+antiaircraft: 1
+antich: 1
 antifascist: 1
 antigovern: 2
 antigua: 68
 antiguan: 2
+antiguo: 1
 antil: 35
 antillean: 5
 antillen: 1
@@ -765,6 +780,7 @@ arango: 2
 aranibar: 3
 aranuka: 1
 arap: 3
+arar: 1
 ararat: 1
 arauca: 1
 araucania: 1
@@ -818,6 +834,7 @@ arkadhia: 1
 arkadii: 1
 arkansa: 2
 arkhangel: 2
+arklow: 1
 arlington: 1
 arm: 105
 arma: 3
@@ -833,6 +850,7 @@ armistice: 3
 armit: 1
 armor: 1
 arnessysla: 1
+arnfinn: 1
 arnold: 2
 arnulfista: 1
 arnulfo: 1
@@ -939,6 +957,7 @@ assur: 1
 assymetr: 1
 assyrian: 2
 astedad: 2
+asterisk: 1
 astrakhan: 2
 astride: 6
 asturia: 1
@@ -1042,6 +1061,7 @@ auvergn: 1
 auxiliari: 2
 avail: 201
 avalanch: 3
+avan: 1
 avant: 1
 avarua: 3
 avatiu: 1
@@ -1160,6 +1180,7 @@ baghdad: 8
 baghlan: 1
 baginda: 1
 bagisu: 1
+baglei: 1
 bagmati: 1
 bago: 3
 bagong: 1
@@ -1187,6 +1208,8 @@ bail: 2
 bailei: 2
 bailiff: 2
 bailiwick: 2
+bailli: 1
+bailout: 1
 baiti: 1
 baiza: 1
 baja: 3
@@ -1320,6 +1343,7 @@ barbuda: 66
 barbudan: 2
 barcelo: 1
 barcelona: 5
+barda: 1
 bardhastrandarsysla: 2
 bare: 7
 barent: 6
@@ -1504,6 +1528,7 @@ bella: 1
 bellingshausen: 2
 bello: 1
 bellsund: 1
+belmont: 2
 belmopan: 3
 belong: 6
 belorussia: 1
@@ -1591,6 +1616,7 @@ beverage: 67
 beverli: 1
 beyla: 1
 beyond: 7
+bezek: 1
 bezigrad: 1
 bharatiya: 1
 bhattarai: 1
@@ -1648,6 +1674,7 @@ biotechnolog: 1
 biqa: 2
 bird: 13
 birendra: 1
+birger: 1
 birkav: 1
 birlesu: 1
 birlik: 1
@@ -1679,11 +1706,13 @@ bitui: 1
 bitumin: 22
 biya: 3
 bizert: 3
+bjarn: 1
 bjelovar: 1
 bjornoya: 3
 bla: 1
 black: 139
 blackett: 1
+blackman: 1
 blade: 2
 blagoveshchensk: 1
 blair: 2
@@ -1711,6 +1740,7 @@ blok: 1
 blomdal: 1
 blood: 2
 bloodi: 1
+bloodili: 1
 blow: 11
 blown: 2
 blue: 149
@@ -1742,6 +1772,7 @@ bohu: 1
 boigni: 1
 boil: 2
 boileau: 1
+bojador: 1
 bojpoori: 1
 bokamba: 1
 boke: 2
@@ -1793,6 +1824,7 @@ bordeaux: 3
 border: 226
 bordj: 1
 bore: 1
+borer: 1
 borg: 2
 borgarfjardharsysla: 1
 borgo: 2
@@ -1821,6 +1853,7 @@ bosporu: 3
 bossano: 2
 bossi: 1
 boston: 22
+both: 56
 bothnia: 4
 botosani: 1
 botswana: 77
@@ -2067,6 +2100,7 @@ bush: 7
 bushehr: 2
 bushel: 1
 bushenyi: 1
+bushmen: 1
 bushnegro: 1
 busi: 60
 busiest: 2
@@ -2193,6 +2227,7 @@ campania: 1
 campbel: 3
 campech: 1
 campesino: 4
+campin: 1
 campo: 2
 can: 11
 canacintra: 1
@@ -2217,6 +2252,7 @@ canindeyu: 1
 cankiri: 1
 cankuzo: 1
 canlaon: 1
+cann: 1
 cannabi: 54
 canneri: 5
 cannon: 1
@@ -2239,6 +2275,7 @@ capisterr: 2
 capit: 583
 capita: 527
 capitalist: 5
+capitan: 1
 capiz: 1
 capljina: 1
 capor: 1
@@ -2257,6 +2294,7 @@ carabinero: 1
 carabinieri: 1
 carabobo: 1
 caraca: 5
+caracalla: 2
 carajo: 3
 carazo: 1
 carbide: 2
@@ -2342,6 +2380,7 @@ castilla: 4
 castillo: 3
 castl: 2
 castlereagh: 1
+castletown: 1
 castor: 1
 castri: 5
 castro: 6
@@ -2369,6 +2408,7 @@ cato: 1
 cattl: 75
 cau: 1
 cauca: 2
+caucas: 2
 caucasian: 14
 caucasu: 3
 cauliflow: 3
@@ -2407,6 +2447,7 @@ cede: 2
 cedex: 8
 cedi: 3
 ceeac: 17
+ceiba: 1
 celal: 1
 celebe: 3
 celebr: 7
@@ -2460,6 +2501,7 @@ certain: 17
 certainli: 4
 cesair: 1
 cesar: 2
+cesare: 1
 ceska: 1
 cess: 1
 cessate: 2
@@ -2506,6 +2548,7 @@ chamber: 51
 chambr: 4
 chameleon: 1
 chamorro: 7
+champ: 2
 champagn: 1
 champasak: 1
 chan: 4
@@ -2542,6 +2585,7 @@ charro: 1
 charter: 9
 chat: 3
 chatchai: 1
+chateau: 1
 chatham: 3
 chattha: 1
 chau: 1
@@ -2629,6 +2673,7 @@ chilli: 1
 chiluba: 3
 chimaltenango: 1
 chimborazo: 1
+chimbote: 1
 chimbu: 1
 chin: 3
 china: 245
@@ -2683,6 +2728,7 @@ chretien: 3
 chri: 2
 christ: 3
 christchurch: 2
+christensen: 1
 christi: 2
 christian: 182
 christianst: 1
@@ -2748,6 +2794,7 @@ citi: 97
 citizen: 29
 citizenship: 1
 citluk: 1
+citroen: 1
 citru: 45
 citta: 2
 ciudad: 3
@@ -2781,6 +2828,7 @@ clear: 17
 clearanc: 1
 clearli: 4
 clement: 2
+cleopa: 2
 clerfayt: 1
 clergi: 4
 cleric: 5
@@ -2804,6 +2852,7 @@ closure: 2
 cloth: 72
 cloud: 2
 cloudberri: 1
+cloudburst: 1
 cloudi: 25
 cloudless: 1
 clove: 5
@@ -2925,6 +2974,7 @@ communaut: 21
 commune: 4
 communidad: 1
 communist: 216
+commut: 1
 commute: 1
 comodoro: 1
 comoran: 11
@@ -3023,6 +3073,7 @@ congregationalist: 2
 congreso: 12
 congress: 85
 congression: 1
+congressmen: 1
 congresso: 1
 conifer: 1
 conjunct: 2
@@ -3078,6 +3129,7 @@ contemporane: 1
 content: 2
 contermin: 1
 contest: 4
+conti: 1
 contigu: 62
 contin: 11
 continent: 152
@@ -3161,6 +3213,7 @@ corum: 1
 coruna: 1
 cosep: 1
 cosmoledo: 1
+cossio: 1
 cost: 17
 costa: 91
 costituzionale: 1
@@ -3170,6 +3223,7 @@ cotier: 1
 coton: 5
 cotopaxi: 2
 cottage: 3
+cottier: 1
 cotton: 116
 coulibali: 1
 council: 384
@@ -3245,6 +3299,7 @@ croatian: 26
 croc: 1
 crocker: 1
 croe: 1
+croi: 1
 croix: 2
 crom: 1
 crook: 2
@@ -3284,6 +3339,7 @@ cuban: 9
 cubango: 1
 cubic: 1
 cucumb: 1
+cuellar: 2
 cult: 1
 cultist: 1
 cultiv: 56
@@ -3337,6 +3393,7 @@ daaga: 1
 daalu: 3
 dabakala: 1
 dabola: 1
+dacca: 1
 dacko: 2
 daddah: 1
 dadra: 1
@@ -3377,6 +3434,7 @@ damag: 19
 damage: 27
 daman: 2
 damao: 1
+damara: 1
 damascu: 8
 damborenea: 1
 dame: 2
@@ -3387,6 +3445,7 @@ dammam: 1
 damp: 4
 dampen: 2
 dan: 1
+danakil: 1
 danane: 1
 danao: 1
 dane: 3
@@ -3460,6 +3519,7 @@ dean: 4
 death: 715
 debar: 1
 debate: 3
+debbi: 1
 debi: 4
 debrecen: 1
 debt: 306
@@ -3535,6 +3595,7 @@ deliv: 1
 deliveri: 5
 dell: 2
 della: 3
+delli: 1
 delta: 7
 delturco: 1
 demain: 1
@@ -3684,6 +3745,7 @@ didier: 2
 diego: 14
 diekirch: 1
 diemen: 1
+diener: 1
 diesel: 2
 diet: 5
 diez: 1
@@ -3842,6 +3904,7 @@ dolophine: 1
 dolphin: 1
 domagnano: 1
 domain: 1
+domenech: 1
 domenico: 1
 domest: 161
 domin: 59
@@ -3859,10 +3922,12 @@ doneg: 1
 donet: 2
 dong: 5
 donji: 1
+donna: 1
 donnelli: 2
 donor: 40
 dordrecht: 1
 dorei: 1
+dori: 1
 doriden: 1
 dormant: 3
 dornbush: 1
@@ -3927,6 +3992,7 @@ drink: 9
 drive: 21
 driven: 7
 drnovsek: 2
+drogheda: 1
 drollet: 1
 drop: 33
 drought: 96
@@ -4021,6 +4087,7 @@ earlier: 10
 earn: 54
 earner: 23
 earth: 391
+earthenware: 1
 earthmov: 1
 earthquak: 50
 eas: 4
@@ -4116,6 +4183,7 @@ eidgenossenschaft: 1
 eidinta: 1
 eight: 17
 eighth: 1
+eileen: 2
 einar: 2
 eireann: 2
 eiselei: 1
@@ -4231,6 +4299,7 @@ enderburi: 1
 endless: 1
 endors: 1
 endow: 7
+enea: 1
 enebish: 1
 energi: 49
 enerv: 1
@@ -4240,6 +4309,7 @@ enforc: 5
 enga: 1
 engag: 16
 engage: 1
+engel: 1
 enger: 1
 engine: 12
 england: 8
@@ -4315,8 +4385,10 @@ erik: 2
 eritrea: 52
 eritrean: 10
 erkindik: 1
+erl: 1
 ermanno: 1
 ermita: 1
+erna: 1
 ernest: 2
 ernesto: 7
 ero: 1
@@ -4390,6 +4462,7 @@ etibar: 1
 etienn: 1
 etoil: 1
 etorofu: 3
+etrang: 1
 euclide: 1
 eugene: 1
 eugenia: 1
@@ -4505,6 +4578,7 @@ eyr: 1
 ezer: 2
 faafu: 1
 fabbri: 1
+fabio: 1
 fabric: 13
 face: 40
 facil: 81
@@ -4558,6 +4632,7 @@ farabundo: 1
 farah: 1
 faranah: 1
 farc: 2
+fard: 2
 farghona: 1
 farig: 1
 farm: 96
@@ -4712,6 +4787,7 @@ firework: 1
 firm: 24
 first: 88
 firth: 1
+firuz: 1
 fiscal: 270
 fischer: 1
 fish: 443
@@ -4799,9 +4875,11 @@ follerau: 1
 folli: 1
 follow: 80
 fomboni: 2
+fong: 1
 fono: 2
 fonoti: 1
 fonseca: 3
+fontenoi: 1
 fontvieil: 1
 food: 440
 foodgrain: 3
@@ -4837,12 +4915,14 @@ formid: 4
 formosa: 3
 formosan: 1
 formula: 1
+forn: 2
 foroyar: 1
 forro: 1
 fort: 5
 fortaleza: 2
 forth: 1
 fortif: 1
+fortin: 1
 fortune: 5
 forum: 15
 forward: 4
@@ -4956,6 +5036,7 @@ fuad: 2
 fuca: 2
 fuego: 2
 fuel: 114
+fuent: 1
 fuerza: 10
 fujayrah: 2
 fujian: 2
@@ -5015,6 +5096,7 @@ gacko: 1
 gado: 1
 gael: 5
 gaelic: 3
+gaeta: 1
 gafsa: 1
 gaga: 1
 gagaifomauga: 1
@@ -5026,8 +5108,10 @@ gaili: 1
 gain: 16
 gairi: 1
 gajendra: 1
+galant: 1
 galapago: 5
 galati: 1
+galatz: 1
 galbe: 1
 galbraith: 1
 gale: 2
@@ -5085,6 +5169,7 @@ garner: 1
 garnet: 1
 garoeb: 1
 garrison: 5
+garza: 1
 garzoni: 1
 gase: 1
 gasoline: 1
@@ -5135,6 +5220,7 @@ geneve: 1
 genia: 1
 gennadii: 2
 genoa: 2
+genocide: 1
 gent: 1
 gentil: 1
 gentli: 12
@@ -5190,6 +5276,7 @@ ghurburron: 1
 ghuwayriyah: 1
 gianfranco: 1
 giang: 4
+gianni: 1
 giant: 3
 giardino: 1
 gibraltar: 43
@@ -5215,12 +5302,14 @@ gingoog: 1
 ginsberg: 1
 giresun: 1
 girija: 1
+gisborn: 2
 giscard: 1
 giscardian: 1
 gisenyi: 3
 gitarama: 1
 gitega: 1
 giulia: 1
+giuliano: 1
 giurgiu: 1
 giusepp: 1
 give: 10
@@ -5240,6 +5329,7 @@ glaru: 1
 glass: 8
 glassware: 1
 glaud: 1
+glaz: 1
 glenbert: 1
 gligorov: 2
 gliwice: 1
@@ -5260,6 +5350,7 @@ goat: 39
 gobi: 1
 gobolka: 1
 godett: 1
+godfrei: 1
 godo: 1
 godoi: 1
 godthaab: 1
@@ -5322,6 +5413,7 @@ gourd: 2
 gourma: 1
 gourmantch: 1
 goutt: 1
+gouvern: 1
 govern: 1114
 government: 6
 governor: 103
@@ -5350,6 +5442,7 @@ gramsh: 1
 gran: 1
 granada: 1
 grand: 37
+grangemouth: 1
 granic: 1
 granillo: 1
 granit: 2
@@ -5390,6 +5483,7 @@ grenada: 61
 grenadi: 1
 grenadian: 2
 grenadine: 70
+grenvil: 1
 grevena: 1
 grevenmach: 1
 grew: 17
@@ -5455,6 +5549,7 @@ guatemala: 94
 guatemalan: 5
 guaviar: 1
 guaya: 1
+guayama: 1
 guayaquil: 3
 guayma: 1
 gubal: 1
@@ -5480,6 +5575,7 @@ guidimaka: 1
 guido: 1
 guiglo: 1
 guilder: 6
+guillen: 1
 guillermo: 3
 guimara: 1
 guin: 2
@@ -5491,6 +5587,7 @@ guizhou: 1
 gujarat: 1
 gujarati: 1
 gul: 2
+gula: 1
 gulbene: 1
 gulbuddin: 2
 gulden: 6
@@ -5581,6 +5678,7 @@ hakka: 4
 hakkari: 1
 hakki: 2
 hakob: 1
+hakod: 1
 hala: 2
 halab: 1
 halalah: 1
@@ -5588,6 +5686,7 @@ halei: 1
 haleru: 1
 half: 114
 halfwai: 1
+hali: 1
 halidi: 1
 halierov: 1
 halifax: 3
@@ -5596,6 +5695,7 @@ halini: 1
 halk: 1
 hall: 2
 halland: 1
+halldor: 1
 halliyev: 1
 hallucinogen: 4
 halmahera: 1
@@ -5618,6 +5718,7 @@ hamilton: 9
 hamit: 4
 hammarskjold: 2
 hammer: 2
+hammerfest: 1
 hamper: 13
 hampshire: 18
 hampton: 1
@@ -5694,6 +5795,7 @@ hasten: 1
 hatai: 4
 hath: 1
 hato: 1
+haugesund: 1
 haul: 2
 hauraki: 2
 hausa: 5
@@ -5709,6 +5811,7 @@ hawar: 3
 hawera: 1
 hawk: 3
 hay: 1
+haya: 2
 hayarkon: 1
 hayastan: 1
 hayastani: 1
@@ -5744,6 +5847,7 @@ hector: 1
 hedmark: 1
 hegb: 1
 heiberg: 1
+heid: 1
 height: 10
 heilongjiang: 1
 heinrich: 1
@@ -5784,6 +5888,7 @@ herder: 1
 heredia: 1
 hereditari: 5
 hereford: 1
+herero: 2
 heritage: 2
 herm: 1
 hermosillo: 2
@@ -5803,6 +5908,7 @@ hexagon: 2
 hexagram: 1
 heydar: 3
 hhohho: 1
+hick: 1
 hidalgo: 2
 hide: 20
 hiem: 1
@@ -5839,10 +5945,12 @@ hing: 1
 hinterland: 1
 hipolito: 1
 hippopotamu: 1
+hir: 1
 hiroshima: 2
 hisammuddin: 1
 hispan: 1
 hispaniola: 5
+hissar: 1
 histor: 8
 histori: 6
 hit: 1
@@ -5915,6 +6023,7 @@ hors: 5
 horst: 1
 horta: 2
 horticulture: 2
+horton: 1
 horyn: 1
 hoseini: 1
 hosieri: 3
@@ -5981,6 +6090,7 @@ hule: 1
 hull: 1
 human: 28
 humanitarian: 19
+humayun: 1
 humberside: 1
 humberto: 3
 hume: 2
@@ -6064,6 +6174,7 @@ idlib: 1
 idrija: 1
 idriss: 2
 idrissa: 1
+iena: 1
 ifad: 158
 ifctu: 2
 ifrane: 1
@@ -6276,6 +6387,7 @@ interim: 39
 interior: 51
 interisland: 14
 interlock: 1
+interm: 1
 intermedi: 13
 intermitt: 4
 intermod: 1
@@ -6341,6 +6453,7 @@ irredentist: 1
 irregular: 2
 irrig: 279
 irv: 1
+irvin: 1
 isaac: 1
 isabel: 1
 isabela: 1
@@ -6374,6 +6487,7 @@ isma: 2
 ismail: 3
 ismailia: 1
 ismet: 1
+isobath: 1
 isocele: 1
 isol: 9
 isom: 1
@@ -6382,6 +6496,7 @@ isparta: 1
 isra: 46
 israel: 117
 issa: 3
+issi: 1
 issia: 1
 issouf: 1
 issu: 287
@@ -6433,6 +6548,7 @@ jabir: 3
 jablah: 1
 jablanica: 1
 jacad: 1
+jacinto: 2
 jack: 3
 jackovich: 1
 jackson: 1
@@ -6483,6 +6599,7 @@ janata: 11
 janeiro: 6
 janez: 4
 jani: 2
+janin: 1
 jann: 1
 janowski: 1
 januari: 434
@@ -6587,6 +6704,7 @@ joffr: 1
 jogeva: 2
 johan: 3
 johann: 1
+johanna: 1
 johannesburg: 3
 johansen: 2
 johansson: 1
@@ -6631,6 +6749,7 @@ jozef: 2
 jozsef: 1
 juan: 56
 juarez: 2
+juba: 1
 jubayl: 2
 jubbada: 2
 jubilaeumstrass: 1
@@ -6685,6 +6804,7 @@ justu: 1
 jut: 1
 jute: 10
 jutiapa: 1
+jutland: 1
 juvenile: 1
 juventin: 2
 juventud: 4
@@ -6694,6 +6814,7 @@ kaafu: 1
 kabale: 1
 kabardino: 1
 kabarole: 1
+kabir: 1
 kablan: 1
 kabol: 1
 kabore: 1
@@ -6758,6 +6879,7 @@ kamikamica: 1
 kamisese: 1
 kamman: 1
 kamnik: 1
+kamo: 1
 kampala: 6
 kamphaeng: 1
 kampheng: 1
@@ -6835,6 +6957,7 @@ karimata: 1
 karimov: 5
 karjala: 1
 karlovac: 1
+karlsruhe: 1
 karnali: 1
 karnataka: 1
 karol: 2
@@ -6878,6 +7001,7 @@ kavala: 2
 kavaliku: 1
 kavango: 1
 kawasaki: 2
+kawerau: 1
 kay: 2
 kaya: 1
 kayah: 1
@@ -7040,6 +7164,7 @@ kibuy: 2
 kicevo: 1
 kicheril: 1
 kidal: 1
+kidnap: 1
 kidurong: 1
 kiel: 4
 kielc: 1
@@ -7272,6 +7397,7 @@ kraje: 2
 krakow: 3
 kralendijk: 1
 kranj: 1
+krantz: 1
 krapina: 1
 kraslava: 1
 krasnodar: 1
@@ -7403,6 +7529,7 @@ laban: 1
 labasa: 1
 labe: 2
 label: 1
+labem: 1
 labor: 493
 laboratori: 1
 labori: 1
@@ -7430,6 +7557,7 @@ lago: 16
 lagoon: 9
 lagt: 1
 laguna: 1
+lahad: 1
 lahdenmaki: 1
 lahij: 1
 lahnstein: 1
@@ -7514,6 +7642,7 @@ larifla: 1
 larisa: 1
 larn: 1
 larnaca: 3
+larri: 1
 laru: 1
 lasfar: 1
 lasithi: 1
@@ -7553,6 +7682,7 @@ lautoka: 1
 lavalleja: 1
 laviti: 2
 laviyani: 1
+lavoro: 2
 law: 25
 lawa: 2
 lawrenc: 6
@@ -7561,6 +7691,7 @@ layer: 156
 layn: 2
 layoff: 2
 lazare: 1
+lazaro: 1
 lazaryan: 1
 lazdiju: 1
 lazio: 1
@@ -7582,6 +7713,7 @@ leava: 1
 lebanese: 20
 lebanon: 100
 lebap: 1
+leblanc: 1
 lech: 2
 ledo: 1
 leendert: 1
@@ -7611,6 +7743,7 @@ leitrim: 1
 leixo: 1
 leke: 2
 lekoum: 1
+lele: 1
 lelouma: 1
 lempa: 1
 lempira: 5
@@ -7650,6 +7783,7 @@ lester: 2
 lesvo: 1
 leszek: 2
 leszno: 1
+leticia: 1
 letter: 7
 lettish: 1
 leva: 2
@@ -7691,6 +7825,7 @@ librium: 1
 libya: 92
 libyan: 6
 licens: 7
+lich: 1
 lichardu: 1
 lichen: 1
 licit: 3
@@ -7804,6 +7939,7 @@ lkd: 2
 lkdp: 2
 llama: 1
 llano: 1
+llave: 1
 lldc: 5
 llewellyn: 1
 lloyd: 1
@@ -7861,6 +7997,7 @@ longyearbyen: 5
 look: 4
 loom: 1
 loong: 1
+loophole: 1
 loos: 6
 loot: 1
 lopare: 1
@@ -7892,6 +8029,7 @@ louisa: 2
 louisiad: 1
 louisiana: 1
 louisor: 1
+loum: 1
 louth: 1
 love: 1
 lovech: 1
@@ -8163,6 +8301,7 @@ malink: 3
 mall: 21
 mallei: 1
 mallet: 1
+malloi: 1
 mallorca: 2
 malmo: 1
 malmohu: 1
@@ -8284,6 +8423,7 @@ map: 1
 mapalala: 1
 mapinduzi: 1
 mapl: 1
+mapp: 1
 maputo: 6
 mar: 1
 mara: 5
@@ -8358,6 +8498,7 @@ marko: 1
 marlborough: 4
 marmara: 3
 marmolejo: 1
+maroni: 1
 maronite: 2
 maroon: 3
 marouini: 2
@@ -8381,6 +8522,7 @@ marshi: 2
 marshland: 1
 mart: 2
 marta: 1
+martel: 1
 marti: 2
 martial: 1
 martin: 21
@@ -8420,6 +8562,7 @@ massa: 1
 massachusett: 46
 massana: 1
 massawa: 2
+massimo: 1
 massive: 8
 mast: 1
 mastercard: 1
@@ -8599,6 +8742,7 @@ mendere: 1
 mendouga: 1
 mendoza: 3
 menem: 4
+menendez: 1
 meneng: 1
 meneze: 1
 mengal: 2
@@ -8661,8 +8805,10 @@ meticai: 1
 metlika: 1
 metochi: 1
 metric: 51
+metro: 1
 metropolitan: 10
 metropolitana: 1
+mett: 1
 meus: 2
 mexc: 1
 mexican: 14
@@ -8791,6 +8937,7 @@ mircea: 3
 mirdite: 1
 mire: 1
 mireya: 2
+miri: 1
 miriam: 1
 mirko: 1
 miro: 1
@@ -8854,6 +9001,7 @@ modif: 88
 modifi: 20
 modin: 2
 modrica: 1
+moen: 1
 moengo: 1
 mofe: 1
 moga: 1
@@ -8871,6 +9019,7 @@ mohan: 2
 mohe: 1
 mohseni: 1
 moin: 1
+mois: 1
 moist: 1
 moisture: 1
 mojaddedi: 1
@@ -8892,6 +9041,7 @@ molier: 1
 molirena: 3
 molise: 1
 moller: 1
+molotov: 3
 molybdenum: 11
 molyneaux: 1
 mombasa: 2
@@ -8921,6 +9071,7 @@ mongol: 6
 mongolia: 64
 mongolian: 7
 mongoloid: 1
+monica: 1
 monitor: 10
 monjo: 1
 monkei: 1
@@ -8957,6 +9108,7 @@ moonah: 1
 moor: 3
 mopti: 1
 moquegua: 2
+mora: 1
 moral: 3
 moravcik: 1
 moravia: 2
@@ -9019,6 +9171,7 @@ motorcycl: 2
 motpan: 1
 motsamai: 1
 motswana: 2
+motta: 1
 motto: 6
 motu: 1
 motuhake: 2
@@ -9026,6 +9179,7 @@ motzfeldt: 1
 mouaada: 1
 mouazair: 1
 mouhoun: 1
+moulineaux: 1
 moulmein: 1
 moumouni: 1
 moundang: 1
@@ -9181,6 +9335,8 @@ myanma: 4
 myanmar: 2
 myasnikovich: 1
 myen: 1
+myer: 1
+myitkyina: 1
 mykhaylo: 2
 mykola: 1
 mykolayiv: 3
@@ -9188,6 +9344,7 @@ myle: 2
 myrasysla: 1
 myria: 1
 myriam: 1
+myrick: 1
 mysteri: 1
 mzimba: 1
 naama: 1
@@ -9233,6 +9390,7 @@ najran: 1
 nakamura: 2
 nakhodka: 1
 nakhon: 9
+nama: 2
 namangan: 1
 namdo: 6
 name: 317
@@ -9462,6 +9620,7 @@ nicobar: 2
 nicol: 1
 nicola: 4
 nicolaa: 1
+nicolai: 1
 nicolau: 1
 nicosia: 7
 nidoish: 1
@@ -9486,6 +9645,7 @@ nikica: 1
 niko: 1
 nikola: 2
 nikolayevich: 2
+nikolayevna: 1
 nikole: 1
 niku: 1
 nikunau: 1
@@ -9512,6 +9672,7 @@ niue: 28
 niuean: 4
 niwano: 1
 niyazov: 5
+nizami: 1
 nizhnii: 1
 njac: 1
 njazidja: 2
@@ -9529,6 +9690,7 @@ noel: 1
 nogale: 1
 nograd: 1
 noir: 3
+nola: 1
 nomad: 11
 nomin: 30
 nomo: 1
@@ -9538,6 +9700,7 @@ nonalign: 2
 nonassoci: 1
 nonclaim: 2
 noncommerci: 1
+noncompetit: 1
 noncoop: 1
 nondenomin: 1
 nondiscriminatori: 1
@@ -9660,6 +9823,7 @@ nuclear: 175
 nueva: 6
 nuevo: 6
 nugaal: 1
+nugi: 1
 nuhayyan: 2
 nujoma: 3
 nuku: 4
@@ -9727,6 +9891,7 @@ oblysi: 19
 oblystar: 1
 obock: 1
 obote: 1
+obra: 2
 obscure: 2
 observ: 200
 observatori: 1
@@ -9755,6 +9920,7 @@ octubr: 1
 od: 1
 oddsson: 2
 odeen: 1
+odens: 1
 odesa: 3
 odienn: 1
 odinga: 1
@@ -9768,6 +9934,7 @@ oeno: 1
 oer: 6
 oesterreich: 2
 oevp: 5
+off: 1
 offali: 1
 offens: 1
 offer: 4
@@ -9802,6 +9969,7 @@ oireachta: 1
 oita: 1
 ojar: 1
 ojeda: 1
+okavango: 1
 okaw: 1
 okayama: 1
 okhotsk: 3
@@ -9983,6 +10151,7 @@ osumi: 1
 osun: 1
 oswald: 2
 oswaldo: 3
+otago: 2
 otamatea: 1
 otar: 1
 otdar: 3
@@ -10139,6 +10308,7 @@ pair: 2
 pais: 1
 paisa: 2
 paislei: 1
+paix: 3
 pakhtun: 2
 pakistan: 130
 pakistani: 14
@@ -10147,6 +10317,7 @@ paktia: 1
 paktika: 1
 pala: 2
 palace: 4
+palai: 4
 palamene: 1
 palang: 1
 palanga: 1
@@ -10248,6 +10419,7 @@ parliamentari: 37
 parlimen: 1
 parm: 1
 parmessar: 1
+parnel: 1
 parnu: 3
 paro: 1
 parroqui: 1
@@ -10271,6 +10443,7 @@ parvan: 1
 pasai: 1
 pascal: 7
 pasco: 2
+pascoal: 1
 pascua: 3
 paseo: 2
 pashai: 1
@@ -10469,12 +10642,14 @@ peso: 32
 pest: 2
 pesticide: 16
 peta: 1
+petar: 2
 peten: 2
 peter: 28
 peteri: 1
 peterl: 1
 petersburg: 10
 petersen: 2
+peterson: 1
 pethidine: 1
 petit: 2
 petkov: 1
@@ -10596,8 +10771,10 @@ piraeu: 3
 piraiev: 3
 piran: 2
 pire: 1
+piso: 1
 pita: 2
 pitcairn: 22
+piton: 1
 pitr: 1
 pittsburgh: 2
 piura: 2
@@ -10606,6 +10783,7 @@ pizano: 2
 pkmap: 3
 pkqp: 2
 place: 48
+placement: 1
 placer: 5
 plachinda: 1
 placidyl: 1
@@ -10620,6 +10798,7 @@ plana: 1
 plane: 2
 planken: 1
 plankton: 1
+plano: 1
 plant: 48
 plantain: 5
 plantate: 14
@@ -10629,6 +10808,7 @@ plateau: 66
 plateaux: 2
 platform: 1
 platinum: 9
+playa: 1
 player: 1
 plaza: 8
 plea: 1
@@ -10746,6 +10926,7 @@ portugues: 39
 portuguesa: 2
 posavina: 1
 pose: 7
+posibl: 2
 posit: 15
 possess: 25
 possibl: 16
@@ -10814,6 +10995,7 @@ predict: 2
 predomin: 26
 predominantli: 16
 predstavnick: 1
+preemptive: 1
 prefect: 6
 prefecture: 18
 prefegitura: 1
@@ -10924,6 +11106,7 @@ project: 22
 proletarian: 2
 prolifer: 3
 prolong: 7
+prom: 1
 promin: 2
 promis: 7
 promise: 5
@@ -11117,6 +11300,7 @@ quechua: 4
 queda: 1
 queen: 65
 queensland: 1
+queenstown: 1
 quemoi: 2
 quercia: 1
 queretaro: 1
@@ -11191,6 +11375,7 @@ radovljica: 1
 raduga: 1
 radviliskio: 1
 rafael: 9
+raffael: 1
 rafiq: 2
 rafsanjani: 2
 rag: 1
@@ -11300,6 +11485,7 @@ raul: 7
 rauma: 1
 rauti: 1
 ravag: 2
+ravenna: 1
 ravine: 1
 ravn: 1
 ravoni: 1
@@ -11321,6 +11507,7 @@ rdnp: 3
 rdp: 2
 reach: 156
 reacheanachak: 1
+reactive: 1
 reactor: 1
 read: 185
 readi: 1
@@ -11355,6 +11542,7 @@ recipi: 181
 reclaim: 3
 recogn: 35
 recognit: 3
+recomm: 1
 recommend: 20
 reconcili: 3
 reconstitut: 2
@@ -11403,6 +11591,7 @@ refus: 3
 regain: 4
 regard: 5
 regardless: 4
+regenc: 2
 regent: 5
 regenvanu: 2
 regiao: 2
@@ -11415,6 +11604,7 @@ regioni: 1
 regist: 65
 registr: 6
 registri: 27
+regroup: 2
 regul: 16
 regular: 11
 regularli: 4
@@ -11478,6 +11668,7 @@ renato: 1
 render: 1
 rene: 7
 renew: 24
+reni: 1
 renmin: 2
 renounc: 1
 renov: 7
@@ -11564,7 +11755,9 @@ resurg: 1
 resurrectionist: 1
 retail: 2
 retain: 18
+retake: 1
 retalhuleu: 1
+rete: 1
 rethimni: 1
 retighten: 1
 retir: 5
@@ -11671,6 +11864,7 @@ roadless: 1
 roast: 1
 robert: 17
 roberto: 9
+robi: 1
 robin: 1
 robinson: 5
 robitussan: 1
@@ -11679,6 +11873,7 @@ robleh: 1
 robot: 1
 robust: 3
 roca: 3
+rocco: 1
 roch: 1
 rocha: 2
 rochest: 1
@@ -11698,6 +11893,8 @@ rogaland: 1
 rogatica: 1
 rogelio: 1
 roger: 5
+roil: 1
+roin: 1
 roja: 3
 rokiskio: 1
 roland: 2
@@ -11724,6 +11921,7 @@ romualda: 1
 ronald: 5
 roncador: 2
 roncerai: 1
+roncier: 1
 rondonia: 1
 rong: 1
 rongji: 1
@@ -11753,6 +11951,7 @@ rossem: 4
 rossen: 1
 rossiya: 1
 rossiyskaya: 1
+rosso: 1
 rostock: 1
 rostov: 2
 rota: 2
@@ -11804,6 +12003,7 @@ rukungiri: 1
 rukwa: 1
 rule: 56
 ruler: 13
+rumen: 1
 rumor: 1
 rumphi: 1
 run: 5
@@ -11884,6 +12084,7 @@ safeti: 2
 safi: 2
 saga: 2
 sagarmatha: 1
+sager: 1
 saguia: 1
 sahaba: 1
 sahara: 34
@@ -11904,6 +12105,7 @@ sail: 3
 saimaa: 1
 saint: 398
 saipan: 9
+sait: 1
 saitama: 1
 saitoti: 1
 sakala: 1
@@ -11915,6 +12117,7 @@ sakeasi: 1
 sakhalin: 3
 sakhalinsk: 1
 sakhon: 1
+saki: 2
 sakigake: 3
 sakiu: 1
 sakon: 1
@@ -11973,6 +12176,7 @@ samarqand: 1
 sambanemanja: 1
 samchi: 1
 samdrup: 1
+same: 28
 samhar: 1
 sami: 7
 sammarinese: 3
@@ -12092,6 +12296,7 @@ savezni: 1
 savi: 1
 savimbi: 1
 savisaar: 1
+savona: 1
 savostin: 1
 savu: 2
 savusavu: 1
@@ -12311,6 +12516,7 @@ sergio: 3
 sergipe: 1
 serhii: 3
 seri: 9
+seria: 1
 seriou: 31
 serious: 3
 serpa: 1
@@ -12411,11 +12617,13 @@ sharpli: 11
 sharqiyah: 4
 shati: 1
 shatt: 5
+shaul: 1
 shave: 1
 shaviyani: 1
 shaykh: 5
 shcherbak: 1
 shea: 2
+shearer: 1
 sheath: 1
 sheep: 50
 sheepherd: 1
@@ -12433,7 +12641,9 @@ shemgang: 1
 sheng: 2
 shengelaya: 2
 shenyang: 2
+sher: 1
 sheraton: 1
+sherbrook: 1
 sherif: 1
 sheriff: 1
 sherpa: 1
@@ -12680,6 +12890,7 @@ skegro: 1
 skender: 2
 ski: 2
 skierniewice: 1
+skift: 1
 skii: 2
 skikda: 2
 skill: 23
@@ -12695,6 +12906,7 @@ skyrocket: 1
 slacken: 2
 slade: 1
 sladek: 1
+slang: 3
 slash: 8
 slate: 3
 slaughterhous: 2
@@ -12832,7 +13044,9 @@ songhai: 1
 songkhla: 3
 songkhram: 1
 songnim: 1
+sonia: 1
 sonink: 1
+sonn: 1
 sonora: 1
 sonson: 1
 sonsor: 1
@@ -12847,6 +13061,7 @@ sophia: 1
 sophist: 1
 sophon: 1
 sopron: 2
+sorbi: 1
 sore: 1
 sorghum: 28
 sorhaindo: 2
@@ -12882,6 +13097,7 @@ southland: 3
 southwest: 82
 southwesterli: 2
 southwestern: 13
+southwick: 1
 souvenir: 3
 sovereign: 8
 sovereignti: 21
@@ -12909,6 +13125,7 @@ specialti: 1
 specif: 8
 specifi: 11
 spectacular: 2
+specter: 1
 specul: 3
 speechwrit: 1
 speed: 7
@@ -12936,6 +13153,7 @@ spokesman: 1
 spokesperson: 1
 sponsor: 6
 sporad: 4
+spore: 1
 sport: 4
 spot: 2
 sppf: 6
@@ -12993,6 +13211,7 @@ stapl: 10
 stapleton: 2
 star: 108
 starch: 3
+starfish: 2
 stari: 1
 starovilenskaya: 1
 start: 12
@@ -13133,6 +13352,7 @@ subsidi: 22
 subsidiari: 2
 subsist: 89
 substanc: 11
+substant: 1
 substanti: 75
 substitute: 2
 subsum: 1
@@ -13181,6 +13401,7 @@ suleymenov: 2
 sulfur: 15
 sullivan: 1
 sullom: 1
+sulpher: 1
 sulphur: 64
 sultan: 12
 sultanov: 2
@@ -13254,6 +13475,7 @@ survei: 4
 surveyor: 2
 surviv: 1
 surya: 1
+susa: 2
 suscept: 2
 suspect: 3
 suspend: 51
@@ -13270,6 +13492,7 @@ suwayda: 1
 suwayf: 1
 svai: 1
 svalbard: 21
+sven: 1
 svencioniu: 1
 svensson: 1
 sverdlovsk: 1
@@ -13404,12 +13627,14 @@ talc: 3
 talcahuano: 1
 taldyqorghan: 1
 tali: 1
+talib: 1
 talk: 4
 tall: 4
 tallinn: 6
 talon: 4
 talsu: 1
 talysh: 1
+taman: 1
 tamana: 1
 tamang: 1
 tamanghasset: 1
@@ -13545,6 +13770,7 @@ teiwaki: 1
 teke: 1
 tekere: 2
 tekirdag: 1
+tela: 1
 telecommun: 32
 telefax: 1
 telegraph: 12
@@ -13574,6 +13800,7 @@ temporarili: 4
 temur: 2
 ten: 1
 tender: 3
+tene: 1
 tenerife: 1
 teng: 7
 tengah: 3
@@ -13650,6 +13877,7 @@ thebain: 1
 thebe: 1
 theo: 1
 theocrat: 1
+theodor: 1
 theodore: 3
 theoret: 2
 theori: 11
@@ -13825,6 +14053,7 @@ tongatapu: 2
 tongo: 1
 tongsa: 1
 tongu: 1
+toni: 1
 tonkin: 5
 tonl: 1
 took: 14
@@ -13853,6 +14082,7 @@ torr: 5
 torrenti: 1
 torrid: 2
 torshavn: 3
+tortola: 1
 torun: 1
 toscana: 1
 toshiki: 1
@@ -13901,6 +14131,7 @@ trail: 1
 train: 12
 traki: 1
 tran: 1
+tranch: 1
 trang: 3
 transact: 6
 transatlant: 1
@@ -13983,6 +14214,7 @@ trincomale: 1
 trindade: 2
 trinidad: 89
 trinidadian: 2
+trinite: 1
 triniti: 1
 tripartite: 3
 tripl: 4
@@ -14090,7 +14322,9 @@ tunn: 1
 tunnel: 1
 tupac: 2
 tupou: 1
+tura: 1
 turabi: 2
+turbo: 1
 turgunaliyev: 1
 turin: 1
 turk: 42
@@ -14143,6 +14377,7 @@ tzomet: 3
 uabo: 1
 ubangi: 1
 ubon: 1
+ucar: 1
 ucayali: 3
 ucero: 1
 uclc: 1
@@ -14197,6 +14432,7 @@ ultraviolet: 1
 uludole: 1
 ulufa: 1
 uman: 2
+umana: 1
 umar: 1
 umberto: 1
 umbra: 1
@@ -14228,6 +14464,7 @@ undefin: 2
 underdevelop: 7
 underemploi: 12
 underemploy: 16
+underfund: 1
 undergo: 6
 undergone: 1
 underground: 4
@@ -14236,6 +14473,7 @@ underli: 3
 undermin: 1
 undermine: 1
 undernourish: 1
+underpin: 1
 underreport: 1
 underst: 1
 understand: 2
@@ -14350,6 +14588,7 @@ unwil: 2
 unwilling: 1
 unwritten: 6
 upad: 3
+upcountri: 1
 update: 2
 updp: 2
 upgrad: 3
@@ -14373,6 +14612,7 @@ urairat: 1
 ural: 2
 uranium: 46
 urban: 44
+urbina: 1
 urdu: 8
 urdun: 1
 urduniyah: 1
@@ -14478,6 +14718,7 @@ vanish: 1
 vanuatu: 65
 varazdin: 1
 vardak: 1
+vardar: 1
 vare: 1
 vareno: 1
 varga: 5
@@ -14519,7 +14760,9 @@ vega: 3
 veget: 143
 veguer: 3
 vehicl: 98
+vehicular: 2
 veiga: 2
+veii: 1
 vejl: 1
 vela: 1
 velasquez: 1
@@ -14552,6 +14795,7 @@ verd: 68
 verdean: 4
 verdet: 1
 verdict: 1
+verena: 1
 verfassungsgerichtshof: 1
 vergina: 1
 verhofstadt: 1
@@ -14623,6 +14867,7 @@ vilkaviskio: 1
 vill: 2
 villa: 1
 village: 13
+villega: 1
 villeta: 1
 villig: 1
 vilniau: 1
@@ -14665,6 +14910,7 @@ vista: 2
 vital: 11
 vitalii: 2
 vitez: 1
+vitoria: 2
 vitsyebsk: 1
 vitsyebskaya: 1
 viv: 1
@@ -14784,6 +15030,7 @@ wakrah: 1
 walachian: 1
 walbrzych: 1
 waldemar: 1
+waldo: 1
 wale: 5
 walesa: 2
 wali: 1
@@ -14840,6 +15087,7 @@ water: 285
 watercraft: 1
 waterford: 2
 waterfowl: 3
+waterg: 1
 watermelon: 2
 watersh: 2
 waterwai: 139
@@ -14886,10 +15134,12 @@ westernmost: 1
 westfalen: 1
 westland: 2
 westmeath: 1
+westminist: 1
 westmoreland: 1
 weston: 1
 westward: 1
 wetar: 1
+wete: 1
 wetland: 94
 wetter: 3
 wexford: 1
@@ -14957,6 +15207,7 @@ windstorm: 3
 windward: 6
 wine: 18
 wing: 15
+winger: 3
 wingti: 1
 winner: 1
 winston: 3
@@ -15039,11 +15290,13 @@ xingang: 1
 xinjiang: 2
 xizang: 2
 xxiii: 1
+xxxx: 4
 yacht: 1
 yacob: 1
 yadav: 1
 yafran: 1
 yagmur: 1
+yahya: 1
 yaik: 1
 yakutia: 1
 yakutsk: 1
@@ -15082,6 +15335,7 @@ yazicioglu: 1
 year: 2281
 yearend: 20
 yearli: 2
+yearlong: 1
 yedinstvo: 2
 yegor: 1
 yekaterinburg: 3
@@ -15183,6 +15437,7 @@ zapadoceski: 1
 zapadoslovenski: 1
 zaporiz: 1
 zaporizhzhya: 1
+zaragoza: 1
 zarasu: 1
 zarif: 1
 zarqa: 1
@@ -15250,6 +15505,7 @@ zlitan: 1
 zloti: 3
 zlotych: 2
 zomba: 1
+zona: 1
 zone: 268
 zongu: 1
 zonguldak: 1

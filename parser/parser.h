@@ -14,7 +14,7 @@ class Parser{
 		unsigned int cant_documentos;
 		unsigned int cant_terminos;
 		std::map<std::string,short> dicc_stopwords;
-		std::map<std::string,unsigned int> hash_frecuencias_globales;
+		std::map<std::string,float> hash_frecuencias_globales;
 		std::map<std::string,std::map<std::string,unsigned int> > hash_frecuencias_locales;
 		std::map<std::string,std::string> hash_apariciones_unicas;
 	public:
@@ -35,11 +35,15 @@ class Parser{
 	public:
 		unsigned int getCantDocs();
 	public:
-		std::map<std::string,unsigned int>* getFrecuenciasGlobales();
+		std::map<std::string,float>* getFrecuenciasGlobales();
 	public:
 		std::map<std::string,std::map<std::string,unsigned int> >* getFrecuenciasLocales();
 	public:
 		void filtrarAparicionesUnicas();
+	public:
+		void setFrecuenciasGlobales(std::map<std::string,float>  frecuencias);
+	public:
+		void agregar_archivo(std::map<std::string,unsigned int> frecuencias_locales,std::string nombre);
 };
 
 #endif //PARSER_H

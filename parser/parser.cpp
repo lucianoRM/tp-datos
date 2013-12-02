@@ -98,7 +98,16 @@ unsigned int Parser::getCantDocs(){
 	return cant_documentos;
 }
 
-map<string,unsigned int>* Parser::getFrecuenciasGlobales(){
+void Parser::setFrecuenciasGlobales(map<string,float>  frecuencias){
+	hash_frecuencias_globales = frecuencias;
+	cant_terminos = frecuencias.size();
+}
+	
+void Parser::agregar_archivo(map<string,unsigned int> frecuencias_locales,string nombre){
+	hash_frecuencias_locales[nombre] = frecuencias_locales;
+}
+
+map<string,float>* Parser::getFrecuenciasGlobales(){
 	return &hash_frecuencias_globales;
 }
 

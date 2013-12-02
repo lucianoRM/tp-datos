@@ -351,7 +351,6 @@ arg: 1
 argu: 5
 arguabl: 1
 argument: 24
-argv: 1
 aris: 1
 arise: 12
 arisen: 1
@@ -4116,7 +4115,6 @@ malfunct: 11
 malice: 1
 malici: 4
 malign: 2
-malloc: 11
 malodor: 1
 mammoth: 1
 mana: 1
@@ -6261,7 +6259,6 @@ six: 4
 sixteen: 1
 sixti: 2
 size: 53
-sizeof: 2
 skate: 1
 skee: 1
 skeleton: 1

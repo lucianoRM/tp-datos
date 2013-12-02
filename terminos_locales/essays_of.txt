@@ -627,7 +627,6 @@ boston: 2
 boswel: 1
 botanise: 1
 botanist: 1
-both: 18
 bottl: 7
 bottom: 9
 bouff: 1
@@ -4703,7 +4702,7 @@ saloon: 15
 salt: 4
 salut: 9
 salutari: 2
-same: 56
+same: 2
 samuel: 1
 sanatorium: 1
 sanctifi: 1
@@ -6096,7 +6095,6 @@ warmth: 4
 warn: 5
 warriston: 1
 wash: 10
-wasn: 1
 wasna: 1
 wast: 6
 watch: 17

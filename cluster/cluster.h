@@ -32,7 +32,7 @@ class Cluster {
 		void recalcular_centroide(std::map<unsigned int,float>* vector,unsigned int cant_terms);
 		bool cambio_centroide(float tolerancia);
 		void resetear_cluster();
-		void escribir_a_disco();
+		void escribir_a_disco(std::string caracter);
 		//~Cluster();
 };
 

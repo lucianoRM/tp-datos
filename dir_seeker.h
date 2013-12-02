@@ -21,8 +21,10 @@ void create_dir(std::string name);
 void remove_dir(std::string name);
 
 /*Carga todo lo que se guarda en los hashes en disco*/
-void guardar_frecuencias(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales);
+void guardar_frecuencias(map<string,float>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales);
 
+
+int parsear_archivo(string nombre_directorio,string nombre_archivo,Parser* parser);
 
 /*Funcion que recorre un directorio e imprime los nombres de los archivos que se encuentran dentro de el*/
 int parsear_archivos(string nombre_dir,Parser* parser);

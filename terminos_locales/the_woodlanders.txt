@@ -616,7 +616,6 @@ born: 16
 borrow: 1
 bosom: 6
 boss: 1
-both: 30
 bother: 1
 bottl: 4
 bottom: 16
@@ -4852,7 +4851,6 @@ salt: 2
 salubr: 1
 salubri: 1
 salv: 1
-same: 60
 sampl: 1
 sand: 4
 sandbourn: 2
@@ -6352,7 +6350,7 @@ warn: 2
 warrant: 5
 wart: 1
 wash: 7
-wasn: 5
+wasn: 3
 wasp: 1
 wast: 6
 watch: 42
