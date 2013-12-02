@@ -10,12 +10,38 @@ using std::map;
 using std::string;
 using std::cout;
 using std::endl;
+using std::ifstream;
 using std::ofstream;
 
 #define MAX 100
 #define PATH "vectores/"
 #define PORCENTAJE_VECTORES 0.3		
 		
+void guardar_pesos_globales(map<string,float> pesos_globales){
+	map<string,float>::iterator it;
+	ofstream archivo("globales.txt");
+	for(it = pesos_globales.begin();it != pesos_globales.end();++it)
+		archivo << it->second << endl << it->first << endl;
+	archivo.close();
+}
+
+map<string,float> recuperar_pesos_globales(){
+	map<string,float> pesos_globales = map<string,float>();
+	ifstream archivo("globales.txt");
+	string linea;
+	string nombre_doc;
+	float peso_global;
+	int count = 1;
+	while(getline(archivo,linea)){
+		if(count % 2 == 0){
+			nombre_doc = linea;
+			pesos_globales[nombre_doc] = peso_global;
+		}
+		else
+			peso_global = atof(linea.c_str());
+	}
+	return pesos_globales;
+}
 
 map<string,map<unsigned int,float> >* vectorizar(Parser* parser){
 
@@ -61,7 +87,7 @@ unsigned int archivos_procesados = 0;
 		////////////////
 		archivos_procesados++;
 	}
-	
+	guardar_pesos_globales(pesos_globales);
 	return vectores;
 }
 
