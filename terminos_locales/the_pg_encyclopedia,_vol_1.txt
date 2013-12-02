@@ -14760,6 +14760,7 @@ lethal: 1
 lethargi: 2
 lethbridg: 2
 letitia: 1
+letra: 1
 lett: 1
 letter: 398
 letteratura: 1

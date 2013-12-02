@@ -2102,6 +2102,7 @@ sake: 1
 sale: 4
 salli: 1
 saloon: 1
+same: 49
 sampl: 3
 sang: 11
 santa: 1

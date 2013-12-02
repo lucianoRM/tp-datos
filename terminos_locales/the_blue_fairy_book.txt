@@ -3358,7 +3358,7 @@ sale: 3
 salt: 17
 salut: 6
 samarcand: 2
-same: 79
+same: 99
 sampl: 1
 sand: 4
 sang: 12
@@ -4307,7 +4307,6 @@ warn: 12
 warren: 3
 warrior: 1
 wash: 24
-wasn: 4
 wasna: 1
 wast: 5
 watch: 27

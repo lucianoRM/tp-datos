@@ -308,7 +308,7 @@ born: 5
 borrow: 1
 bosh: 1
 bosom: 12
-both: 17
+both: 44
 bother: 4
 bottl: 5
 bottom: 11
@@ -2408,6 +2408,7 @@ sailor: 1
 sake: 7
 salt: 1
 salute: 1
+same: 73
 sand: 7
 sandwich: 10
 sang: 15

@@ -260,6 +260,7 @@ bootlace: 1
 bore: 1
 born: 4
 borrow: 4
+both: 8
 bother: 6
 bottl: 42
 bottom: 3
@@ -2085,6 +2086,7 @@ sake: 3
 sale: 3
 salmon: 3
 salt: 1
+same: 28
 sampl: 9
 sand: 3
 sang: 4

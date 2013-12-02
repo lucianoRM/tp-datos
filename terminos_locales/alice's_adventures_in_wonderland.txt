@@ -80,6 +80,7 @@ ask: 22
 askanc: 1
 asleep: 8
 assembl: 2
+athel: 1
 atom: 2
 attempt: 3
 attend: 5
@@ -185,6 +186,7 @@ burst: 2
 busi: 9
 busili: 4
 butter: 10
+buttercup: 1
 butterfli: 1
 button: 1
 cackl: 1
@@ -197,6 +199,7 @@ canari: 1
 candl: 3
 canterburi: 1
 canva: 1
+caper: 1
 capit: 4
 card: 3
 cardboard: 1
@@ -204,6 +207,7 @@ care: 6
 carefulli: 3
 carri: 7
 carrier: 1
+carrol: 2
 cart: 1
 cartwheel: 1
 case: 5
@@ -227,6 +231,7 @@ chang: 26
 chapter: 12
 charact: 1
 charg: 1
+chatt: 1
 cheap: 1
 cheat: 1
 check: 3
@@ -276,6 +281,7 @@ cold: 1
 collar: 1
 collect: 2
 come: 57
+comfit: 2
 comfort: 3
 common: 1
 commot: 1
@@ -288,6 +294,7 @@ conclus: 2
 condemn: 1
 conduct: 1
 confus: 12
+conger: 1
 conqueror: 2
 conquest: 1
 consent: 1
@@ -322,7 +329,9 @@ crept: 1
 cri: 21
 crimson: 2
 crocodile: 1
+croquet: 11
 cross: 6
+crossli: 1
 crouch: 1
 crowd: 9
 crown: 3
@@ -337,12 +346,17 @@ curiou: 19
 curious: 2
 curl: 3
 curli: 1
+currant: 1
 curtain: 1
+curtsei: 2
 curv: 1
 cushion: 2
+custard: 1
+custodi: 2
 cut: 1
 dai: 4
 dainti: 1
+daisi: 2
 danc: 15
 dare: 5
 daresai: 1
@@ -377,6 +391,7 @@ difficult: 2
 difficulti: 5
 dig: 4
 dilig: 1
+dinah: 14
 dinner: 2
 dip: 2
 direct: 10
@@ -406,6 +421,7 @@ doubt: 6
 doubtfulli: 2
 downward: 2
 doze: 2
+draggl: 1
 draw: 8
 drawl: 3
 dread: 2
@@ -425,8 +441,10 @@ drunk: 2
 duchess: 42
 duck: 4
 dull: 3
+dunc: 1
 eager: 3
 eagerli: 8
+eaglet: 3
 ear: 5
 earl: 2
 earnestli: 2
@@ -449,6 +467,7 @@ elbow: 4
 eleg: 1
 eleventh: 1
 els: 12
+elsi: 1
 emphasi: 1
 empti: 1
 encourag: 3
@@ -482,6 +501,7 @@ except: 4
 exclaim: 6
 exclam: 1
 execut: 11
+execute: 2
 execution: 6
 exist: 1
 expect: 4
@@ -550,6 +570,8 @@ fit: 2
 five: 8
 fix: 1
 flame: 1
+flamingo: 7
+flapper: 2
 flash: 1
 flat: 2
 flavour: 1
@@ -569,9 +591,11 @@ follow: 13
 fond: 4
 foolish: 1
 foot: 10
+footman: 14
 footmen: 1
 footstep: 2
 forehead: 2
+forepaw: 1
 forget: 5
 forgot: 2
 forgotten: 6
@@ -630,6 +654,7 @@ glove: 11
 go: 27
 goe: 7
 golden: 7
+goldfish: 2
 gone: 13
 good: 27
 goos: 2
@@ -639,6 +664,7 @@ grand: 3
 grant: 1
 grass: 4
 grave: 6
+gravi: 1
 graze: 1
 great: 39
 green: 4
@@ -652,6 +678,7 @@ growl: 6
 grown: 7
 grumbl: 1
 grunt: 5
+gryphon: 55
 guard: 1
 guess: 6
 guest: 3
@@ -676,16 +703,16 @@ hastili: 16
 hatch: 1
 hate: 3
 hatter: 57
-have: 10
-haven: 8
 head: 60
 heap: 1
 hear: 18
 heard: 30
 heart: 10
 hearth: 1
+hearthrug: 1
 heavi: 2
 hedg: 3
+hedgehog: 10
 heel: 1
 height: 5
 held: 4
@@ -707,11 +734,13 @@ hollow: 1
 home: 5
 honest: 1
 honour: 4
+hookah: 5
 hope: 8
 hopeless: 1
 hors: 1
 hour: 6
 hous: 19
+housemaid: 1
 howev: 20
 howl: 4
 humbl: 3
@@ -771,6 +800,7 @@ journei: 1
 judg: 5
 jump: 10
 juri: 22
+juror: 5
 jurymen: 4
 just: 52
 justice: 1
@@ -829,6 +859,7 @@ least: 9
 leav: 16
 ledg: 1
 left: 14
+lefthand: 2
 leg: 5
 length: 1
 less: 4
@@ -861,6 +892,7 @@ longer: 3
 longitude: 2
 look: 106
 loos: 1
+lori: 7
 lose: 2
 lost: 3
 loud: 6
@@ -873,9 +905,11 @@ lower: 1
 luckili: 2
 lullabi: 1
 ly: 8
+mabel: 4
 machine: 1
 made: 30
 magic: 1
+magpi: 1
 majesti: 12
 make: 46
 mallet: 1
@@ -904,6 +938,7 @@ melancholi: 6
 memorandum: 1
 memori: 1
 mention: 3
+mercia: 2
 mere: 2
 merrili: 1
 message: 2
@@ -929,6 +964,7 @@ moment: 31
 month: 2
 moon: 1
 moral: 9
+morcar: 2
 morn: 5
 morsel: 1
 mostli: 2
@@ -952,6 +988,7 @@ name: 12
 narrow: 2
 nasti: 1
 natur: 5
+naturedli: 1
 near: 15
 nearer: 5
 nearli: 11
@@ -1050,6 +1087,7 @@ peer: 1
 peg: 1
 penc: 1
 pencil: 3
+pennyworth: 2
 peopl: 13
 pepper: 8
 perfectli: 4
@@ -1083,6 +1121,7 @@ pocket: 7
 point: 5
 poison: 3
 poker: 1
+poki: 1
 polite: 6
 pool: 11
 poor: 27
@@ -1124,16 +1163,19 @@ puf: 1
 pull: 2
 punch: 1
 punish: 1
+puppi: 7
 pur: 2
 purpl: 1
 purpose: 1
 push: 1
+puss: 1
 put: 3
 puzzl: 14
 quadril: 4
 quarrel: 4
 queen: 76
 queer: 12
+queerest: 1
 question: 21
 quick: 2
 quicker: 1
@@ -1193,8 +1235,11 @@ riddl: 3
 ridg: 2
 ridicul: 1
 right: 32
+righthand: 1
 rightli: 1
 ring: 2
+ringlet: 2
+riper: 1
 rippl: 1
 rise: 3
 roar: 1
@@ -1224,8 +1269,10 @@ sai: 19
 said: 462
 salmon: 1
 salt: 2
+same: 24
 sand: 2
 sang: 2
+saucepan: 2
 saucer: 1
 savage: 4
 save: 2
@@ -1327,12 +1374,14 @@ slightest: 1
 slip: 3
 slipperi: 1
 slowli: 8
+sluggard: 1
 small: 10
 smaller: 3
 smallest: 2
 smile: 6
 smoke: 3
 snail: 3
+snappishli: 1
 snatch: 2
 sneez: 11
 snort: 1
@@ -1397,7 +1446,9 @@ steam: 1
 sternli: 1
 stick: 5
 stiff: 1
+stigand: 1
 still: 13
+stingi: 1
 stir: 2
 stock: 1
 stole: 2
@@ -1416,6 +1467,7 @@ string: 1
 struck: 2
 stuff: 4
 stupid: 6
+stupidest: 1
 stupidli: 1
 subdu: 1
 subject: 7
@@ -1427,6 +1479,7 @@ suet: 1
 sugar: 2
 suit: 3
 sulki: 3
+sulkili: 2
 summer: 2
 suppl: 1
 suppose: 14
@@ -1445,9 +1498,12 @@ taken: 4
 tale: 5
 talk: 31
 taller: 2
+tart: 8
 tast: 6
 taught: 4
 teach: 1
+teacup: 5
+teapot: 1
 tear: 11
 teas: 1
 teeth: 1
@@ -1459,6 +1515,7 @@ terribl: 1
 terrier: 1
 terror: 1
 thank: 5
+thatch: 1
 therefore: 1
 thick: 1
 thimbl: 4
@@ -1486,6 +1543,7 @@ tide: 1
 tidi: 1
 tight: 1
 till: 21
+tilli: 1
 time: 77
 timid: 3
 timidli: 9
@@ -1498,6 +1556,7 @@ titter: 1
 toast: 1
 todai: 1
 toe: 3
+toffe: 1
 togeth: 9
 toi: 1
 told: 6
@@ -1509,6 +1568,7 @@ top: 1
 tortois: 3
 toss: 4
 touch: 1
+tougher: 1
 toward: 1
 trai: 1
 trampl: 1
@@ -1533,8 +1593,10 @@ trust: 1
 truth: 2
 try: 14
 tuck: 3
+tulip: 1
 tumbl: 3
 tunnel: 1
+tureen: 1
 turkei: 1
 turn: 42
 turtl: 61
@@ -1550,6 +1612,8 @@ unabl: 1
 uncivil: 1
 uncomfort: 5
 uncommon: 1
+uncommonli: 1
+uncork: 1
 underneath: 1
 understand: 6
 understood: 1
@@ -1606,6 +1670,7 @@ wander: 5
 want: 15
 warn: 1
 wash: 5
+wasn: 11
 wast: 3
 watch: 13
 water: 6

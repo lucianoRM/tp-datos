@@ -316,6 +316,7 @@ boon: 1
 boot: 2
 born: 8
 boston: 6
+both: 18
 bother: 1
 bottl: 1
 bottom: 2
@@ -2449,6 +2450,7 @@ sale: 1
 salesmen: 2
 salt: 1
 samaritan: 4
+same: 36
 sampl: 1
 samuel: 1
 sand: 7

@@ -3799,7 +3799,7 @@ salient: 1
 salli: 1
 saloon: 7
 salt: 3
-same: 12
+same: 5
 sanatorium: 1
 sand: 1
 sandstorm: 1
@@ -4982,7 +4982,6 @@ warn: 4
 warrant: 2
 warstl: 1
 wash: 28
-wasn: 1
 wasp: 1
 wast: 4
 watch: 7

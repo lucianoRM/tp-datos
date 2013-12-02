@@ -131,6 +131,7 @@ bonnet: 1
 book: 16
 border: 1
 bore: 1
+both: 3
 bough: 1
 bound: 1
 brambl: 1
