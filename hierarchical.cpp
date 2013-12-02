@@ -20,6 +20,7 @@ using std::ostringstream;
 
 
 
+
 unsigned int distancia_minima_vector(vector<Cluster*>* clusters,map<unsigned int,float>* centroide,unsigned int norma){
 	unsigned int retorno = 0;
 	unsigned int i;
@@ -41,6 +42,62 @@ unsigned int distancia_minima_vector(vector<Cluster*>* clusters,map<unsigned int
 	}
 	return retorno;
 }
+
+vector<unsigned int> min_distances(vector<Cluster*>* clusters,map<unsigned int,float>* archivo,float norma,float cota){
+	vector<unsigned int> retorno;
+	float act_distance;
+	unsigned int i;
+	for(i = 0;i < clusters->size(); i++ ){
+		act_distance = calcular_distancia((*clusters)[i]->get_centroide(),(*clusters)[i]->get_norma(),archivo,norma);
+		if (act_distance > cota)
+			retorno.push_back(i);
+	}
+	return retorno;
+}
+
+void agregado_resto_de_vectores_HY(vector<Cluster*>* clusters, map<string, map<unsigned int, float> >* vectores){
+	
+	vector<unsigned int> mas_cercanos;
+	map<string,map<unsigned int,float> >::iterator it_vectores2;
+				
+	unsigned int distancia_docs = (int)(1/ 0.3);
+	int i = 0;
+	
+	for(it_vectores2 = vectores->begin();it_vectores2 != vectores->end();++it_vectores2){
+		if (i % distancia_docs != 0){
+			mas_cercanos = min_distances(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second),0.8);
+			if(mas_cercanos.size() == 0) mas_cercanos.push_back(distancia_minima_vector(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second)));
+			for(unsigned int h = 0; h<mas_cercanos.size();h++){
+					(*clusters)[mas_cercanos[h]]->agregar_vector(&it_vectores2->second,it_vectores2->first);
+					cout << mas_cercanos[h] << endl;
+			}
+			vectores->erase(it_vectores2);
+		}
+		i++;
+	}
+	delete vectores;
+}
+
+
+void agregado_resto_de_vectores_HN(vector<Cluster*>* clusters, map<string, map<unsigned int, float> >* vectores){
+	
+	unsigned int mas_cercano;
+	map<string,map<unsigned int,float> >::iterator it_vectores2;
+				
+	unsigned int distancia_docs = (int)(1/ 0.3);
+	int i = 0;
+	
+	for(it_vectores2 = vectores->begin();it_vectores2 != vectores->end();++it_vectores2){
+		if (i % distancia_docs != 0){
+			mas_cercano = distancia_minima_vector(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second));
+			(*clusters)[mas_cercano]->agregar_vector(&it_vectores2->second,it_vectores2->first);
+			vectores->erase(it_vectores2);
+		}
+		i++;
+	}
+	delete vectores;
+}
+
 
 
 void mergear_cercanos(vector<Cluster*>* clusters,float cota){

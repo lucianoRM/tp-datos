@@ -30,7 +30,9 @@ using std::ostringstream;
 
 
 
-	
+void agregado_resto_de_vectores_KN(map<string,Cluster*>* clusters, map<string, map<unsigned int, float> >* vectores);
+
+void agregado_resto_de_vectores_KY(map<string,Cluster*>* clusters, map<string, map<unsigned int, float> >* vectores);	
 
 
 

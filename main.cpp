@@ -37,23 +37,8 @@ int vectorizar_documentos(string path, Parser* parser) {
 	
 	return 0;
 }
-void agregado_resto_de_vectores(map<string,Cluster*>* clusters, map<string, map<unsigned int, float> >* vectores){
-	
-	string mas_cercano;
-	map<string,map<unsigned int,float> >::iterator it_vectores2;
-				
-	unsigned int distancia_docs = (int)(1/ 0.3);
-	int i = 0;
-	
-	for(it_vectores2 = vectores->begin();it_vectores2 != vectores->end();++it_vectores2){
-		if (i % distancia_docs != 0){
-			mas_cercano = distancia_minima_key(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second));
-			(*clusters)[mas_cercano]->agregar_vector(&it_vectores2->second,it_vectores2->first);
-		}
-		i++;
-	}
-	delete vectores;
-}
+
+
 
 void escribir_clusters_en_disco(map<string,Cluster*>* clusters){
 	map<string,Cluster*>::iterator it;
@@ -178,22 +163,27 @@ int main(int args,char* argv[]){
 			cant_docs = parser->getCantDocs();
 			delete parser;
 			
-			map<string,Cluster*>* clusters;
+			
 			
 			if(strcmp(argv[3], "-c") == 0){
+				map<string,Cluster*>* clusters;
 				if(args < 7) return mensaje_error();
 				
 				if(strcmp(argv[5], "-o") != 0) return mensaje_error();
 				
-				if(strcmp(argv[6], "Y") == 0)
+				if(strcmp(argv[6], "Y") == 0){
 					clusters = k_means(vectores_iniciales,atoi(argv[4]),cant_terms,0.99,0.8);
-				else 
+					delete vectores_iniciales;
+					agregado_resto_de_vectores_KY(clusters, vectores);
+				}
+				else{
 					clusters = k_means(vectores_iniciales,atoi(argv[4]),cant_terms,0.99,1);
-					
+					delete vectores_iniciales;
+					agregado_resto_de_vectores_KN(clusters, vectores);
+				}
 				
-				delete vectores_iniciales;
 			
-				agregado_resto_de_vectores(clusters, vectores);
+				
 				escribir_clusters_en_disco(clusters);
 				
 				cout << "Cantidad de archivos: "<< cant_docs << endl;
@@ -202,14 +192,17 @@ int main(int args,char* argv[]){
 				cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
 				
 			}else{
+				vector<Cluster*>* clusters;
 				if(strcmp(argv[3], "-o") != 0) return mensaje_error();
 				
 				if(args < 5) return mensaje_error();
-				
-				/*if(strcmp(argv[6], "Y") == 0)
-					//Jerarquico
+				clusters = hierarchical(vectores_iniciales,cant_terms,0.55);
+				delete vectores_iniciales;
+				if(strcmp(argv[6], "Y") == 0)
+					agregado_resto_de_vectores_HY(clusters, vectores);
+					
 				else 
-					//Jerarquico*/
+					agregado_resto_de_vectores_HN(clusters, vectores);
 			}
 			
 			crearIndice("Clusters");

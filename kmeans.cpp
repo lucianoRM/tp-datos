@@ -23,10 +23,51 @@ using std::ostringstream;
 
 
 
+void agregado_resto_de_vectores_KN(map<string,Cluster*>* clusters, map<string, map<unsigned int, float> >* vectores){
+	
+	string mas_cercano;
+	map<string,map<unsigned int,float> >::iterator it_vectores2;
+				
+	unsigned int distancia_docs = (int)(1/ 0.3);
+	int i = 0;
+	
+	for(it_vectores2 = vectores->begin();it_vectores2 != vectores->end();++it_vectores2){
+		if (i % distancia_docs != 0){
+			mas_cercano = distancia_minima_key(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second));
+			(*clusters)[mas_cercano]->agregar_vector(&it_vectores2->second,it_vectores2->first);
+			vectores->erase(it_vectores2);
+		}
+		i++;
+	}
+	delete vectores;
+}
 
 
 
 
+void agregado_resto_de_vectores_KY(map<string,Cluster*>* clusters, map<string, map<unsigned int, float> >* vectores){
+	
+	string mas_cercano;
+	vector<string> mas_cercanos;
+	map<string,map<unsigned int,float> >::iterator it_vectores2;
+				
+	unsigned int distancia_docs = (int)(1/ 0.3);
+	int i = 0;
+	
+	for(it_vectores2 = vectores->begin();it_vectores2 != vectores->end();++it_vectores2){
+		if (i % distancia_docs != 0){
+			mas_cercanos = min_distances(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second),0.8);
+			if(mas_cercanos.size() == 0) mas_cercanos.push_back(distancia_minima_key(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second)));
+			for(unsigned int h = 0; h<mas_cercanos.size();h++){
+					(*clusters)[mas_cercanos[h]]->agregar_vector(&it_vectores2->second,it_vectores2->first);
+					cout << mas_cercanos[h] << endl;
+			}
+			vectores->erase(it_vectores2);
+		}
+		i++;
+	}
+	delete vectores;
+}
 
 
 
