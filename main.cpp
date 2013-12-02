@@ -110,7 +110,7 @@ void cargar_clusters(map<string,Cluster*>* clusters,unsigned int cant_terms){
 
 void listar_documentos() {
 
-    DIR* dir_pointer = opendir("Indices\ Archivos/");
+    DIR* dir_pointer = opendir("Indices");
 	//if (dir_pointer == NULL)
 	struct dirent* reg_buffer = readdir(dir_pointer);
 	
@@ -127,7 +127,7 @@ void listar_documentos() {
 			continue;
 		}
 		
-		archivo.open(("Indices\ Archivos/" + nombre_archivo).c_str());		
+		archivo.open(("Indices" + nombre_archivo).c_str());		
 		getline(archivo, nombre_cluster, ';');
         while( strcmp(nombre_cluster.c_str(),"") != 0){
 			cout << nombre_cluster << ", ";
@@ -180,6 +180,32 @@ void listar_clusters(){
 	
 }
 
+void limpiar_directorio(string directorio){
+
+	DIR* dir_pointer = opendir(directorio.c_str());
+	
+	struct dirent* reg_buffer = readdir(dir_pointer);
+	
+	string nombre_directorio = directorio;
+	string nombre_archivo;
+	nombre_directorio+="/";
+	
+	while(reg_buffer != NULL){
+        nombre_archivo = (reg_buffer->d_name);
+        
+		if(nombre_archivo == "." || nombre_archivo == ".."){
+			reg_buffer = readdir(dir_pointer);
+			continue;
+		}
+		
+		remove((nombre_directorio+nombre_archivo).c_str());
+        
+		reg_buffer = readdir(dir_pointer);
+	}
+
+	closedir(dir_pointer);
+}
+
 void help(){
 	cout << "Uso:\n\nCreacion de Clusters:\n\n" << NOMBRE_TP << " -d <path> -c <#clusters> -o <Y/N>\n\n-d indica el path a donde están almacenados los documentos.\n-c indica la cantidad de categorias a crear, si no se indica se decide automaticamente automaticamente.\n-o indica si un documento puede estar en mas de un grupo.\n\nListado de resultados:\n\n" << NOMBRE_TP	 << " -l\nLista todos los documentos del repositorio y la categoría a la cual pertenece cada uno.\n\n" << NOMBRE_TP << " -g\nLista los grupos o categorías existentes y los documentos dentro de cada grupo o categoría.\n\nAgregado de archivos:\n\n" << NOMBRE_TP << " -a <path>\nAgrega y clasifica el texto pasado como parametro e indica a que grupo lo ha agregado."; 
 }
@@ -222,6 +248,10 @@ int main(int args,char* argv[]){
 			retorno = vectorizar_documentos(argv[2], parser);
 			if (retorno != 0)
 				return retorno;
+			
+			limpiar_directorio("Clusters");
+			limpiar_directorio("Centroides");
+			limpiar_directorio("Indices");
 			
 			vectores = vectorizar(parser);
 			vectores_iniciales = obtener_muestra_vectores(vectores);
