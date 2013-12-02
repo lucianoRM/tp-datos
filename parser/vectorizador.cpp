@@ -30,7 +30,7 @@ map<string,float> recuperar_pesos_globales(){
 	ifstream archivo("globales.txt");
 	string linea;
 	string nombre_doc;
-	float peso_global;
+	float peso_global = 0;
 	int count = 1;
 	while(getline(archivo,linea)){
 		if(count % 2 == 0){

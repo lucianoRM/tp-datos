@@ -14,7 +14,11 @@
 #include "parser/vectorizador.h"
 
 
+/*Crea un directorio con el nombre pasado por parametro*/
+void create_dir(std::string name);
 
+/*Borra un directorio con el nombre pasado por parametro*/
+void remove_dir(std::string name);
 
 /*Carga todo lo que se guarda en los hashes en disco*/
 void guardar_frecuencias(map<string,unsigned int>* hash_frecuencias_globales,map<string,map<string,unsigned int> >* hash_frecuencias_locales);

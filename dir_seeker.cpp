@@ -7,6 +7,7 @@
 #include <dirent.h>
 #include <string.h>
 #include <time.h>
+#include <sys/stat.h>
 #include "porter/porter.h"
 #include "parser/vectorizador.h"
 #include "dir_seeker.h"
@@ -19,6 +20,15 @@ using std::cout;
 using std::endl;
 using std::ofstream;
 
+
+
+void create_dir(string name){
+	mkdir(name.c_str(),S_IRWXU|S_IRGRP|S_IXGRP);
+}
+
+void remove_dir(string name){
+	rmdir(name.c_str());
+}
 
 
 /*Carga todo lo que se guarda en los hashes en disco*/
