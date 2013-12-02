@@ -28,12 +28,13 @@ using std::ofstream;
 
 map<string,Cluster*>* convertir(vector<Cluster*>* clusters){
 	
+	vector<Cluster*>::iterator it;
 	map<string,Cluster*>* retorno = new map<string,Cluster*>;
-	unsigned int size = clusters->size();
-	for(unsigned int i = 0;i< size;i++){
-		(*retorno)[(*clusters)[i]->get_id()] = (*clusters)[i];
-		clusters->erase(clusters->begin() + i);
+	for(it = clusters->begin(); it != clusters->end(); ++it){
+		(*retorno)[(*it)->get_id()] = (*it);
+		cout << clusters->size() <<endl;
 	}
+	delete clusters;
 	return retorno;
 } 
 		
@@ -56,6 +57,10 @@ int vectorizar_documentos(string path, Parser* parser) {
 void escribir_clusters_en_disco(map<string,Cluster*>* clusters){
 	map<string,Cluster*>::iterator it;
 	for(it = clusters->begin(); it!= clusters->end() ; ++it){
+		if(it->second->get_cant_docs() == 0) {
+			delete it->second;			
+			continue;
+		}
 		it->second->escribir_a_disco();
 		delete it->second;
 	}
@@ -152,13 +157,14 @@ int main(int args,char* argv[]){
 	}
 	
 	int t_inicio = time(NULL);
+	int t_fin;
 	Parser *parser = new Parser();
 	map<string, map<unsigned int, float> >* vectores;
 	map<string, map<unsigned int, float> >* vectores_iniciales;
 	unsigned int cant_terms;
 	unsigned int cant_docs;
 	int retorno;
-	
+	map<string,Cluster*>* clusters;
 	switch(argv[1][1]) {
 		case 'd':
 			if(args < 3) return mensaje_error();
@@ -177,7 +183,7 @@ int main(int args,char* argv[]){
 			
 			
 			if(strcmp(argv[3], "-c") == 0){
-				map<string,Cluster*>* clusters;
+				
 				if(args < 7) return mensaje_error();
 				
 				if(strcmp(argv[5], "-o") != 0) return mensaje_error();
@@ -193,29 +199,33 @@ int main(int args,char* argv[]){
 					agregado_resto_de_vectores_KN(clusters, vectores);
 				}
 				
-			
-				
-				escribir_clusters_en_disco(clusters);
-				
-				cout << "Cantidad de archivos: "<< cant_docs << endl;
-				cout << "Cantidad de terminos: "<< cant_terms << endl;
-				int t_fin = time(NULL);
-				cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
 				
 			}else{
-				vector<Cluster*>* clusters;
+				vector<Cluster*>* clusters_aux;
+				
 				if(strcmp(argv[3], "-o") != 0) return mensaje_error();
 				
 				if(args < 5) return mensaje_error();
-				clusters = hierarchical(vectores_iniciales,cant_terms,0.55);
+				clusters_aux = hierarchical(vectores_iniciales,cant_terms,0.55);
+				
 				delete vectores_iniciales;
+				
 				if(strcmp(argv[6], "Y") == 0)
-					agregado_resto_de_vectores_HY(clusters, vectores);
+					agregado_resto_de_vectores_HY(clusters_aux, vectores);
 					
 				else 
-					agregado_resto_de_vectores_HN(clusters, vectores);
+					agregado_resto_de_vectores_HN(clusters_aux, vectores);
+					
+				clusters = convertir(clusters_aux);
 			}
 			
+
+			escribir_clusters_en_disco(clusters);
+				
+			cout << "Cantidad de archivos: "<< cant_docs << endl;
+			cout << "Cantidad de terminos: "<< cant_terms << endl;
+			t_fin = time(NULL);
+			cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
 			crearIndice("Clusters");
 			break;
 			
