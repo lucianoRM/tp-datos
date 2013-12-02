@@ -189,11 +189,13 @@ int main(int args,char* argv[]){
 				if(strcmp(argv[5], "-o") != 0) return mensaje_error();
 				
 				if(strcmp(argv[6], "Y") == 0){
+					cout << "KMEANS-Y" << endl;
 					clusters = k_means(vectores_iniciales,atoi(argv[4]),cant_terms,0.99,0.8);
 					delete vectores_iniciales;
 					agregado_resto_de_vectores_KY(clusters, vectores);
 				}
 				else{
+					cout << "KMEANS-N" << endl;
 					clusters = k_means(vectores_iniciales,atoi(argv[4]),cant_terms,0.99,1);
 					delete vectores_iniciales;
 					agregado_resto_de_vectores_KN(clusters, vectores);
@@ -210,12 +212,14 @@ int main(int args,char* argv[]){
 				
 				delete vectores_iniciales;
 				
-				if(strcmp(argv[6], "Y") == 0)
+				if(strcmp(argv[4], "Y") == 0){
+					cout << "HIER-Y" << endl;
 					agregado_resto_de_vectores_HY(clusters_aux, vectores);
-					
-				else 
+				}
+				else {
+					cout << "HIER-N" << endl;
 					agregado_resto_de_vectores_HN(clusters_aux, vectores);
-					
+				}
 				clusters = convertir(clusters_aux);
 			}
 			
