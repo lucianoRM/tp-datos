@@ -153,8 +153,10 @@ int mensaje_error(){
 int main(int args,char* argv[]){
 	if (args == 1){
 		help();
-		return 0;
+		return mensaje_error();
 	}
+	
+	
 	
 	int t_inicio = time(NULL);
 	int t_fin;
@@ -167,8 +169,8 @@ int main(int args,char* argv[]){
 	map<string,Cluster*>* clusters;
 	switch(argv[1][1]) {
 		case 'd':
-			if(args < 3) return mensaje_error();
-			
+			if(args < 5) return mensaje_error();
+			if( (strcmp(argv[3], "-c") != 0 && strcmp(argv[5], "-o") != 0) || strcmp(argv[3], "-o") != 0) return mensaje_error();
 			
 			retorno = vectorizar_documentos(argv[2], parser);
 			if (retorno != 0)

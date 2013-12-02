@@ -63,6 +63,5 @@ clean:
 	rm stopwords/*.o
 	rm porter/*.o
 	rm cluster/*.o
-	rm algoritmo_cluster/*.o
 	rm indice/*.o
 	rm parser/*.o
