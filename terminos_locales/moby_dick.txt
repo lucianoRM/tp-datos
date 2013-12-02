@@ -4,7 +4,6 @@ accost: 1
 adventure: 1
 advoc: 1
 afternoon: 1
-albatross: 1
 aloft: 1
 alreadi: 2
 american: 3
@@ -35,7 +34,6 @@ breakfast: 1
 breez: 1
 brother: 1
 bucket: 1
-bulk: 1
 busi: 1
 cabin: 4
 call: 1
@@ -98,7 +96,6 @@ easili: 1
 eastward: 3
 ebook: 2
 elaps: 1
-embark: 1
 emerg: 1
 end: 1
 england: 1
@@ -134,7 +131,6 @@ friend: 1
 funer: 1
 gilder: 1
 given: 1
-glide: 1
 glori: 1
 go: 1
 golden: 1
@@ -174,7 +170,6 @@ larg: 1
 last: 2
 late: 1
 later: 1
-launch: 1
 lean: 1
 leav: 1
 length: 2
@@ -197,7 +192,6 @@ mast: 1
 mate: 2
 matter: 1
 meadow: 1
-measur: 1
 meet: 6
 merchant: 1
 merri: 1
@@ -215,7 +209,6 @@ nearli: 1
 never: 1
 next: 5
 night: 5
-nimbl: 1
 nois: 1
 nonc: 1
 noon: 2
@@ -227,8 +220,6 @@ number: 1
 nurs: 1
 occas: 1
 offic: 1
-omit: 1
-ostens: 1
 paint: 1
 pass: 2
 passage: 1
@@ -289,7 +280,6 @@ shore: 1
 shout: 1
 sight: 1
 simpli: 1
-skeleton: 1
 slain: 1
 slowli: 1
 small: 1
@@ -301,16 +291,13 @@ squeez: 1
 squir: 2
 stand: 1
 steel: 1
-steer: 2
 step: 1
 stern: 1
 stood: 1
 stori: 2
-stow: 1
 street: 1
 stuf: 1
 subsid: 1
-successfulli: 1
 suit: 1
 sultri: 1
 sunset: 1

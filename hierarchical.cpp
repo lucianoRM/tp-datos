@@ -160,6 +160,7 @@ vector<Cluster*>* hierarchical(map<string,map<unsigned int,float> >* vectores,un
 	generar_clusters(clusters_aux,vectores,cant_terms,id);
 	while(clusters_aux->size() != 0){
 		while(clusters_aux->size() != anterior){
+			cout << i << endl;			
 			i++;
 			anterior = clusters_aux->size();		
 			mergear_cercanos(clusters_aux,cota);
@@ -169,9 +170,13 @@ vector<Cluster*>* hierarchical(map<string,map<unsigned int,float> >* vectores,un
 		generar_clusters(clusters_aux,vectores,cant_terms,id);
 	}
 	i = 0;
+	cout << "TERMINO CON LOS SETS" << endl;
 	delete clusters_aux;
 	while(clusters->size() != anterior){
+		cout << clusters->size()<< endl;
+		cout << i << endl;
 		i++;
+		cota += 0.1;
 		anterior = clusters->size();		
 		mergear_cercanos(clusters,cota);
 	}	

@@ -11,6 +11,7 @@ using std::string;
 using std::vector;
 
 
+void agregar(string nombre_dir,string nombre);
     
 void crearIndice(string nombre);
 vector<string> obtenerClustersDeTermino(string termino);   

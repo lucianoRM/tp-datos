@@ -284,7 +284,7 @@ int main(int args,char* argv[]){
 				if(strcmp(argv[3], "-o") != 0) return mensaje_error();
 				
 				if(args < 5) return mensaje_error();
-				clusters_aux = hierarchical(vectores_iniciales,cant_terms,0.55);
+				clusters_aux = hierarchical(vectores_iniciales,cant_terms,0.5);
 				
 				delete vectores_iniciales;
 				
@@ -327,7 +327,7 @@ int main(int args,char* argv[]){
 			vectores = vectorizar(parser);
 			agregado_resto_de_vectores_KN(clusters, vectores);
 			escribir_clusters_en_disco(clusters,";");
-			crearIndice("Clusters");
+			agregar("Clusters",nombrearchivo);
 	}
 	
 	

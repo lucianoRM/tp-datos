@@ -49,7 +49,7 @@ void agregado_resto_de_vectores_KY(map<string,Cluster*>* clusters, map<string, m
 				
 	
 	for(it_vectores2 = vectores->begin();it_vectores2 != vectores->end();++it_vectores2){
-		mas_cercanos = min_distances(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second),0.8);
+		mas_cercanos = min_distances(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second),0.5);
 		if(mas_cercanos.size() == 0) mas_cercanos.push_back(distancia_minima_key(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second)));
 		for(unsigned int h = 0; h<mas_cercanos.size();h++){
 			(*clusters)[mas_cercanos[h]]->agregar_vector(&it_vectores2->second,it_vectores2->first);
@@ -195,6 +195,7 @@ map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,uns
 	i = 0;
 	while(cambiaron_centroides(clusters,tolerancia) != false){
 		i++;
+		cout << i << endl;
 		resetear_clusters(clusters);
 		if(cota == 1){
 			for(it_vectores = vectores->begin();it_vectores != vectores->end();++it_vectores){

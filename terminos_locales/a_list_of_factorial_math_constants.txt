@@ -1,5 +1,4 @@
 calcul: 1
-code: 1
 constant: 1
 contain: 1
 digit: 118
