@@ -14,12 +14,9 @@ even: 1
 flight: 4
 georg: 1
 goddard: 4
-greenbelt: 2
-grossc: 1
 gsfc: 2
 guarante: 1
 gutenberg: 1
-internet: 2
 jerri: 4
 mason: 1
 million: 2

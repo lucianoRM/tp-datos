@@ -27,7 +27,7 @@ void crearIndice(string nombre_dir)
 	//if (dir_pointer == NULL)
 	struct dirent* reg_buffer = readdir(dir_pointer);
 
-	string path = "../Indices\ Archivos/";
+	string path = "Indices\ Archivos/";
 	string nombre_archivo;
 	string nombre_directorio = nombre_dir;
 	nombre_directorio+="/";
@@ -43,24 +43,22 @@ void crearIndice(string nombre_dir)
 			continue;
 		}
 		
-		nombre_cluster = nombre_archivo.substr(0, nombre_archivo.length()- 4);
 		archivo.open((nombre_directorio + nombre_archivo).c_str());		
 		
-		getline(archivo, cantidad_terminos, ';');
-        for(int i = 0; i < atoi( cantidad_terminos.c_str() ) - 1; i++){
-			string termino_actual;
-            getline(archivo, termino_actual, ';');
+		string termino_actual;
+		
+        while(getline(archivo, termino_actual, ';')){
 
             indice[termino_actual].push_back(nombre_cluster);
             
             fstream archivo_indice;
 			archivo_indice.open((path+termino_actual).c_str(), std::fstream::in | std::fstream::out | std::fstream::app);
-			archivo_indice << nombre_cluster << ";";
+			archivo_indice << nombre_archivo << ";";
 			archivo_indice.close();
 		}
         
         //Levanto el ultimo texto
-        string termino_actual;
+        /*string termino_actual;
         getline(archivo, termino_actual);
         indice[termino_actual].push_back(nombre_cluster);
 		
@@ -68,7 +66,7 @@ void crearIndice(string nombre_dir)
 		archivo_indice.open ((path+termino_actual).c_str(), std::fstream::in | std::fstream::out | std::fstream::app); 
 		archivo_indice << nombre_cluster << ";";
 		archivo_indice.close();
-		
+		*/
 		archivo.close();
 		reg_buffer = readdir(dir_pointer);
 	}
