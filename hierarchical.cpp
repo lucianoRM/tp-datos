@@ -21,7 +21,7 @@ using std::ostringstream;
 
 
 unsigned int distancia_minima_vector(vector<Cluster*>* clusters,map<unsigned int,float>* centroide,unsigned int norma){
-	unsigned int retorno;
+	unsigned int retorno = 0;
 	unsigned int i;
 	float min_distance;
 	float act_distance;
@@ -30,7 +30,6 @@ unsigned int distancia_minima_vector(vector<Cluster*>* clusters,map<unsigned int
 	
 	for(it = clusters->begin(), i = 0;it != clusters->end(); ++it,i++ ){
 		if(i == 0) {
-			retorno = i;
 			min_distance = calcular_distancia((*it)->get_centroide(),(*it)->get_norma(),centroide,norma);
 			continue;
 		}
