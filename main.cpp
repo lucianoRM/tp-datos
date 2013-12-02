@@ -53,18 +53,61 @@ int vectorizar_documentos(string path, Parser* parser) {
 }
 
 
+void escribir_centroide_en_disco(Cluster* cluster){
+	map<unsigned int,float>* centroide = cluster->get_centroide();
+	map<unsigned int,float>::iterator it;
+	ofstream archivo_centroide;
+	archivo_centroide.open(("Centroides/"+cluster->get_id()).c_str());
+	
+	for(it = centroide ->begin(); it != centroide->end(); ++it){
+		archivo_centroide << it->first << ";" << it->second << "\n";
+	}
+	archivo_centroide.close();
+}
 
 void escribir_clusters_en_disco(map<string,Cluster*>* clusters){
 	map<string,Cluster*>::iterator it;
 	for(it = clusters->begin(); it!= clusters->end() ; ++it){
-		if(it->second->get_cant_docs() == 0) {
-			delete it->second;			
-			continue;
-		}
 		it->second->escribir_a_disco();
+		escribir_centroide_en_disco(it->second);
 		delete it->second;
 	}
 	delete clusters;
+}
+
+void cargar_centroides(map< string , map<unsigned int,float> >* centroides){
+	
+	DIR* dir_pointer = opendir("Centroides");
+	
+	struct dirent* reg_buffer = readdir(dir_pointer);
+	
+	string nombre_archivo;
+	ifstream archivo;
+	
+	while(reg_buffer != NULL){
+        nombre_archivo = (reg_buffer->d_name);
+        
+		if(nombre_archivo == "." || nombre_archivo == ".."){
+			reg_buffer = readdir(dir_pointer);
+			continue;
+		}
+		
+		archivo.open(("Centroides/" + nombre_archivo).c_str());		
+		string posicion;
+		string valor;
+		
+        while( getline(archivo, posicion, ';') ){
+			getline(archivo, valor);
+			
+			(*centroides)[nombre_archivo][atoi(posicion.c_str())] = atof(valor.c_str());
+		}
+        
+		archivo.close();
+        
+		reg_buffer = readdir(dir_pointer);
+	}
+
+	closedir(dir_pointer);
 }
 
 void listar_documentos() {
@@ -170,7 +213,14 @@ int main(int args,char* argv[]){
 	switch(argv[1][1]) {
 		case 'd':
 			if(args < 5) return mensaje_error();
-			if( (strcmp(argv[3], "-c") != 0 && strcmp(argv[5], "-o") != 0) || strcmp(argv[3], "-o") != 0) return mensaje_error();
+			if(args < 5) return mensaje_error();
+			if( (strcmp(argv[3], "-c") == 0) ){ 
+				if( (strcmp(argv[5], "-o") != 0) )
+					return mensaje_error();
+			}else{
+				if( (strcmp(argv[3], "-o") != 0) )
+					return mensaje_error();
+			}
 			
 			retorno = vectorizar_documentos(argv[2], parser);
 			if (retorno != 0)
@@ -243,7 +293,9 @@ int main(int args,char* argv[]){
 			listar_clusters();
 			break;
 			
-		//case: "-a"
+		case 'a':
+			map< string, map<unsigned int,float> >* centroides = new map< string, map<unsigned int,float> >;
+			cargar_centroides(centroides);
 	}
 	
 	
