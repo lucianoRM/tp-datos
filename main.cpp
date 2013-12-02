@@ -121,10 +121,8 @@ void listar_clusters(){
 		
 		archivo.open(("Clusters/" + nombre_cluster).c_str());		
 		cout << "Cluster " << nombre_cluster << ": ";
-
-		getline(archivo, cantidad_terminos, ';');
-        for(int i = 0; i < atoi( cantidad_terminos.c_str() ) - 1; i++){
-			getline(archivo, nombre_archivo, ';');
+		
+		while(getline(archivo, nombre_archivo, ';')){
 			cout << nombre_archivo <<", ";
 		}
 		

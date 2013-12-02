@@ -27,7 +27,6 @@ abdul: 15
 abdulkarim: 1
 abdullah: 3
 abdur: 2
-abeba: 1
 abeda: 21
 abemama: 1
 abengour: 1
@@ -314,7 +313,6 @@ albertvil: 1
 alborg: 1
 albuquerqu: 2
 alcerro: 1
-alcide: 1
 alcohol: 2
 aldabra: 1
 alderdice: 1
@@ -827,7 +825,6 @@ assume: 1
 assumpt: 2
 assyrian: 2
 astedad: 2
-astorga: 1
 astrakhan: 1
 astride: 6
 asttel: 1
@@ -1375,8 +1372,6 @@ bermuda: 21
 bermudez: 1
 bermudian: 6
 bern: 4
-berna: 1
-bernadin: 1
 bernal: 1
 bernard: 7
 bernardino: 2
@@ -1727,7 +1722,6 @@ brussel: 5
 bruton: 1
 bryan: 1
 bryant: 1
-brynn: 1
 buada: 1
 bubanza: 1
 bubi: 2
@@ -1891,7 +1885,6 @@ calderon: 7
 caledoni: 2
 caledonia: 16
 caledonian: 3
-calend: 1
 calendar: 133
 calexico: 1
 calfa: 1
@@ -2284,7 +2277,6 @@ chia: 2
 chiam: 1
 chiang: 4
 chiapa: 1
-chiara: 1
 chiba: 3
 chic: 1
 chicago: 42
@@ -2513,7 +2505,6 @@ codo: 3
 codyde: 1
 coequal: 1
 coffe: 121
-cofound: 1
 cogwheel: 2
 cohep: 1
 coimbra: 1
@@ -2774,7 +2765,6 @@ corinto: 1
 corisco: 2
 cork: 6
 corn: 82
-corneil: 1
 corneliu: 1
 corner: 36
 cornerstone: 2
@@ -3126,7 +3116,6 @@ defeat: 1
 defend: 2
 defens: 572
 defer: 3
-deferr: 1
 defi: 1
 defici: 3
 deficit: 33
@@ -3303,7 +3292,6 @@ diffa: 1
 differ: 19
 difficult: 4
 difficulti: 12
-digg: 1
 digit: 8
 dignitari: 1
 digu: 1
@@ -3362,7 +3350,6 @@ discretionari: 1
 discua: 1
 discuss: 4
 disengag: 4
-disequilibrium: 1
 disgruntl: 1
 disk: 21
 diskett: 2
@@ -3693,7 +3680,6 @@ elimin: 3
 elite: 2
 eliya: 1
 elizabeth: 45
-elize: 1
 ellef: 1
 ellefsen: 1
 ellemann: 1
@@ -3737,7 +3723,6 @@ empirin: 1
 emploi: 82
 employ: 35
 employe: 9
-emptier: 1
 emunim: 1
 enabl: 4
 enact: 3
@@ -4088,7 +4073,6 @@ featherston: 1
 featur: 6
 feature: 15
 featureless: 1
-febr: 1
 febrerista: 1
 februari: 219
 fedaiyin: 1
@@ -4099,7 +4083,6 @@ federale: 5
 federalist: 1
 federalni: 1
 federativnaya: 1
-fedor: 1
 fee: 6
 feed: 6
 feeder: 1
@@ -4127,7 +4110,6 @@ fenech: 2
 feni: 1
 fer: 1
 feral: 2
-ferenc: 1
 ferkessedoug: 1
 fermanagh: 1
 fern: 1
@@ -4326,7 +4308,6 @@ fournier: 3
 fourteen: 2
 fourth: 15
 fovaro: 1
-foward: 1
 fraction: 1
 fractur: 1
 fraga: 1
@@ -4603,7 +4584,6 @@ gerai: 1
 gerakan: 1
 gerard: 7
 gerardo: 1
-gerd: 1
 gerhard: 1
 gerichtshof: 2
 german: 60
@@ -5080,8 +5060,9 @@ hausa: 4
 haut: 7
 hautala: 1
 havana: 4
-have: 1
+have: 24
 havel: 2
+haven: 1
 havr: 2
 hawaii: 26
 hawaiian: 2
@@ -5417,7 +5398,6 @@ ibra: 2
 ibrahim: 2
 ibrahimi: 1
 ibrd: 158
-ibri: 1
 ibukota: 1
 ic: 4
 icao: 164
@@ -6415,7 +6395,6 @@ kostic: 1
 koszalin: 1
 kota: 2
 kotak: 1
-koto: 1
 kotoko: 1
 kotto: 2
 kouilou: 1
@@ -6661,7 +6640,6 @@ laurent: 1
 lauro: 1
 lautoka: 1
 lavalleja: 1
-lavin: 1
 laviti: 2
 laviyani: 1
 law: 18
@@ -7039,7 +7017,6 @@ macia: 1
 mackai: 1
 mackenzi: 1
 mackernan: 1
-maclean: 1
 macori: 2
 macquari: 2
 madagascar: 50
@@ -7203,7 +7180,6 @@ manag: 18
 manage: 1
 manageri: 1
 managua: 4
-manah: 1
 manaia: 1
 manama: 5
 manamah: 1
@@ -7566,7 +7542,6 @@ memori: 1
 mena: 2
 menalco: 1
 mend: 3
-mendez: 1
 mendieta: 1
 mendoza: 2
 menem: 3
@@ -7639,7 +7614,6 @@ miao: 2
 mica: 4
 michael: 20
 michel: 3
-michelsen: 1
 michigan: 1
 michoacan: 1
 micoud: 1
@@ -8085,7 +8059,6 @@ nacala: 3
 nachtig: 1
 nacion: 17
 nacionalista: 1
-nada: 1
 nador: 2
 nadu: 3
 naga: 1
@@ -8093,7 +8066,6 @@ nagaland: 1
 nagano: 2
 nagar: 1
 nagasaki: 1
-nagi: 1
 nagoya: 1
 nagykun: 1
 nagymaro: 2
@@ -8254,7 +8226,6 @@ nestor: 1
 nestorean: 1
 netherland: 162
 netrakona: 1
-netto: 1
 network: 48
 neuchatel: 1
 neuquen: 1
@@ -8851,7 +8822,6 @@ package: 1
 pact: 3
 paddi: 6
 padeco: 1
-padilla: 1
 padraic: 1
 paduka: 1
 paek: 1
@@ -9324,7 +9294,6 @@ plateaux: 1
 platinum: 10
 platt: 1
 player: 1
-playfair: 1
 plaza: 6
 pleasant: 7
 plebiscite: 1
@@ -9402,7 +9371,6 @@ poorest: 20
 poorli: 5
 pope: 7
 popov: 2
-popp: 1
 poppi: 20
 popul: 1080
 populace: 3
@@ -9977,7 +9945,6 @@ reedi: 2
 reef: 30
 reefer: 1
 reelect: 30
-reemerg: 2
 reestablish: 6
 reexport: 6
 refah: 1
@@ -10045,7 +10012,6 @@ religi: 20
 religion: 227
 relinquish: 2
 relizane: 1
-reloc: 2
 reluct: 1
 remain: 58
 remaind: 28
@@ -10079,7 +10045,6 @@ repeat: 20
 replac: 15
 replace: 1
 replant: 2
-repons: 1
 report: 12
 reportedli: 2
 repres: 205
@@ -10376,7 +10341,6 @@ rupiah: 4
 rupp: 1
 rural: 22
 ruse: 1
-russ: 1
 russian: 16
 rutana: 1
 ruth: 1
@@ -10509,7 +10473,6 @@ samar: 3
 sambat: 1
 samchi: 1
 samdrup: 1
-same: 15
 sami: 1
 samo: 1
 samoa: 47
@@ -10553,7 +10516,6 @@ sankt: 1
 sanmarinese: 4
 sanmatenga: 1
 sann: 2
-sano: 1
 sanorex: 1
 sansad: 1
 sanskrit: 1
@@ -10744,7 +10706,6 @@ selva: 1
 semarang: 1
 sembilan: 1
 sembler: 1
-semen: 3
 semiarid: 18
 semiconductor: 2
 semidesert: 2
@@ -10857,7 +10818,6 @@ sfry: 2
 sha: 2
 shaafi: 1
 shaanxi: 1
-shab: 1
 shaba: 1
 shabeellaha: 2
 shabwah: 1
@@ -10870,7 +10830,6 @@ shahhat: 1
 shahid: 1
 shaikh: 1
 shale: 1
-shalim: 1
 shall: 2
 shallow: 16
 shamal: 2
@@ -11182,7 +11141,6 @@ smallest: 8
 smallhold: 2
 smelt: 4
 smith: 4
-smokestack: 1
 smoothli: 2
 smuggl: 2
 snaefellsn: 1
@@ -11221,7 +11179,6 @@ softwood: 1
 soglo: 2
 sogn: 1
 sohahong: 1
-sohar: 1
 soil: 89
 sokoto: 1
 solar: 1
@@ -11389,7 +11346,6 @@ stagnant: 1
 stagnate: 3
 stai: 1
 stake: 1
-stalem: 1
 stalinist: 2
 stalk: 4
 stamboliski: 1
@@ -11406,7 +11362,6 @@ stapl: 13
 stapleton: 1
 star: 108
 starch: 2
-starkli: 1
 start: 5
 starv: 1
 state: 518
@@ -11684,7 +11639,6 @@ sworn: 3
 sydnei: 5
 sylhet: 1
 sylla: 1
-sylvain: 1
 sylvestr: 1
 sylvio: 2
 symbol: 19
@@ -11746,7 +11700,6 @@ tagpochu: 1
 tagu: 1
 taha: 2
 tahi: 2
-tahir: 1
 tahiti: 1
 tahitian: 3
 tahoeraa: 1
@@ -12019,7 +11972,6 @@ thong: 1
 thorndon: 1
 thorni: 1
 thornton: 1
-thoroughgo: 1
 though: 8
 thought: 1
 thousand: 6
@@ -12514,7 +12466,6 @@ underst: 1
 understand: 1
 understood: 10
 undertak: 1
-underutil: 1
 underwai: 1
 underwat: 2
 undetermin: 14
@@ -12869,7 +12820,6 @@ vlaanderen: 2
 vlach: 1
 vladimiro: 1
 vladivostok: 2
-vlat: 1
 vlissingen: 1
 vlit: 2
 vlore: 2
