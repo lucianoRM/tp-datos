@@ -328,6 +328,7 @@ bello: 1
 belong: 9
 belov: 1
 bend: 1
+bene: 1
 beneath: 2
 benefit: 7
 benevol: 5
@@ -385,6 +386,7 @@ boil: 1
 bold: 4
 boldli: 2
 bolt: 1
+bona: 1
 bonapart: 4
 bone: 1
 book: 21
@@ -394,7 +396,6 @@ bore: 3
 born: 3
 borrow: 2
 botch: 1
-both: 26
 bottom: 1
 bound: 7
 bow: 5
@@ -1223,6 +1224,7 @@ exert: 3
 exhaust: 13
 exhibit: 1
 exist: 14
+exordium: 1
 expand: 2
 expect: 8
 expedi: 4
@@ -1394,6 +1396,7 @@ foolish: 1
 foolishli: 2
 foot: 6
 footmen: 2
+footnote: 3
 footstep: 1
 forag: 1
 forage: 5
@@ -1600,8 +1603,6 @@ hath: 1
 hatr: 1
 haughti: 1
 haul: 1
-have: 29
-haven: 1
 havoc: 1
 hazard: 3
 head: 31
@@ -1891,6 +1892,7 @@ island: 1
 isol: 7
 issu: 6
 itali: 1
+italic: 1
 item: 1
 jackson: 5
 jade: 3
@@ -2343,6 +2345,7 @@ opportun: 12
 oppos: 7
 oppose: 7
 opposite: 2
+opprobrium: 1
 option: 1
 order: 106
 orderli: 1
@@ -2574,6 +2577,7 @@ pride: 1
 primari: 1
 primarili: 2
 prime: 3
+primi: 1
 princ: 16
 princip: 4
 principl: 26
@@ -2923,6 +2927,7 @@ section: 8
 secur: 6
 secure: 12
 sedan: 1
+sedit: 1
 see: 11
 seed: 1
 seek: 8
@@ -3635,6 +3640,7 @@ visibl: 1
 visit: 3
 visitor: 1
 vital: 2
+vive: 1
 vivid: 2
 vogu: 1
 void: 1

@@ -1596,7 +1596,6 @@ bosporu: 2
 bossano: 2
 bossi: 1
 boston: 21
-both: 49
 bothnia: 1
 botosani: 1
 botswana: 44
@@ -5060,9 +5059,8 @@ hausa: 4
 haut: 7
 hautala: 1
 havana: 4
-have: 24
+have: 1
 havel: 2
-haven: 1
 havr: 2
 hawaii: 26
 hawaiian: 2
@@ -10706,6 +10704,7 @@ selva: 1
 semarang: 1
 sembilan: 1
 sembler: 1
+semen: 3
 semiarid: 18
 semiconductor: 2
 semidesert: 2

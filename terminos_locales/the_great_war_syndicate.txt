@@ -256,7 +256,6 @@ boom: 9
 border: 4
 bore: 5
 born: 5
-both: 26
 bottom: 7
 bought: 1
 bounc: 1
@@ -1009,7 +1008,6 @@ hasten: 2
 hatch: 2
 hate: 1
 haul: 6
-have: 10
 head: 24
 headland: 2
 heap: 1

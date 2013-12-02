@@ -13,6 +13,7 @@ absolute: 1
 abund: 2
 abysm: 1
 abyss: 4
+accede: 1
 accept: 8
 access: 1
 accid: 7
@@ -158,6 +159,7 @@ approach: 22
 approb: 1
 approve: 1
 approxim: 2
+arbore: 1
 arch: 8
 archfiend: 2
 architecture: 1
@@ -362,7 +364,6 @@ bore: 9
 born: 33
 bosom: 10
 boss: 1
-both: 21
 bottl: 1
 bottom: 21
 bottomless: 1
@@ -851,6 +852,7 @@ devour: 6
 devout: 1
 dexter: 1
 di: 6
+diadem: 7
 diamet: 1
 diamond: 2
 dictate: 1
@@ -1492,8 +1494,6 @@ hatr: 6
 haughti: 2
 haunch: 1
 haunt: 3
-have: 14
-haven: 2
 havoc: 2
 hazard: 2
 haze: 2
@@ -1770,6 +1770,7 @@ journei: 9
 joyou: 2
 judg: 16
 judgment: 5
+judith: 1
 junction: 1
 jungl: 7
 junk: 1
@@ -2038,6 +2039,7 @@ mood: 1
 moon: 7
 moonlight: 1
 moor: 1
+mor: 39
 morbid: 1
 morn: 15
 morrow: 3

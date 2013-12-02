@@ -1463,7 +1463,6 @@ bosna: 2
 bosporu: 2
 bossano: 2
 boston: 21
-both: 50
 bothnia: 1
 botosani: 1
 botswana: 20
@@ -4650,9 +4649,8 @@ hausa: 5
 haut: 7
 hautala: 1
 havana: 4
-have: 6
+have: 1
 havel: 2
-haven: 1
 havr: 2
 hawaii: 26
 hawaiian: 2
@@ -6198,6 +6196,7 @@ liaison: 2
 liancourt: 3
 liaon: 1
 liber: 131
+libere: 1
 liberia: 19
 liberian: 10
 libert: 1
@@ -7678,6 +7677,7 @@ nograd: 1
 noir: 3
 nomad: 9
 nomin: 15
+nomine: 1
 nomo: 1
 nomoi: 1
 nonagricultur: 4

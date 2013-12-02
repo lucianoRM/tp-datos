@@ -94,6 +94,7 @@ add: 14
 addi: 6
 addit: 43
 address: 30
+adduc: 5
 adduce: 1
 adequ: 11
 adher: 19
@@ -121,11 +122,14 @@ advent: 7
 adventure: 1
 advers: 5
 adversari: 5
+adversu: 3
 advertis: 1
 advice: 5
 advis: 11
 advoc: 15
+aer: 1
 aerea: 1
+aeri: 2
 aerial: 1
 afar: 3
 affair: 9
@@ -187,6 +191,8 @@ algier: 1
 alice: 1
 alien: 6
 alike: 15
+alio: 1
+aliquando: 1
 alive: 18
 alkaloid: 1
 all: 2
@@ -275,6 +281,7 @@ anew: 3
 ang: 9
 angel: 77
 angelo: 5
+angelu: 2
 anger: 16
 angl: 1
 anglic: 2
@@ -283,16 +290,20 @@ anglo: 6
 angri: 11
 anguish: 1
 anim: 205
+anima: 2
 ann: 3
 anna: 2
 annal: 10
+annale: 4
 annihil: 2
 anniversari: 1
+anno: 2
 annoi: 1
 announc: 31
 annoy: 2
 annual: 3
 annul: 2
+annum: 1
 annunci: 2
 anomali: 1
 anonym: 4
@@ -306,6 +317,7 @@ anteced: 1
 anthoni: 6
 anti: 12
 antic: 1
+antichrist: 4
 anticip: 19
 antipathi: 2
 antipode: 35
@@ -333,6 +345,7 @@ apologet: 5
 apoplexi: 1
 apostl: 40
 apostol: 15
+apostolorum: 1
 apothecari: 2
 appal: 2
 appar: 42
@@ -343,6 +356,7 @@ appeal: 31
 appear: 306
 appeas: 1
 appel: 5
+appellatur: 1
 append: 3
 appendice: 2
 appendix: 19
@@ -365,6 +379,8 @@ approvingli: 1
 approxim: 1
 apr: 1
 april: 22
+apud: 2
+aqua: 3
 aquat: 2
 arab: 29
 arabia: 1
@@ -386,6 +402,7 @@ archive: 1
 archwai: 1
 arctic: 8
 ardent: 1
+ardentibu: 1
 ardour: 1
 arena: 1
 argent: 1
@@ -396,6 +413,7 @@ aris: 16
 arise: 15
 arisen: 4
 aristocraci: 1
+aristotl: 53
 arithmet: 7
 arm: 15
 arma: 1
@@ -479,6 +497,7 @@ atmospher: 8
 atmosphere: 70
 atom: 1
 aton: 3
+atqu: 2
 atroc: 2
 attach: 21
 attack: 124
@@ -508,6 +527,7 @@ australia: 12
 australian: 3
 austria: 13
 austrian: 1
+autem: 1
 authent: 13
 author: 373
 authorit: 8
@@ -540,6 +560,7 @@ baa: 14
 babe: 2
 babel: 36
 babylon: 9
+babyloni: 5
 bacchu: 2
 bachelor: 1
 back: 92
@@ -610,6 +631,7 @@ battl: 31
 battlefield: 7
 bavaria: 4
 bavarian: 3
+baxter: 3
 bayern: 2
 bazin: 1
 be: 31
@@ -623,6 +645,7 @@ beast: 24
 beastli: 2
 beat: 7
 beaten: 4
+beati: 1
 beaumont: 2
 beauti: 70
 beautifulli: 3
@@ -675,6 +698,7 @@ belov: 9
 bemoan: 1
 bench: 4
 beneath: 28
+benedicite: 1
 benedict: 21
 benedictine: 11
 benefic: 7
@@ -700,6 +724,7 @@ beside: 22
 besieg: 3
 besom: 1
 best: 75
+bestia: 1
 bestial: 2
 bestow: 7
 bethel: 1
@@ -804,7 +829,6 @@ borrow: 10
 bosom: 1
 boss: 2
 boston: 42
-both: 198
 bottl: 2
 bottom: 8
 bottomless: 1
@@ -942,6 +966,7 @@ bygone: 1
 bystand: 1
 cabinet: 3
 cabot: 1
+caelo: 1
 caesar: 7
 cairo: 13
 cajole: 1
@@ -1086,6 +1111,7 @@ chagrin: 1
 chain: 13
 chair: 19
 chairman: 1
+chaldaeo: 3
 chaldean: 75
 challeng: 2
 chamber: 17
@@ -1134,6 +1160,7 @@ chemist: 6
 chemistri: 41
 cherish: 15
 cherri: 1
+cherubim: 6
 chester: 2
 chevali: 1
 chew: 4
@@ -1170,6 +1197,7 @@ christian: 397
 christine: 2
 christo: 1
 christoph: 2
+christu: 2
 chronic: 2
 chronicl: 45
 chronolog: 51
@@ -1182,12 +1210,14 @@ circl: 12
 circu: 1
 circul: 5
 circular: 6
+circumcis: 2
 circumfer: 3
 circumst: 31
 circumstanti: 6
 cistern: 5
 citadel: 2
 cite: 199
+cithara: 1
 citi: 117
 citizen: 6
 civil: 144
@@ -1221,6 +1251,7 @@ clearest: 5
 clearli: 84
 cleav: 4
 clement: 31
+clementine: 2
 clergi: 58
 clergyman: 19
 clergymen: 14
@@ -1284,6 +1315,7 @@ colonel: 1
 coloni: 14
 colonist: 1
 coloss: 5
+colossian: 1
 colossu: 2
 colour: 14
 columbia: 9
@@ -1373,6 +1405,7 @@ conclud: 7
 conclude: 1
 conclus: 107
 concord: 1
+concordia: 3
 concours: 1
 concur: 4
 concurr: 3
@@ -1416,6 +1449,7 @@ conqueror: 1
 conquest: 13
 conrad: 9
 conscienc: 15
+conscienti: 32
 consciou: 4
 conscious: 2
 consecr: 32
@@ -1458,6 +1492,7 @@ contact: 4
 contagi: 2
 contagion: 1
 contain: 67
+contemn: 1
 contempl: 2
 contemporari: 60
 contempt: 24
@@ -1470,9 +1505,11 @@ contin: 34
 continent: 12
 continu: 135
 contort: 1
+contra: 10
 contract: 3
 contradict: 24
 contrari: 39
+contraria: 1
 contrast: 8
 contribut: 41
 contribute: 3
@@ -1488,6 +1525,7 @@ convent: 30
 convention: 5
 converg: 4
 convers: 17
+conversa: 1
 convert: 17
 convey: 1
 convict: 30
@@ -1504,6 +1542,7 @@ copiou: 2
 copper: 3
 coral: 2
 cord: 1
+corinthian: 4
 cork: 1
 corn: 2
 corneliu: 9
@@ -1512,6 +1551,7 @@ cornerstone: 1
 cornice: 1
 cornwal: 2
 corpor: 2
+corporibu: 1
 corps: 2
 corpu: 6
 correct: 25
@@ -1519,6 +1559,7 @@ correctli: 2
 correl: 1
 correspond: 19
 corridor: 2
+corrigantur: 1
 corrobor: 2
 corrupt: 18
 cosma: 34
@@ -1587,6 +1628,7 @@ crisi: 4
 cristiani: 1
 criterion: 2
 critic: 96
+critica: 2
 croak: 1
 crocodile: 4
 crop: 10
@@ -1596,6 +1638,7 @@ crow: 1
 crowd: 15
 crown: 8
 crozier: 1
+cruci: 1
 crucibl: 2
 crucifi: 5
 crucifix: 10
@@ -1649,6 +1692,7 @@ cylind: 3
 cynic: 4
 cyprian: 3
 cyril: 4
+cyru: 2
 czar: 2
 dai: 133
 daili: 6
@@ -1669,6 +1713,7 @@ danger: 86
 daniel: 20
 danish: 8
 dare: 37
+dariu: 2
 dark: 33
 darken: 1
 darker: 4
@@ -1735,6 +1780,7 @@ decompos: 1
 decor: 6
 decre: 54
 decreas: 3
+decretum: 1
 dedic: 13
 deduc: 5
 deduce: 2
@@ -1854,6 +1900,8 @@ determine: 1
 detest: 5
 dethron: 6
 deu: 3
+deum: 3
+deuteronomi: 6
 deutsch: 10
 deutschland: 9
 devant: 1
@@ -1868,6 +1916,7 @@ devot: 125
 devote: 16
 devour: 4
 devout: 20
+devoutli: 3
 dexter: 1
 di: 46
 diabol: 78
@@ -1877,12 +1926,15 @@ dialogu: 8
 diamet: 1
 diametr: 1
 diari: 7
+dicant: 1
+dicit: 1
 dickson: 3
 dictate: 5
 dictionari: 26
 dictum: 6
 didst: 3
 diego: 1
+dierum: 1
 diestel: 1
 diet: 1
 dieu: 7
@@ -1893,6 +1945,7 @@ difficulti: 87
 diffus: 1
 digest: 5
 digger: 1
+digni: 1
 dignifi: 3
 dignitari: 11
 digniti: 4
@@ -2038,6 +2091,7 @@ dogma: 46
 dogmat: 20
 dollar: 1
 domain: 8
+domat: 1
 dome: 3
 domest: 9
 domin: 31
@@ -2046,8 +2100,11 @@ domingo: 2
 domini: 4
 dominican: 16
 dominion: 5
+domu: 2
+dona: 1
 donate: 3
 done: 91
+donec: 2
 donkei: 1
 donnelli: 1
 donor: 1
@@ -2166,6 +2223,8 @@ eb: 4
 ebook: 1
 eccentr: 1
 ecclesiast: 152
+ecclesiastici: 2
+ecclesiasticu: 1
 echo: 39
 eclect: 1
 eclips: 17
@@ -2232,6 +2291,7 @@ elijah: 2
 elimin: 1
 elixir: 1
 elizabeth: 10
+ell: 2
 elm: 2
 eloqu: 18
 els: 15
@@ -2302,6 +2362,7 @@ engrav: 29
 enhanc: 1
 enigma: 1
 enigmat: 1
+enim: 2
 enjoi: 11
 enjoin: 2
 enjoy: 5
@@ -2334,12 +2395,17 @@ envi: 1
 enviabl: 1
 enviou: 2
 environ: 3
+ephesian: 4
+ephesio: 1
 epicuru: 1
 epidem: 58
 epigram: 4
 epilept: 2
 episcop: 10
 episode: 6
+epistl: 24
+epistola: 5
+epistolarum: 2
 epitaph: 5
 epithet: 12
 epoch: 52
@@ -2350,8 +2416,10 @@ equip: 3
 equival: 1
 er: 2
 erastu: 3
+erat: 1
 erect: 30
 erfurt: 5
+ergo: 3
 ernest: 1
 eros: 1
 erot: 1
@@ -2363,6 +2431,7 @@ erupt: 2
 escap: 20
 escape: 18
 escobar: 4
+esdra: 4
 eskimo: 5
 especi: 582
 espous: 1
@@ -2372,6 +2441,7 @@ essenti: 21
 establish: 98
 estate: 3
 esteem: 4
+esther: 1
 estim: 11
 estrang: 1
 etat: 1
@@ -2434,6 +2504,7 @@ excuse: 1
 execut: 22
 execution: 4
 exegesi: 11
+exegete: 1
 exemplifi: 6
 exempt: 1
 exercis: 31
@@ -2506,6 +2577,7 @@ exult: 4
 ey: 24
 eyebright: 1
 ezekiel: 16
+ezra: 12
 fabl: 4
 fabric: 16
 face: 35
@@ -2605,6 +2677,7 @@ feud: 1
 feudal: 3
 fever: 19
 fewer: 3
+fiant: 1
 fiasco: 1
 fiat: 4
 fibr: 2
@@ -2746,6 +2819,7 @@ forgotten: 18
 fork: 1
 forlorn: 4
 form: 268
+forma: 1
 formal: 5
 formate: 26
 former: 45
@@ -2801,6 +2875,7 @@ franklin: 29
 frantic: 6
 franz: 5
 fraser: 3
+fratri: 1
 fraud: 12
 fraught: 3
 frazer: 1
@@ -2842,6 +2917,8 @@ fruitless: 2
 frustrate: 3
 fuego: 1
 fuel: 1
+fuerunt: 1
+fugiant: 1
 ful: 4
 fulfil: 8
 fulk: 4
@@ -2872,6 +2949,7 @@ gain: 52
 gainsai: 3
 gainsaid: 4
 galapago: 1
+galatian: 2
 galaxi: 1
 gale: 2
 galen: 14
@@ -2913,11 +2991,14 @@ genial: 5
 geniu: 38
 genoa: 2
 gent: 1
+gentibu: 1
+gentium: 2
 gentl: 16
 gentleman: 5
 gentlemen: 4
 gentlest: 2
 gentli: 1
+genu: 3
 geoffrei: 1
 geograph: 36
 geographi: 42
@@ -2937,6 +3018,7 @@ german: 68
 germani: 139
 germin: 1
 gesner: 3
+gesta: 3
 gesture: 4
 get: 4
 ghastli: 4
@@ -2971,6 +3053,7 @@ glimps: 9
 globe: 16
 gloomi: 2
 glori: 35
+gloriam: 1
 glorieus: 1
 glorif: 1
 glorifi: 4
@@ -2984,6 +3067,7 @@ go: 27
 goat: 4
 god: 43
 goddess: 1
+godless: 5
 godli: 6
 godwin: 2
 goe: 32
@@ -3095,6 +3179,7 @@ gutter: 1
 haarlem: 1
 habili: 1
 habit: 14
+haec: 1
 hagar: 1
 hail: 24
 hailstorm: 8
@@ -3137,6 +3222,7 @@ hardi: 1
 hardli: 45
 hardship: 1
 hare: 5
+harlot: 1
 harm: 14
 harmless: 11
 harmon: 1
@@ -3162,7 +3248,6 @@ hatr: 11
 haughti: 1
 haunt: 3
 haut: 2
-have: 186
 havoc: 2
 hawkin: 1
 hayn: 9
@@ -3262,6 +3347,7 @@ hippopotamu: 2
 hist: 24
 histor: 70
 histori: 391
+historia: 8
 historian: 28
 hitherto: 3
 hoard: 2
@@ -3279,14 +3365,17 @@ holm: 1
 homage: 2
 home: 13
 homer: 2
+hominibu: 1
 homm: 7
 hommel: 2
+homo: 3
 honei: 3
 honest: 29
 honesti: 14
 honestli: 4
 honor: 4
 honorari: 2
+honorat: 6
 honour: 78
 hoof: 2
 hook: 2
@@ -3298,6 +3387,7 @@ hopefulli: 1
 hopeless: 4
 hopelessli: 6
 hopkin: 4
+hora: 1
 hord: 1
 horizon: 5
 horn: 9
@@ -3309,6 +3399,7 @@ horseflesh: 1
 horst: 2
 horticulture: 1
 horu: 1
+hosea: 1
 hospit: 26
 host: 11
 hostil: 28
@@ -3379,6 +3470,7 @@ idiot: 2
 idl: 2
 idol: 3
 idolatri: 1
+ierusalem: 1
 ignit: 2
 ignobl: 1
 ignomini: 3
@@ -3567,6 +3659,9 @@ inhal: 2
 inher: 1
 inherit: 20
 inhospit: 1
+inimico: 1
+iniqu: 1
+iniquit: 1
 initi: 9
 injunct: 8
 injur: 6
@@ -3636,6 +3731,7 @@ intensifi: 3
 intent: 15
 intention: 1
 interced: 1
+intercess: 10
 interchang: 1
 intercours: 3
 interdepend: 1
@@ -3660,6 +3756,7 @@ intim: 5
 intoler: 7
 inton: 1
 intox: 1
+intra: 1
 intric: 2
 intrigu: 5
 introduc: 16
@@ -3700,6 +3797,7 @@ irretriev: 1
 irrevoc: 1
 isaac: 15
 isaia: 1
+isaiah: 23
 isi: 2
 isl: 8
 island: 37
@@ -3708,6 +3806,9 @@ ismail: 1
 isol: 7
 israel: 41
 issu: 63
+ist: 1
+ista: 1
+isto: 1
 itali: 79
 italian: 19
 item: 3
@@ -3776,6 +3877,7 @@ joy: 1
 juan: 1
 jubil: 1
 judaism: 4
+jude: 1
 judg: 41
 judgement: 3
 judgment: 36
@@ -3879,6 +3981,7 @@ lane: 2
 lang: 11
 languag: 189
 lantern: 1
+lapide: 4
 laps: 2
 larg: 146
 larger: 25
@@ -3928,6 +4031,7 @@ leav: 18
 leaven: 2
 lebanon: 1
 lecki: 38
+lection: 3
 lectur: 6
 lecture: 87
 left: 62
@@ -3953,6 +4057,7 @@ lenorm: 21
 lent: 3
 leon: 6
 leonardo: 1
+leoni: 1
 leopold: 7
 leper: 3
 leroi: 1
@@ -3969,7 +4074,9 @@ lettuce: 2
 level: 13
 levi: 7
 leviathan: 6
+levit: 2
 leviti: 1
+leviticu: 7
 lew: 3
 lewi: 7
 li: 10
@@ -3981,6 +4088,7 @@ liberti: 12
 libr: 1
 librari: 42
 librarian: 5
+libri: 13
 libyan: 2
 licens: 2
 lichen: 1
@@ -4013,6 +4121,7 @@ lineal: 1
 linen: 1
 linger: 13
 lingua: 7
+linguarum: 1
 linguist: 4
 link: 6
 linz: 2
@@ -4031,6 +4140,7 @@ literari: 19
 literature: 124
 lith: 1
 lithuania: 1
+littera: 3
 littl: 157
 liturg: 1
 live: 156
@@ -4044,9 +4154,12 @@ load: 1
 loan: 21
 loathsome: 2
 loav: 2
+loca: 1
 local: 9
 locate: 1
+loci: 4
 lock: 8
+loco: 1
 locust: 1
 loft: 1
 lofti: 7
@@ -4123,11 +4236,14 @@ madelein: 1
 madonna: 1
 madrid: 2
 magazine: 12
+magdalene: 1
 magdeburg: 7
 magellan: 7
+magi: 12
 magic: 96
 magician: 11
 magistr: 2
+magna: 4
 magnet: 1
 magnifi: 2
 magnific: 6
@@ -4193,6 +4309,7 @@ maria: 3
 marin: 2
 marine: 3
 marino: 2
+mariti: 5
 maritime: 1
 mark: 59
 market: 2
@@ -4262,6 +4379,7 @@ medic: 92
 medicin: 9
 medicine: 114
 mediev: 75
+medio: 3
 medit: 4
 mediterranean: 3
 medium: 3
@@ -4316,7 +4434,9 @@ mew: 1
 mexican: 2
 mexico: 3
 meyer: 11
+micah: 3
 mice: 4
+micha: 7
 michael: 9
 michel: 5
 michigan: 6
@@ -4356,6 +4476,7 @@ minnesota: 2
 minor: 20
 minute: 15
 minutest: 1
+mirabilia: 1
 miracl: 184
 miracul: 72
 mire: 1
@@ -4386,6 +4507,7 @@ mistak: 2
 mistake: 15
 mistaken: 16
 misti: 2
+mistransl: 3
 misunderstood: 1
 mitchel: 3
 mitig: 3
@@ -4442,8 +4564,10 @@ morgan: 9
 morin: 2
 morn: 22
 morri: 2
+mort: 4
 mortal: 23
 mortar: 2
+mortem: 2
 morton: 5
 mosaic: 29
 moscow: 2
@@ -4457,6 +4581,7 @@ motion: 52
 motionless: 1
 motive: 7
 motto: 2
+motum: 1
 mould: 5
 mound: 4
 mount: 19
@@ -4477,11 +4602,13 @@ muddi: 1
 muddl: 1
 mule: 2
 muller: 22
+multa: 1
 multifari: 1
 multipl: 2
 multipli: 9
 multitude: 117
 mummi: 2
+mundi: 23
 muni: 1
 munich: 12
 municip: 1
@@ -4517,12 +4644,14 @@ narrate: 5
 narrow: 3
 narrowest: 1
 narrowli: 1
+nashvil: 3
 natal: 4
 nathan: 1
 nation: 72
 nationale: 1
 native: 21
 natur: 279
+natura: 10
 nature: 146
 naught: 8
 naughti: 2
@@ -4536,6 +4665,7 @@ nebraska: 1
 nebular: 9
 necess: 22
 necessari: 50
+necessaria: 1
 necessarili: 11
 necessit: 2
 neck: 4
@@ -4547,6 +4677,7 @@ neg: 5
 neglect: 13
 negoti: 1
 negro: 6
+nehemiah: 2
 neighbor: 3
 neighbour: 27
 neighbourhood: 11
@@ -4616,6 +4747,8 @@ northern: 30
 northward: 1
 northwest: 2
 nose: 2
+nostra: 2
+nostri: 1
 nostril: 1
 nota: 1
 notabl: 11
@@ -4639,18 +4772,22 @@ novel: 1
 novelti: 4
 novemb: 9
 novi: 1
+novit: 1
 nowhere: 11
 nowise: 2
 noxiou: 13
 nucleu: 3
 nuisanc: 1
+nulla: 1
 nullifi: 1
 number: 139
 numberless: 2
 numer: 14
 nun: 8
+nunc: 2
 nuncio: 2
 nunez: 1
+nuremberg: 10
 nurs: 2
 nurtur: 1
 nymph: 1
@@ -4667,6 +4804,7 @@ oblong: 3
 obnoxi: 4
 obscen: 3
 obscur: 6
+obscura: 1
 obscure: 8
 obsequi: 1
 observ: 136
@@ -4687,6 +4825,8 @@ odd: 3
 oder: 1
 odin: 2
 odiou: 2
+odium: 1
+offenbarung: 2
 offenc: 9
 offend: 17
 offens: 2
@@ -4708,9 +4848,12 @@ omin: 1
 omiss: 1
 omit: 8
 omn: 2
+omni: 4
+omnia: 7
 omnibu: 1
 omnipoten: 1
 omnisci: 2
+omnium: 1
 on: 12
 onion: 1
 onset: 1
@@ -4721,6 +4864,7 @@ open: 86
 openli: 15
 oper: 14
 opera: 17
+opere: 1
 opiat: 1
 opinion: 101
 opium: 1
@@ -4741,6 +4885,7 @@ orate: 9
 orator: 2
 oratori: 5
 orb: 3
+orbem: 3
 orbit: 5
 orchard: 2
 ordain: 1
@@ -4823,6 +4968,7 @@ oxygen: 1
 oyster: 3
 pablo: 1
 pace: 1
+paci: 1
 pacif: 10
 pack: 1
 pagan: 35
@@ -4838,14 +4984,17 @@ pale: 1
 palei: 8
 palermo: 5
 palestine: 44
+pallio: 1
 palm: 1
 palmer: 8
 palmerston: 2
 pamphlet: 5
 panic: 6
+papaci: 15
 papal: 58
 paper: 26
 papist: 2
+par: 4
 parabl: 6
 parabol: 1
 parabola: 1
@@ -4868,6 +5017,7 @@ pari: 175
 parish: 14
 parishion: 1
 parisian: 4
+parit: 3
 park: 5
 parker: 17
 parliament: 16
@@ -4899,18 +5049,23 @@ pastor: 30
 patagonia: 1
 patch: 8
 patent: 2
+pater: 3
 path: 61
 pathet: 9
 patient: 36
+patr: 18
+patri: 1
 patriarch: 9
 patrick: 2
 patriot: 3
 patrol: 1
 patron: 3
 patronage: 2
+patrum: 4
 pattern: 1
 paul: 70
 pauper: 7
+pauperibu: 1
 paus: 1
 pave: 4
 pavement: 5
@@ -4926,6 +5081,7 @@ peasant: 17
 peasantri: 6
 peat: 3
 pebbl: 6
+peccata: 1
 peculiar: 20
 peculiarli: 1
 pedant: 2
@@ -4993,6 +5149,7 @@ perus: 1
 peruvian: 2
 pervad: 8
 pervade: 2
+pervenit: 1
 pervers: 12
 pervert: 5
 pestil: 61
@@ -5002,6 +5159,7 @@ peter: 54
 petersburg: 6
 petit: 17
 petition: 1
+petri: 6
 petrifi: 2
 petroleum: 1
 petru: 1
@@ -5018,8 +5176,10 @@ phenomena: 39
 phenomenon: 2
 philadelphia: 6
 philanthropist: 1
+philemon: 4
 philip: 7
 philipp: 3
+philippian: 1
 philistine: 4
 phillip: 1
 philosoph: 64
@@ -5130,6 +5290,7 @@ pomp: 3
 pompeii: 1
 pond: 3
 ponder: 11
+pont: 1
 pontif: 9
 pool: 14
 poor: 38
@@ -5144,6 +5305,7 @@ popular: 70
 porcelain: 1
 porch: 1
 port: 4
+porta: 3
 portal: 5
 portent: 11
 porter: 3
@@ -5159,11 +5321,15 @@ possess: 195
 possessor: 3
 possibl: 74
 post: 15
+posterior: 1
 postpone: 1
 postul: 1
+posui: 1
 potato: 3
 potent: 3
 potenti: 3
+potentia: 1
+potestati: 1
 potter: 2
 potteri: 6
 pound: 6
@@ -5178,6 +5344,8 @@ practic: 18
 practice: 49
 practis: 5
 practise: 4
+prae: 1
+praecepta: 1
 prai: 18
 prairi: 2
 prais: 19
@@ -5221,7 +5389,9 @@ preposter: 2
 prerog: 1
 presag: 2
 presage: 6
+presbyteri: 2
 presbyterian: 21
+presbytero: 2
 prescienc: 1
 prescrib: 4
 prescribe: 1
@@ -5252,17 +5422,21 @@ priest: 99
 priestess: 2
 priesthood: 6
 priestli: 12
+prima: 1
 primari: 1
 primarili: 2
 prime: 2
 primev: 11
 primit: 35
 primo: 1
+primum: 3
 princ: 52
 princess: 1
 princeton: 12
 princip: 28
 principe: 1
+principem: 1
+principibu: 1
 principl: 46
 pringl: 3
 print: 39
@@ -5301,6 +5475,7 @@ profoundest: 1
 profoundli: 4
 profund: 3
 profuse: 2
+progeni: 3
 programm: 1
 progress: 78
 prohibit: 29
@@ -5333,6 +5508,7 @@ propos: 13
 propose: 3
 proposit: 13
 propound: 5
+propter: 1
 proscrib: 1
 prose: 3
 prosecut: 4
@@ -5342,6 +5518,7 @@ protect: 37
 protector: 2
 protest: 291
 proud: 4
+prout: 1
 prove: 174
 proven: 3
 proverb: 6
@@ -5400,17 +5577,21 @@ putrid: 1
 puzzl: 4
 pyramid: 10
 python: 1
+quae: 1
 quagmire: 1
 quai: 2
 quaint: 8
+qual: 1
 qualif: 2
 qualiti: 17
+quam: 5
 quantiti: 1
 quarantine: 2
 quarrel: 15
 quarri: 1
 quarter: 35
 quarterli: 18
+quarto: 4
 quasi: 2
 quebec: 1
 queen: 11
@@ -5420,14 +5601,20 @@ quench: 4
 quest: 3
 question: 155
 queue: 1
+qui: 1
+quia: 1
+quibu: 2
 quick: 1
 quickli: 3
 quiescenc: 1
 quiet: 15
 quietli: 36
+quietu: 1
 quinine: 3
+quipp: 1
 quit: 16
 quiver: 1
+quo: 1
 quod: 5
 quot: 23
 quotate: 20
@@ -5450,6 +5637,7 @@ rais: 43
 raleigh: 5
 ralli: 4
 ralph: 2
+rami: 1
 rampart: 1
 rang: 22
 rank: 10
@@ -5553,11 +5741,14 @@ refut: 21
 regain: 1
 regard: 443
 regent: 2
+regi: 1
 regime: 1
 regiment: 1
+regina: 2
 reginald: 3
 region: 82
 regist: 2
+regiu: 5
 regret: 5
 regul: 5
 regular: 13
@@ -5643,6 +5834,7 @@ repute: 1
 request: 10
 requir: 53
 requisit: 2
+rerum: 4
 rescu: 9
 research: 133
 resembl: 35
@@ -5663,6 +5855,7 @@ respectfulli: 2
 respond: 1
 respons: 15
 rest: 41
+restat: 3
 restitut: 2
 restor: 19
 restore: 2
@@ -5686,6 +5879,7 @@ retrogress: 1
 return: 36
 reveal: 102
 revel: 73
+revelatum: 1
 reveng: 2
 revenu: 5
 rever: 34
@@ -5815,7 +6009,9 @@ russo: 2
 rust: 2
 saba: 1
 sabbath: 15
+sacco: 1
 sacr: 422
+sacra: 12
 sacrament: 5
 sacri: 1
 sacrif: 9
@@ -5824,6 +6020,7 @@ sacrilege: 4
 sad: 1
 saddl: 1
 sadli: 4
+saeculum: 1
 safe: 26
 safeguard: 4
 safest: 1
@@ -5848,6 +6045,7 @@ salt: 154
 salut: 1
 salute: 1
 salv: 5
+salvat: 1
 salvate: 11
 salzburg: 7
 sampl: 1
@@ -5859,6 +6057,8 @@ sancti: 5
 sanctifi: 6
 sanction: 57
 sanctiti: 7
+sanctorum: 2
+sanctum: 1
 sand: 9
 sandi: 3
 sane: 1
@@ -5928,6 +6128,7 @@ schrader: 14
 schweiz: 1
 schwerin: 1
 scienc: 740
+scientia: 1
 scientif: 393
 scientist: 4
 scof: 2
@@ -5948,7 +6149,9 @@ scowl: 1
 scratch: 4
 scream: 8
 scribbl: 1
+scribe: 3
 scriptur: 108
+scriptura: 8
 scripture: 344
 scrupl: 4
 scrupul: 1
@@ -5981,6 +6184,7 @@ sect: 23
 sectarian: 9
 section: 9
 secular: 11
+secundum: 1
 secur: 18
 secure: 23
 sedan: 1
@@ -6004,6 +6208,7 @@ semblanc: 1
 semi: 3
 seminari: 17
 semite: 1
+semper: 1
 senate: 7
 send: 16
 seneca: 14
@@ -6015,9 +6220,11 @@ senseless: 2
 sensibl: 1
 sent: 71
 sentenc: 22
+sententia: 2
 sentiment: 10
 separ: 29
 septemb: 15
+septuagint: 5
 sepulchr: 3
 sequel: 2
 sequenc: 4
@@ -6027,6 +6234,7 @@ seri: 103
 seriou: 40
 serious: 5
 sermon: 88
+sermone: 2
 serpent: 31
 serpentine: 2
 serv: 29
@@ -6146,6 +6354,7 @@ signature: 5
 signifi: 13
 signific: 53
 significantli: 3
+significat: 1
 silenc: 27
 silent: 8
 silli: 2
@@ -6183,6 +6392,7 @@ site: 8
 sitteth: 1
 situat: 3
 siva: 3
+sive: 4
 six: 1
 sixteen: 5
 sixteenth: 74
@@ -6407,10 +6617,13 @@ statement: 322
 statesman: 6
 statesmanship: 2
 statesmen: 4
+statim: 1
 station: 1
 stationari: 1
 statist: 7
 statu: 98
+statua: 2
+statuam: 1
 stature: 1
 statute: 5
 staunch: 1
@@ -6428,6 +6641,7 @@ steep: 3
 steepl: 1
 steer: 1
 stein: 1
+stelli: 1
 stem: 1
 stench: 3
 step: 15
@@ -6525,6 +6739,7 @@ suav: 1
 subdivis: 1
 subject: 183
 sublim: 4
+sublime: 7
 submerg: 3
 submiss: 4
 submit: 12
@@ -6566,6 +6781,7 @@ suit: 9
 suitabl: 2
 sulphur: 13
 sum: 32
+summa: 11
 summar: 2
 summari: 59
 summarili: 2
@@ -6582,6 +6798,7 @@ sunlight: 1
 sunni: 1
 sunrise: 1
 sunshine: 2
+sunt: 4
 super: 1
 superb: 4
 superfici: 3
@@ -6672,6 +6889,7 @@ system: 143
 systemat: 4
 tabl: 34
 tablet: 14
+tacitu: 3
 tactic: 1
 tag: 1
 tail: 18
@@ -6685,6 +6903,7 @@ tali: 1
 talk: 20
 tall: 2
 tame: 2
+tamen: 1
 tammani: 1
 tank: 1
 tape: 1
@@ -6715,9 +6934,11 @@ tempera: 2
 temperature: 4
 tempest: 40
 templ: 52
+templi: 1
 tempor: 5
 temporari: 11
 temporarili: 5
+temporum: 1
 tempt: 9
 temptate: 6
 ten: 7
@@ -6739,6 +6960,8 @@ terr: 8
 terra: 8
 terrac: 2
 terrace: 7
+terram: 1
+terrarum: 3
 terrestri: 5
 terribl: 27
 terrif: 2
@@ -6874,6 +7097,7 @@ titu: 1
 to: 1
 toad: 3
 tobia: 1
+tobit: 3
 todai: 2
 toe: 2
 togeth: 68
@@ -6887,6 +7111,7 @@ tombstone: 3
 tome: 36
 tone: 8
 tongu: 74
+tonitrua: 4
 took: 140
 tool: 4
 tooth: 4
@@ -6935,6 +7160,7 @@ trampl: 3
 tran: 1
 tranquilli: 1
 transact: 3
+transcrib: 3
 transcript: 1
 transfer: 7
 transfigur: 2
@@ -6964,6 +7190,7 @@ treatment: 61
 tree: 40
 trembl: 3
 tremend: 8
+tremisc: 1
 trench: 1
 trenton: 2
 tress: 2
@@ -7042,6 +7269,7 @@ tyrant: 2
 tyre: 1
 tyrol: 1
 ultim: 6
+ultimi: 1
 ultra: 3
 ulyss: 1
 unabl: 9
@@ -7103,6 +7331,7 @@ unfeel: 1
 unfit: 5
 unfold: 2
 unfortun: 29
+ungu: 1
 unhappi: 1
 unhealthi: 1
 unheed: 1
@@ -7121,6 +7350,8 @@ unitarian: 2
 unite: 1
 uniti: 3
 univers: 409
+universa: 1
+universo: 2
 unjust: 1
 unjustli: 4
 unknow: 1
@@ -7208,11 +7439,13 @@ upset: 1
 upstart: 1
 upward: 29
 urban: 33
+urbi: 1
 urg: 35
 us: 154
 usage: 10
 useless: 7
 usher: 16
+usu: 1
 usual: 48
 usurp: 2
 utah: 1
@@ -7223,6 +7456,7 @@ utrecht: 6
 utter: 116
 utterli: 44
 uttermost: 2
+uxore: 1
 vacuum: 2
 vagari: 4
 vagrant: 1
@@ -7244,6 +7478,7 @@ varianc: 10
 variant: 1
 variat: 7
 varieti: 17
+varii: 1
 variou: 378
 various: 2
 vasco: 4
@@ -7281,6 +7516,7 @@ verdure: 1
 verg: 1
 verifi: 3
 verili: 2
+veritati: 2
 vermin: 1
 vermont: 2
 vernacular: 1
@@ -7363,6 +7599,7 @@ vow: 2
 vowel: 10
 voyage: 43
 vulgar: 5
+vulgate: 13
 waddington: 1
 wade: 1
 wage: 4
@@ -7444,6 +7681,7 @@ welt: 1
 welter: 2
 wendel: 1
 went: 84
+werk: 1
 werner: 3
 weslei: 43
 wesleyan: 1
@@ -7536,6 +7774,7 @@ within: 95
 without: 97
 withstand: 3
 withstood: 5
+wittenberg: 13
 witti: 2
 wive: 6
 woe: 2
@@ -7630,6 +7869,8 @@ zealand: 1
 zealot: 4
 zealou: 16
 zebra: 1
+zechariah: 4
+zephaniah: 1
 zimmermann: 1
 zion: 1
 zodiac: 4

@@ -25,6 +25,19 @@ using std::cout;
 using std::endl;
 using std::ofstream;
 
+
+map<string,Cluster*>* convertir(vector<Cluster*>* clusters){
+	
+	map<string,Cluster*>* retorno = new map<string,Cluster*>;
+	unsigned int size = clusters->size();
+	for(unsigned int i = 0;i< size;i++){
+		(*retorno)[(*clusters)[i]->get_id()] = (*clusters)[i];
+		clusters->erase(clusters->begin() + i);
+	}
+	return retorno;
+} 
+		
+
 int vectorizar_documentos(string path, Parser* parser) {
 	int retorno = parsear_archivos(path,parser);
 	if (retorno != 0){

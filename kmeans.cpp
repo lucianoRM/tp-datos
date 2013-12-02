@@ -217,7 +217,6 @@ map<string,Cluster*>* k_means(map<string,map<unsigned int,float> >* vectores,uns
 				if(mas_cercanos.size() == 0) mas_cercanos.push_back(distancia_minima_key(clusters,&it_vectores->second,calcular_norma(it_vectores->second)));
 				for(unsigned int h = 0; h<mas_cercanos.size();h++){
 					(*clusters)[mas_cercanos[h]]->agregar_vector(&it_vectores->second,it_vectores->first);
-					cout << mas_cercanos[h] << endl;
 				}
 			}
 		}	

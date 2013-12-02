@@ -1867,7 +1867,6 @@ bosporu: 3
 bossano: 2
 bossi: 1
 boston: 23
-both: 55
 bothnia: 2
 botosani: 1
 botswana: 70
@@ -5810,9 +5809,8 @@ hauraki: 1
 hausa: 5
 haut: 7
 havana: 3
-have: 28
+have: 1
 havel: 2
-haven: 5
 havr: 2
 hawaii: 27
 hawaiian: 1
@@ -11933,6 +11931,7 @@ richest: 2
 richi: 1
 richli: 3
 richmond: 1
+richter: 2
 rico: 69
 ridg: 8
 riel: 2
@@ -11961,6 +11960,7 @@ rio: 4
 rioja: 2
 riordan: 1
 riot: 1
+ripa: 1
 riparian: 6
 risaralda: 1
 rise: 52

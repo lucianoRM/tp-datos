@@ -101,7 +101,6 @@ bomb: 11
 bond: 2
 bone: 3
 born: 1
-both: 4
 bound: 1
 break: 3
 breast: 1
@@ -464,7 +463,6 @@ haphazard: 1
 hard: 1
 harm: 3
 harold: 1
-have: 1
 havoc: 1
 hazard: 7
 health: 1

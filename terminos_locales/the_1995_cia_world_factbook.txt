@@ -1821,7 +1821,6 @@ bosporu: 3
 bossano: 2
 bossi: 1
 boston: 22
-both: 56
 bothnia: 4
 botosani: 1
 botswana: 77
@@ -3869,6 +3868,7 @@ dormant: 3
 dornbush: 1
 dornod: 1
 dornogovi: 1
+dorothi: 1
 dorset: 1
 dorum: 1
 dosso: 1
@@ -4645,6 +4645,7 @@ fernand: 1
 fernandez: 7
 fernandino: 1
 fernando: 15
+ferr: 1
 ferreira: 1
 ferri: 2
 ferro: 1
@@ -5076,6 +5077,7 @@ garden: 7
 gardner: 2
 gare: 1
 garfield: 1
+gari: 1
 garifuna: 2
 garland: 1
 garment: 12
@@ -5697,9 +5699,8 @@ hauraki: 2
 hausa: 5
 haut: 7
 havana: 4
-have: 14
+have: 1
 havel: 2
-haven: 2
 havr: 2
 hawaii: 28
 hawaiian: 1
@@ -7987,6 +7988,7 @@ macao: 1
 macau: 40
 maccarthi: 1
 mace: 3
+macedo: 1
 macedonia: 63
 macedonian: 13
 macenta: 1
@@ -8782,6 +8784,7 @@ minya: 1
 minyar: 1
 miquel: 2
 miquelon: 23
+mira: 1
 miramar: 1
 miranda: 4
 mircea: 3
@@ -14696,6 +14699,7 @@ volga: 1
 volgograd: 2
 volksuni: 1
 volksvertegenwoordig: 1
+volo: 1
 volodymyr: 3
 vologda: 1
 volta: 6

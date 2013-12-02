@@ -1794,7 +1794,6 @@ bossano: 2
 bossi: 1
 boston: 20
 boswana: 1
-both: 49
 bothnia: 1
 botosani: 1
 botswana: 64
@@ -3023,6 +3022,7 @@ constitu: 13
 constitucion: 1
 constitut: 417
 constitute: 8
+constituti: 1
 constitution: 1
 constitutionalist: 2
 constitutionnel: 2
@@ -5187,6 +5187,7 @@ gliwice: 2
 global: 10
 globe: 3
 glori: 1
+gloria: 1
 glorieus: 2
 glorioso: 13
 gloucest: 1
@@ -5629,9 +5630,8 @@ hauraki: 1
 hausa: 5
 haut: 7
 havana: 6
-have: 27
+have: 1
 havel: 2
-haven: 2
 havr: 2
 hawaii: 29
 hawaiian: 1
@@ -12616,6 +12616,7 @@ socialist: 138
 socialst: 1
 societ: 1
 societi: 25
+socio: 1
 socioeconom: 1
 socotra: 2
 soda: 3

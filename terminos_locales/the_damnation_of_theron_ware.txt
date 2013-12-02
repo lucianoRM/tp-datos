@@ -531,6 +531,7 @@ blindli: 1
 blink: 7
 bliss: 1
 block: 12
+blockhead: 1
 blond: 1
 blood: 21
 bloodless: 1
@@ -574,7 +575,6 @@ born: 21
 borrow: 4
 bosom: 3
 boss: 2
-both: 43
 bother: 7
 bottl: 1
 bottom: 5
@@ -1051,6 +1051,7 @@ confid: 30
 confidenti: 1
 confin: 3
 confirm: 2
+confiteor: 2
 conflict: 1
 confound: 1
 confront: 10
@@ -2210,6 +2211,7 @@ furious: 1
 furnace: 2
 furnish: 4
 furniture: 5
+furore: 1
 furtive: 6
 fuse: 2
 fuss: 2
@@ -2458,8 +2460,6 @@ hate: 18
 hatter: 1
 haughti: 1
 haunt: 2
-have: 49
-haven: 21
 havoc: 1
 hazard: 1
 haze: 3
@@ -2547,6 +2547,7 @@ hollerin: 1
 hollow: 3
 home: 62
 homeward: 5
+homine: 1
 hommel: 1
 homogene: 1
 honei: 1
@@ -2789,6 +2790,7 @@ intend: 10
 intens: 4
 intent: 16
 interced: 1
+intercede: 1
 intercept: 1
 interchang: 1
 interdepend: 1
@@ -3324,6 +3326,7 @@ mirth: 6
 mischief: 3
 mischiev: 2
 miser: 8
+misereatur: 1
 misfortune: 2
 mishap: 1
 misjudg: 1
@@ -4487,6 +4490,7 @@ sampl: 2
 sanctifi: 2
 sanction: 1
 sanctiti: 2
+sancto: 1
 sand: 6
 sandi: 5
 sandwich: 2
@@ -4622,6 +4626,7 @@ sent: 14
 sentenc: 10
 sentiment: 2
 separ: 16
+sept: 1
 septemb: 1
 sequenc: 5
 serene: 4
@@ -5376,6 +5381,7 @@ thwart: 1
 ti: 9
 tick: 1
 ticket: 1
+tickl: 3
 tidi: 1
 tier: 1
 tight: 7

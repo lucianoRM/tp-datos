@@ -407,7 +407,6 @@ born: 3
 borrow: 1
 bosom: 6
 botch: 1
-both: 20
 bother: 11
 bottl: 6
 bottom: 5
@@ -425,6 +424,7 @@ box: 1
 boyhood: 2
 boyish: 1
 brace: 3
+brag: 1
 brain: 1
 branch: 9
 brand: 1
@@ -560,6 +560,7 @@ center: 1
 centr: 2
 centuri: 1
 ceremoni: 1
+cert: 1
 certain: 13
 certainli: 3
 chafe: 1
@@ -648,6 +649,7 @@ clean: 9
 cleanli: 1
 clear: 9
 clearer: 1
+clemen: 2
 clergyman: 2
 clerk: 2
 clew: 3
@@ -1793,6 +1795,7 @@ heel: 11
 height: 2
 held: 16
 hell: 1
+hello: 6
 help: 26
 helpless: 2
 helplessli: 2
@@ -2009,6 +2012,7 @@ invalid: 1
 invari: 1
 invent: 1
 investig: 2
+inveter: 2
 invis: 1
 invit: 4
 invite: 1
@@ -2135,6 +2139,7 @@ latin: 1
 latter: 5
 latterli: 1
 laud: 1
+laudate: 1
 laugh: 13
 laughter: 8
 lavish: 2
@@ -2384,6 +2389,7 @@ misfortune: 4
 misgiv: 2
 misplac: 1
 miss: 18
+missi: 3
 missile: 1
 mission: 1
 mississippi: 2
@@ -2790,6 +2796,7 @@ pleasure: 4
 plenti: 6
 plot: 1
 plough: 1
+plow: 1
 pluck: 1
 plug: 1
 plume: 1
@@ -2817,6 +2824,7 @@ portion: 3
 portli: 1
 pose: 4
 posit: 2
+poss: 1
 possess: 8
 possibl: 14
 post: 2
@@ -3751,6 +3759,7 @@ surprise: 11
 surround: 2
 survei: 5
 susan: 1
+susi: 2
 suspect: 5
 suspend: 5
 suspens: 1
@@ -4080,6 +4089,7 @@ uninterest: 1
 unit: 4
 unkempt: 2
 unkind: 1
+unknowingli: 1
 unknown: 3
 unless: 1
 unlock: 4

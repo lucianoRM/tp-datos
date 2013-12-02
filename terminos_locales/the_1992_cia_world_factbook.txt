@@ -842,6 +842,7 @@ asanbayev: 1
 asatiani: 1
 asbesto: 10
 ascens: 10
+ascii: 1
 asdb: 52
 asean: 13
 aseb: 1
@@ -1710,7 +1711,6 @@ bossano: 2
 bossi: 1
 boston: 20
 boswana: 2
-both: 61
 bothnia: 1
 botosani: 1
 botswana: 48
@@ -5340,9 +5340,8 @@ hauraki: 1
 hausa: 4
 haut: 7
 havana: 5
-have: 26
+have: 1
 havel: 2
-haven: 1
 havr: 2
 hawaii: 28
 hawaiian: 2
