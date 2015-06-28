@@ -1780,6 +1780,7 @@ sake: 13
 salmon: 1
 salt: 2
 salvate: 1
+same: 35
 sand: 21
 sandi: 1
 sang: 9

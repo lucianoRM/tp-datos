@@ -259,6 +259,7 @@ rope: 1
 rose: 2
 sail: 2
 sailor: 1
+same: 1
 saturdai: 1
 scene: 1
 school: 1

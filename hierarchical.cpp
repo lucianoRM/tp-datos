@@ -66,7 +66,6 @@ void agregado_resto_de_vectores_HY(vector<Cluster*>* clusters, map<string, map<u
 		if(mas_cercanos.size() == 0) mas_cercanos.push_back(distancia_minima_vector(clusters,&it_vectores2->second,calcular_norma(it_vectores2->second)));
 		for(unsigned int h = 0; h<mas_cercanos.size();h++){
 			(*clusters)[mas_cercanos[h]]->agregar_vector(&it_vectores2->second,it_vectores2->first);
-			cout << mas_cercanos[h] << endl;
 		}
 		vectores->erase(it_vectores2);
 		
@@ -132,7 +131,7 @@ void generar_clusters(vector<Cluster*>* clusters,map<string,map<unsigned int,flo
 	unsigned int j = 0;
 	ostringstream numero;
 	map<string,map<unsigned int,float> >::iterator it_vectores;
-	unsigned int set = vectores->size()*0.3;
+	unsigned int set = vectores->size()*0.55;
 	for(it_vectores = vectores->begin();it_vectores != vectores->end();++it_vectores){
 		string nombre("cluster");
 		numero << id;
@@ -159,8 +158,7 @@ vector<Cluster*>* hierarchical(map<string,map<unsigned int,float> >* vectores,un
 	i = 0;
 	generar_clusters(clusters_aux,vectores,cant_terms,id);
 	while(clusters_aux->size() != 0){
-		while(clusters_aux->size() != anterior){
-			cout << i << endl;			
+		while(clusters_aux->size() != anterior){		
 			i++;
 			anterior = clusters_aux->size();		
 			mergear_cercanos(clusters_aux,cota);
@@ -170,11 +168,8 @@ vector<Cluster*>* hierarchical(map<string,map<unsigned int,float> >* vectores,un
 		generar_clusters(clusters_aux,vectores,cant_terms,id);
 	}
 	i = 0;
-	cout << "TERMINO CON LOS SETS" << endl;
 	delete clusters_aux;
 	while(clusters->size() != anterior){
-		cout << clusters->size()<< endl;
-		cout << i << endl;
 		i++;
 		cota += 0.1;
 		anterior = clusters->size();		

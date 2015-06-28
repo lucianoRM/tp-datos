@@ -300,10 +300,10 @@ int main(int args,char* argv[]){
 
 			escribir_clusters_en_disco(clusters,"");
 		
-			cout << "Cantidad de archivos: "<< cant_docs << endl;
-			cout << "Cantidad de terminos: "<< cant_terms << endl;
+			//cout << "Cantidad de archivos: "<< cant_docs << endl;
+			//cout << "Cantidad de terminos: "<< cant_terms << endl;
 			t_fin = time(NULL);
-			cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
+			//cout << "Tardo: " << t_fin - t_inicio << " segundos" << endl;
 			crearIndice("Clusters");
 			break;
 			

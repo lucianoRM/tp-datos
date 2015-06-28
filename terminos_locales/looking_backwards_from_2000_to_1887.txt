@@ -1726,6 +1726,7 @@ said: 226
 sake: 5
 salt: 1
 salvate: 3
+same: 72
 sandi: 1
 sang: 1
 satisfi: 8

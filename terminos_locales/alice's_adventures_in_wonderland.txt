@@ -1059,6 +1059,7 @@ sai: 19
 said: 462
 salmon: 1
 salt: 2
+same: 24
 sand: 2
 sang: 2
 savage: 4
